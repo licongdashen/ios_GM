@@ -28,6 +28,7 @@
 		188D7B1120EA27E900F283CD /* RiskAppraisalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AF820EA27E900F283CD /* RiskAppraisalViewController.m */; };
 		188D7B1220EA27E900F283CD /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AFC20EA27E900F283CD /* UIImage+Color.m */; };
 		188D7B1320EA27E900F283CD /* RequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7B0120EA27E900F283CD /* RequestOperationManager.m */; };
+		188D7B1720EA2E3900F283CD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7B1620EA2E3900F283CD /* HomeViewController.m */; };
 		22C174E28DD9B54F691AAC18 /* Pods_ios_GM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ADF0588862AC73DF7CDC66 /* Pods_ios_GM.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,8 @@
 		188D7AFE20EA27E900F283CD /* TitleDefineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleDefineHeader.h; sourceTree = "<group>"; };
 		188D7B0120EA27E900F283CD /* RequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestOperationManager.m; sourceTree = "<group>"; };
 		188D7B0320EA27E900F283CD /* RequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestOperationManager.h; sourceTree = "<group>"; };
+		188D7B1520EA2E3900F283CD /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		188D7B1620EA2E3900F283CD /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		96ADF0588862AC73DF7CDC66 /* Pods_ios_GM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_GM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E04D957D1841A67C56C4160 /* Pods-ios_GM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_GM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_GM/Pods-ios_GM.release.xcconfig"; sourceTree = "<group>"; };
 		CEC8B6293C5ED21E1248ECE6 /* Pods-ios_GM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_GM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_GM/Pods-ios_GM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				188D7AFF20EA27E900F283CD /* Network */,
 				188D7AA220EA116D00F283CD /* AppDelegate.h */,
 				188D7AA320EA116D00F283CD /* AppDelegate.m */,
+				188D7B1520EA2E3900F283CD /* HomeViewController.h */,
+				188D7B1620EA2E3900F283CD /* HomeViewController.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
 				188D7AB020EA116E00F283CD /* Info.plist */,
 				188D7AB120EA116E00F283CD /* main.m */,
@@ -212,19 +217,19 @@
 			isa = PBXGroup;
 			children = (
 				188D7AE320EA27E900F283CD /* MD5 */,
-				188D7AE620EA27E900F283CD /* ConfigDefineHeader.h */,
 				188D7AE720EA27E900F283CD /* UIView+Positioning.h */,
-				188D7AE820EA27E900F283CD /* CACUtility.h */,
-				188D7AE920EA27E900F283CD /* UIImage+Color.h */,
-				188D7AEA20EA27E900F283CD /* NotificationDefineHeader.h */,
-				188D7AEB20EA27E900F283CD /* CACUtility.m */,
 				188D7AEC20EA27E900F283CD /* UIView+Positioning.m */,
+				188D7AE820EA27E900F283CD /* CACUtility.h */,
+				188D7AEB20EA27E900F283CD /* CACUtility.m */,
 				188D7AED20EA27E900F283CD /* MBProgressHUD */,
-				188D7AFA20EA27E900F283CD /* CustomDefineHeader.h */,
-				188D7AFB20EA27E900F283CD /* UIDefineHeader.h */,
+				188D7AE920EA27E900F283CD /* UIImage+Color.h */,
 				188D7AFC20EA27E900F283CD /* UIImage+Color.m */,
 				188D7AFD20EA27E900F283CD /* ConstantDefineHeader.h */,
+				188D7AEA20EA27E900F283CD /* NotificationDefineHeader.h */,
 				188D7AFE20EA27E900F283CD /* TitleDefineHeader.h */,
+				188D7AFB20EA27E900F283CD /* UIDefineHeader.h */,
+				188D7AFA20EA27E900F283CD /* CustomDefineHeader.h */,
+				188D7AE620EA27E900F283CD /* ConfigDefineHeader.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -260,8 +265,8 @@
 		188D7AFF20EA27E900F283CD /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				188D7B0120EA27E900F283CD /* RequestOperationManager.m */,
 				188D7B0320EA27E900F283CD /* RequestOperationManager.h */,
+				188D7B0120EA27E900F283CD /* RequestOperationManager.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 				188D7B0C20EA27E900F283CD /* MBProgressHUD.m in Sources */,
 				188D7B0A20EA27E900F283CD /* UIView+Positioning.m in Sources */,
 				188D7B0620EA27E900F283CD /* CACBaseViewController.m in Sources */,
+				188D7B1720EA2E3900F283CD /* HomeViewController.m in Sources */,
 				188D7B0E20EA27E900F283CD /* WebViewController.m in Sources */,
 				188D7B1320EA27E900F283CD /* RequestOperationManager.m in Sources */,
 				188D7B1120EA27E900F283CD /* RiskAppraisalViewController.m in Sources */,
