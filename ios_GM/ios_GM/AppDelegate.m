@@ -19,6 +19,12 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
+    UIViewController *myVC=[[UIViewController alloc] initWithNibName:nil bundle:nil];
+    myVC.view.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController=myVC;
+    
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 

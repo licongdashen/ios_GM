@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
 		188D7AAC20EA116E00F283CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188D7AAB20EA116E00F283CD /* Assets.xcassets */; };
-		188D7AAF20EA116E00F283CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188D7AAD20EA116E00F283CD /* LaunchScreen.storyboard */; };
 		188D7AB220EA116E00F283CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AB120EA116E00F283CD /* main.m */; };
 		188D7ABC20EA116E00F283CD /* ios_GMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7ABB20EA116E00F283CD /* ios_GMTests.m */; };
 		188D7AC720EA116F00F283CD /* ios_GMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AC620EA116F00F283CD /* ios_GMUITests.m */; };
@@ -38,7 +37,6 @@
 		188D7AA220EA116D00F283CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		188D7AA320EA116D00F283CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		188D7AAB20EA116E00F283CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		188D7AAE20EA116E00F283CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		188D7AB020EA116E00F283CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188D7AB120EA116E00F283CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		188D7AB720EA116E00F283CD /* ios_GMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_GMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +104,6 @@
 				188D7AA220EA116D00F283CD /* AppDelegate.h */,
 				188D7AA320EA116D00F283CD /* AppDelegate.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
-				188D7AAD20EA116E00F283CD /* LaunchScreen.storyboard */,
 				188D7AB020EA116E00F283CD /* Info.plist */,
 				188D7AB120EA116E00F283CD /* main.m */,
 			);
@@ -253,7 +250,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188D7AAF20EA116E00F283CD /* LaunchScreen.storyboard in Resources */,
 				188D7AAC20EA116E00F283CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,17 +365,6 @@
 			targetProxy = 188D7AC320EA116F00F283CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		188D7AAD20EA116E00F283CD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				188D7AAE20EA116E00F283CD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		188D7AC920EA116F00F283CD /* Debug */ = {
@@ -497,16 +482,18 @@
 			baseConfigurationReference = CEC8B6293C5ED21E1248ECE6 /* Pods-ios_GM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z94B79WRVM;
 				INFOPLIST_FILE = ios_GM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bos.ios-GM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -515,16 +502,18 @@
 			baseConfigurationReference = 9E04D957D1841A67C56C4160 /* Pods-ios_GM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z94B79WRVM;
 				INFOPLIST_FILE = ios_GM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bos.ios-GM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
