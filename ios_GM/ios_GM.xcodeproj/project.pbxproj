@@ -45,6 +45,7 @@
 		188D7AC220EA116F00F283CD /* ios_GMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_GMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		188D7AC620EA116F00F283CD /* ios_GMUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_GMUITests.m; sourceTree = "<group>"; };
 		188D7AC820EA116F00F283CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		188D7AD720EA211700F283CD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		96ADF0588862AC73DF7CDC66 /* Pods_ios_GM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_GM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E04D957D1841A67C56C4160 /* Pods-ios_GM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_GM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_GM/Pods-ios_GM.release.xcconfig"; sourceTree = "<group>"; };
 		CEC8B6293C5ED21E1248ECE6 /* Pods-ios_GM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_GM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_GM/Pods-ios_GM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
 				188D7AB020EA116E00F283CD /* Info.plist */,
 				188D7AB120EA116E00F283CD /* main.m */,
+				188D7AD720EA211700F283CD /* PrefixHeader.pch */,
 			);
 			path = ios_GM;
 			sourceTree = "<group>";
@@ -485,6 +487,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z94B79WRVM;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ios_GM/PrefixHeader.pch";
 				INFOPLIST_FILE = ios_GM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -505,6 +509,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z94B79WRVM;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ios_GM/PrefixHeader.pch";
 				INFOPLIST_FILE = ios_GM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
