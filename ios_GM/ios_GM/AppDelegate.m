@@ -20,17 +20,37 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    
-    HomeViewController *tabBar = [[HomeViewController alloc]init];
-    CACBaseNavigationController *Nav = [[CACBaseNavigationController alloc]initWithRootViewController:tabBar];
-    self.window.rootViewController = Nav;
-    self.mainNav = Nav;
+    [self loadingHomeController];
     
     [self.window makeKeyAndVisible];
 
     return YES;
 }
 
+-(void)loadingHomeController
+{
+    HomeViewController *tabBar = [[HomeViewController alloc]init];
+    CACBaseNavigationController *Nav = [[CACBaseNavigationController alloc]initWithRootViewController:tabBar];
+    self.window.rootViewController = Nav;
+    self.mainNav = Nav;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    NSLog(@"URL:%@ Options:%@",url,sourceApplication);
+    [self loadingHomeController];
+
+    return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options{
+    
+    NSLog(@"URL:%@ Options:%@",url,options);
+
+    [self loadingHomeController];
+    return YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -18,7 +18,6 @@
 
 - (void)loadingHomeController;
 
-- (void)loadingLaoShiController;
 
 @end
 
