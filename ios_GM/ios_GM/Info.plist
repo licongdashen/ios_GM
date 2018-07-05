@@ -25,7 +25,7 @@
 			<string>zc.skygm</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>zcNightgm</string>
+				<string>chevroletapp</string>
 			</array>
 		</dict>
 	</array>
@@ -33,7 +33,7 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>zcNightelf</string>
+		<string>chevy</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

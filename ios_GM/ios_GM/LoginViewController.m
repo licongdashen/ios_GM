@@ -77,11 +77,9 @@
 
 -(void)shouquan
 {
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"zcNightelf://"]]) {
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"zcNightelf://one?name=TheLordOftheRings"] options:nil completionHandler:^(BOOL success) {
-//            NSLog(@"嘿，我打开过了");
-//        }];
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"zcNightelf://"]];
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"chevy://"]]) {
+
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"chevy://"]];
         
     }
 }

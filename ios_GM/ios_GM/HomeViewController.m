@@ -8,6 +8,8 @@
 
 #import "HomeViewController.h"
 #import "LoginViewController.h"
+#import "NowAndSoonCollectionCell.h"
+#import "MainViewController.h"
 
 @interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic, strong) UICollectionView *Collection;
@@ -19,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navBar.hidden = YES;
-    
+
     UIButton *nameLb = [[UIButton alloc]initWithFrame:CGRectMake(0, 56 + SafeAreaTopHeight, DEF_DEVICE_WIDTH/2, 30)];
     nameLb.titleLabel.font = DEF_MyBoldFont(26);
     [nameLb setTitleColor:DEF_UICOLORFROMRGB(0x4b4948) forState:0];
@@ -46,7 +48,7 @@
 //    self.Collection.contentInset = UIEdgeInsetsMake(DEF_NAVIGATIONBAR_HEIGHT, 0, DEF_TABBAR_HEIGHT, 0);
     self.Collection.backgroundColor = [UIColor clearColor];
     self.Collection.alwaysBounceVertical = YES;
-    [self.Collection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    [self.Collection registerClass:[NowAndSoonCollectionCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
     [self.view addSubview:self.Collection];
     @weakify(self);
     self.Collection.mj_header  = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -79,16 +81,15 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor grayColor];
-    cell.layer.cornerRadius = 5;
-    
+    NowAndSoonCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    MainViewController *vc = [[MainViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

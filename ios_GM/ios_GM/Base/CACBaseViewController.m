@@ -36,15 +36,15 @@
     self.navBar.alpha = 1;
     [self.view addSubview:self.navBar];
 
-    self.titleLb = [[UILabel alloc] initWithFrame:CGRectMake(60, 20 + SafeAreaTopHeight, DEF_DEVICE_WIDTH - 60*2, 44)];
+    self.titleLb = [[UILabel alloc] initWithFrame:CGRectMake(41, 32 + SafeAreaTopHeight, DEF_DEVICE_WIDTH - 60*2, 36)];
     self.titleLb.textColor = DEF_UICOLORFROMRGB(0x292929);
     self.titleLb.backgroundColor = [UIColor clearColor];
-    self.titleLb.textAlignment = NSTextAlignmentCenter;
+//    self.titleLb.textAlignment = NSTextAlignmentCenter;
     self.titleLb.font = DEF_MyBoldFont(18.0);
     [self.navBar addSubview:self.titleLb];
 
-    self.leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(5, 25 + SafeAreaTopHeight, 52, 36)];
-    [self.leftBtn setImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
+    self.leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(5, 32 + SafeAreaTopHeight, 52, 36)];
+    [self.leftBtn setImage:[UIImage imageNamed:@"左箭头"] forState:UIControlStateNormal];
     [self.leftBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 20)];
     self.leftBtn.imageView.contentMode = UIViewContentModeCenter;
     [self.leftBtn addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -52,7 +52,7 @@
     self.leftBtn.titleLabel.font = DEF_MyFont(14.0f);
     [self.navBar addSubview:self.leftBtn];
 
-    self.rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.navBar.width - 47, 25 + SafeAreaTopHeight, 52, 36)];
+    self.rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.navBar.width - 47, 32 + SafeAreaTopHeight, 52, 36)];
     [self.rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.rightBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.rightBtn.imageView.clipsToBounds = YES;
@@ -62,9 +62,9 @@
     [self.navBar addSubview:self.rightBtn];
     self.rightBtn.hidden = YES;
 
-    self.lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.navBar.height - 0.5, self.navBar.width, 0.5)];
-    self.lineView.backgroundColor = DEF_UICOLORFROMRGB(0xe3e4e4);
-    [self.navBar addSubview:self.lineView];
+//    self.lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.navBar.height - 0.5, self.navBar.width, 0.5)];
+//    self.lineView.backgroundColor = DEF_UICOLORFROMRGB(0xe3e4e4);
+//    [self.navBar addSubview:self.lineView];
 
     if (self.navigationController.visibleViewController == DEF_MyAppDelegate.tabBar) {
         //是tabBar 的viewcontroller 左边按钮隐藏

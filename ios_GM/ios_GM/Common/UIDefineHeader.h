@@ -26,7 +26,7 @@
 //图片背景颜色
 #define DEF_IMAGE_BACKGROUND_COLOR              DEF_COLOR_RGB(243, 243, 243)
 
-#define DEF_APP_MAIN_TITLECOLOR                  DEF_UICOLORFROMRGB(0x3376ff)
+#define DEF_APP_MAIN_TITLECOLOR                  DEF_UICOLORFROMRGB(0x4b4948)
 
 //黑色透明度
 #define BLACKALPHA    0.2

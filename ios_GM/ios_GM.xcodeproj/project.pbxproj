@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
+		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
 		188D7AAC20EA116E00F283CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188D7AAB20EA116E00F283CD /* Assets.xcassets */; };
 		188D7AB220EA116E00F283CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AB120EA116E00F283CD /* main.m */; };
@@ -51,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
+		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
+		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		182ACD0820ECBEB2007760BF /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		188D7A9F20EA116D00F283CD /* ios_GM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_GM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188D7AA220EA116D00F283CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		188D7AA320EA116D00F283CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -165,8 +171,12 @@
 				188D7AFF20EA27E900F283CD /* Network */,
 				188D7AA220EA116D00F283CD /* AppDelegate.h */,
 				188D7AA320EA116D00F283CD /* AppDelegate.m */,
+				182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */,
+				182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */,
 				188D7B1520EA2E3900F283CD /* HomeViewController.h */,
 				188D7B1620EA2E3900F283CD /* HomeViewController.m */,
+				182ACD0720ECBEB2007760BF /* MainViewController.h */,
+				182ACD0820ECBEB2007760BF /* MainViewController.m */,
 				188D7B1820EB66C300F283CD /* LoginViewController.h */,
 				188D7B1920EB66C300F283CD /* LoginViewController.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
@@ -483,6 +493,7 @@
 				188D7AB220EA116E00F283CD /* main.m in Sources */,
 				188D7B1020EA27E900F283CD /* CACProgressHUD.m in Sources */,
 				188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */,
+				182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */,
 				188D7B0920EA27E900F283CD /* CACUtility.m in Sources */,
 				188D7B0520EA27E900F283CD /* CACTabBarViewController.m in Sources */,
 				188D7B0C20EA27E900F283CD /* MBProgressHUD.m in Sources */,
@@ -490,6 +501,7 @@
 				188D7B0620EA27E900F283CD /* CACBaseViewController.m in Sources */,
 				188D7B1720EA2E3900F283CD /* HomeViewController.m in Sources */,
 				188D7B0E20EA27E900F283CD /* WebViewController.m in Sources */,
+				182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */,
 				188D7B1320EA27E900F283CD /* RequestOperationManager.m in Sources */,
 				188D7B1120EA27E900F283CD /* RiskAppraisalViewController.m in Sources */,
 				188D7B0720EA27E900F283CD /* CACBaseNavigationController.m in Sources */,
