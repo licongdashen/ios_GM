@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "NoBossSoundViewController.h"
 
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -23,7 +24,7 @@
 
 -(void)rightBtnClick
 {
-    
+    [super rightBtnClick];
 }
 
 - (void)viewDidLoad {
@@ -34,8 +35,7 @@
 
     self.imagvArr = @[@"Group",@"Group 3",@"Group 4"];
     
-    self.rightBtn.hidden = NO;
-    [self.rightBtn setImage:DEF_IMAGE(@"意见反馈") forState:0];
+
     
     self.leftBtn.hidden = YES;
     
@@ -180,7 +180,9 @@
                 [tap.rac_gestureSignal subscribeNext:^(UIGestureRecognizer * x) {
                     NSLog(@"vvvvvv%ld",x.view.tag);
                     if (x.view.tag == 200) {
-                        
+                        NoBossSoundViewController *vc = [[NoBossSoundViewController alloc]init];
+                        vc.dic = self.dic;
+                        [self.navigationController pushViewController:vc animated:YES];
                     }else if (x.view.tag == 201){
                         
                     }else if (x.view.tag == 202){

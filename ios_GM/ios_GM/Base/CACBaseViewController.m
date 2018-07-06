@@ -60,8 +60,8 @@
     self.rightBtn.imageEdgeInsets = UIEdgeInsetsMake(0,-10,0,0);
     [self.rightBtn addTarget:self action:@selector(rightBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.navBar addSubview:self.rightBtn];
-    self.rightBtn.hidden = YES;
-
+    [self.rightBtn setImage:DEF_IMAGE(@"意见反馈") forState:0];
+    
 //    self.lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.navBar.height - 0.5, self.navBar.width, 0.5)];
 //    self.lineView.backgroundColor = DEF_UICOLORFROMRGB(0xe3e4e4);
 //    [self.navBar addSubview:self.lineView];
@@ -74,7 +74,25 @@
         //是tabBar 的viewcontroller 左边按钮隐藏
         self.leftBtn.hidden = NO;
     }
+    
+    UIView *carView = [[UIView alloc]initWithFrame:CGRectMake(40, self.navBar.bottom, 200, 25)];
+    [self.view addSubview:carView];
+    self.carView = carView;
+    carView.hidden = YES;
+    
+    UIImageView *carImagv = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    carImagv.image = DEF_IMAGE(@"车型-1");
+    carImagv.contentMode = UIViewContentModeCenter;
+    [carView addSubview:carImagv];
+    
+    UILabel *carLb = [[UILabel alloc]initWithFrame:CGRectMake(carImagv.right, 0, 175, 25)];
+    carLb.font = DEF_MyFont(14);
+    carLb.textColor = DEF_APP_MAIN_TITLECOLOR;
+    [carView addSubview:carLb];
+    self.carLb = carLb;
+    
 
+    
 }
 
 /**

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		181CB22520EF4E0D0095572F /* NoBossSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB22420EF4E0D0095572F /* NoBossSoundViewController.m */; };
+		181CB22720EF69CE0095572F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181CB22620EF69CE0095572F /* CoreBluetooth.framework */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		181CB22320EF4E0D0095572F /* NoBossSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoBossSoundViewController.h; sourceTree = "<group>"; };
 		181CB22420EF4E0D0095572F /* NoBossSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBossSoundViewController.m; sourceTree = "<group>"; };
+		181CB22620EF69CE0095572F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181CB22720EF69CE0095572F /* CoreBluetooth.framework in Frameworks */,
 				22C174E28DD9B54F691AAC18 /* Pods_ios_GM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +297,7 @@
 		258D51280129C83D81D6E848 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				181CB22620EF69CE0095572F /* CoreBluetooth.framework */,
 				96ADF0588862AC73DF7CDC66 /* Pods_ios_GM.framework */,
 			);
 			name = Frameworks;

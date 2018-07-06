@@ -35,6 +35,10 @@
  */
 @property (nonatomic, strong)UIView *lineView;
 
+@property (nonatomic, weak)UILabel *carLb;
+
+@property (nonatomic, weak)UIView *carView;
+
 /**
  *  返回按钮方法
  */

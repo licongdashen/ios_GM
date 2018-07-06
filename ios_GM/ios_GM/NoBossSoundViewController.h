@@ -10,4 +10,6 @@
 
 @interface NoBossSoundViewController : CACBaseViewController
 
+@property (nonatomic, strong) NSMutableDictionary *dic;
+
 @end
