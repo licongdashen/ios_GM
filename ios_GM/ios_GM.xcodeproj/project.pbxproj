@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181CB22520EF4E0D0095572F /* NoBossSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB22420EF4E0D0095572F /* NoBossSoundViewController.m */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181CB22320EF4E0D0095572F /* NoBossSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoBossSoundViewController.h; sourceTree = "<group>"; };
+		181CB22420EF4E0D0095572F /* NoBossSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBossSoundViewController.m; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				188D7B1620EA2E3900F283CD /* HomeViewController.m */,
 				182ACD0720ECBEB2007760BF /* MainViewController.h */,
 				182ACD0820ECBEB2007760BF /* MainViewController.m */,
+				181CB22320EF4E0D0095572F /* NoBossSoundViewController.h */,
+				181CB22420EF4E0D0095572F /* NoBossSoundViewController.m */,
 				188D7B1820EB66C300F283CD /* LoginViewController.h */,
 				188D7B1920EB66C300F283CD /* LoginViewController.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
@@ -492,6 +497,7 @@
 			files = (
 				188D7AB220EA116E00F283CD /* main.m in Sources */,
 				188D7B1020EA27E900F283CD /* CACProgressHUD.m in Sources */,
+				181CB22520EF4E0D0095572F /* NoBossSoundViewController.m in Sources */,
 				188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */,
 				182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */,
 				188D7B0920EA27E900F283CD /* CACUtility.m in Sources */,

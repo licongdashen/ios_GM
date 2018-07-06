@@ -279,7 +279,7 @@ static RequestOperationManager *sessionManager1;
                       success:(void (^)(NSMutableDictionary *result))successBlock
                      failture:(void (^)(id result))failtureBlock
 {
-    [RequestOperationManager requestPostWithParameters:parameterDic
+    [RequestOperationManager requestGetWithParameters:parameterDic
                                              urlString:DEF_API_LOGIN
                                           finishHandle:^(id result) {
                                               successBlock(result);

@@ -10,4 +10,6 @@
 
 @interface MainViewController : CACBaseViewController
 
+@property (nonatomic, strong) NSMutableDictionary *dic;
+
 @end

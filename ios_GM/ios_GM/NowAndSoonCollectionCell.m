@@ -40,8 +40,7 @@
         //电影名字
         UILabel *nameLb = [[UILabel alloc]initWithFrame:CGRectMake(0, DEF_RESIZE_UI(91), DEF_RESIZE_UI(170 - 12), 17)];
         nameLb.font = DEF_MyFont(16);
-        nameLb.textColor = DEF_UICOLORFROMRGB(0x292929);
-        nameLb.text = @"凯迪拉克";
+        nameLb.textColor = [UIColor whiteColor];
         nameLb.textAlignment = NSTextAlignmentRight;
         [movieImagV addSubview:nameLb];
         self.nameLb = nameLb;
@@ -59,11 +58,10 @@
 {
     _model = model;
     
-    [self.movieImagV sd_setImageWithURL:[NSURL URLWithString:model[@"Url"]]placeholderImage:DEF_IMAGE(@"test")];
+    [self.movieImagV sd_setImageWithURL:[NSURL URLWithString:model[@"image"]]placeholderImage:DEF_IMAGE(@"test")];
 
-    self.nameLb.text = model[@"Name"];
+    self.nameLb.text = model[@"name"];
     
-    self.amountLb.text = [NSString stringWithFormat:@"¥%@",model[@"Price"]];
 
 }
 

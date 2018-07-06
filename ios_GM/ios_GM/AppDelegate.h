@@ -16,6 +16,9 @@
 
 @property (weak, nonatomic)CACTabBarViewController *tabBar;
 
+@property (nonatomic, strong) NSDictionary *loginDic;
+
+
 - (void)loadingHomeController;
 
 

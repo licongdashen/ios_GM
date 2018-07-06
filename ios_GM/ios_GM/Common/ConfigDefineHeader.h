@@ -17,7 +17,7 @@
 //@"http://172.16.21.240:6789"
 
 //测试环境ip地址
-#define DEF_IPAddress           @"http://api.sdcen.cn/mobile/"
+#define DEF_IPAddress           @"http://140.143.193.19:8080/"
 
 //张最本地ip地址
 //#define DEF_IPAddress          @"http://172.16.21.58:8022"
@@ -128,7 +128,7 @@ static NSString *const UMENG_APPKEY = @"5a55ab57a40fa36edc000103";
 #define DEF_API_USEBANKCARD_LIST @"api/GetCourseeProcess"   // 我的银行卡信息
 
 // 登录 注册
-#define DEF_API_LOGIN            @"api/login"           //登录接口
+#define DEF_API_LOGIN            @"api/v1/cars"           //登录接口
 #define DEF_API_REGISTER         @"api/UpdateEbookLog"     //注册接口
 #define DEF_API_GETVALIDIMG      @"api/new/GetAllNotice"       //请求图片验证码接口
 #define DEF_API_CHECKVALIDIMG    @"api/RrfreshInteractiveScore"      //校验图片验证码接口

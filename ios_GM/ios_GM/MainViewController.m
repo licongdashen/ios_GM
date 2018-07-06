@@ -42,7 +42,7 @@
     UILabel *nameLb = [[UILabel alloc]initWithFrame:CGRectMake(20, self.navBar.height - 24, DEF_DEVICE_WIDTH, 24)];
     nameLb.font = DEF_MyBoldFont(23);
     nameLb.textColor = DEF_UICOLORFROMRGB(0x4b4948);
-    nameLb.text = @"Hi,  张全明";
+    nameLb.text = [NSString stringWithFormat:@"Hi,  %@",DEF_MyAppDelegate.loginDic[@"accountName"]];
     [self.navBar addSubview:nameLb];
     
     _homeTabv = [[UITableView alloc]initWithFrame:CGRectMake(0, DEF_NAVIGATIONBAR_HEIGHT, DEF_DEVICE_WIDTH, DEF_DEVICE_HEIGHT - DEF_NAVIGATIONBAR_HEIGHT) style:UITableViewStylePlain];
@@ -61,7 +61,9 @@
     [headerview addSubview:imagv];
     
     UIImageView *rightImagv = [[UIImageView alloc]initWithFrame:CGRectMake(imagv.width/2, 2, imagv.width/2, imagv.height - 8)];
-    rightImagv.image = DEF_IMAGE(@"迈锐宝XL车型");
+    rightImagv.contentMode = UIViewContentModeScaleAspectFill;
+    rightImagv.clipsToBounds = YES;
+    [rightImagv sd_setImageWithURL:[NSURL URLWithString:self.dic[@"image"]]];
     rightImagv.clipsToBounds = YES;
     [imagv addSubview:rightImagv];
     
@@ -72,7 +74,7 @@
     [imagv addSubview:titleLb];
     
     UILabel *nameLb1 = [[UILabel alloc]initWithFrame:CGRectMake(12, titleLb.bottom + 9, imagv.width/2 - 12, 25)];
-    nameLb1.text = @"迈锐宝XL";
+    nameLb1.text = self.dic[@"name"];
     nameLb1.font = DEF_MyBoldFont(24);
     nameLb1.textColor = DEF_UICOLORFROMRGB(0xffbe17);
     [imagv addSubview:nameLb1];

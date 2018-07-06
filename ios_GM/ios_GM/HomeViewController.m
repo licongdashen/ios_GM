@@ -13,6 +13,7 @@
 
 @interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic, strong) UICollectionView *Collection;
+@property (nonatomic, strong) NSMutableArray *arr;
 
 @end
 
@@ -26,7 +27,7 @@
     nameLb.titleLabel.font = DEF_MyBoldFont(26);
     [nameLb setTitleColor:DEF_UICOLORFROMRGB(0x4b4948) forState:0];
     [nameLb addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
-    [nameLb setTitle:@"Hi 张全明" forState:0];
+    [nameLb setTitle:[NSString stringWithFormat:@"Hi,  %@",DEF_MyAppDelegate.loginDic[@"accountName"]] forState:0];
     [self.view addSubview:nameLb];
     
     UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(23, nameLb.bottom + 9, DEF_DEVICE_WIDTH - 23, 17)];
@@ -60,18 +61,38 @@
     }];
     [self.Collection.mj_footer endRefreshingWithNoMoreData];
     
-//    [self planRefresh];
+    [self planRefresh];
     
 }
 
 -(void)planRefresh
 {
     
+    
+    NSDictionary *dic = @{@"access-token"      :DEF_MyAppDelegate.loginDic[@"access_token"],
+                          };
+    [RequestOperationManager userLoginParametersDic:dic success:^(NSMutableDictionary *result) {
+        [self.Collection.mj_header endRefreshing];
+        
+        if (result == nil) {
+            return;
+        }
+        if ([result[@"code"] intValue] != 1) {
+            return;
+        }
+        
+        self.arr = result[@"data"];
+        [self.Collection reloadData];
+        
+    } failture:^(id result) {
+        [self.Collection.mj_header endRefreshing];
+
+    }];
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 8;
+    return self.arr.count;
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -83,12 +104,15 @@
 {
     NowAndSoonCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
 
+    cell.model = self.arr[indexPath.row];
+    
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MainViewController *vc = [[MainViewController alloc]init];
+    vc.dic = self.arr[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

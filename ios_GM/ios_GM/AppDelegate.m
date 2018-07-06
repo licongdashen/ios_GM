@@ -20,6 +20,11 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
+    
+    self.loginDic = @{@"access_token"   : @"bb20320c9898263fee62a0ae3eb81208",
+                      @"accountName"    : @"陈杰"
+                      };
+    
     [self loadingHomeController];
     
     [self.window makeKeyAndVisible];
@@ -43,12 +48,43 @@
     return YES;
 }
 
+-(NSString *)decodeString:(NSString*)encodedString
+
+{
+    
+    //NSString *decodedString = [encodedString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding ];
+    
+    NSString *decodedString  = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
+                                                                                                                     
+                                                                                                                     (__bridge CFStringRef)encodedString,
+                                                                                                                     
+                                                                                                                     CFSTR(""),
+                                                                                                                     
+                                                                                                                     CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+    
+    return decodedString;
+    
+}
+
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options{
     
-    NSLog(@"URL:%@ Options:%@",url,options);
+
+    
+    NSString *str = [url query];
+    NSString *aaa = [self decodeString:str];
+    
+    NSString * subString2 = [aaa substringFromIndex:5];
+    NSData *jsonData = [subString2 dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    self.loginDic = dic;
+    NSLog(@"loginDic:%@",dic);
 
     [self loadingHomeController];
+    
     return YES;
 }
 
