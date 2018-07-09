@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		181CB22520EF4E0D0095572F /* NoBossSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB22420EF4E0D0095572F /* NoBossSoundViewController.m */; };
 		181CB22720EF69CE0095572F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181CB22620EF69CE0095572F /* CoreBluetooth.framework */; };
+		181CB22920F306430095572F /* 8270.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB22820F306430095572F /* 8270.mp3 */; };
+		181CB22B20F330490095572F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181CB22A20F330490095572F /* AVFoundation.framework */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -58,6 +60,8 @@
 		181CB22320EF4E0D0095572F /* NoBossSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoBossSoundViewController.h; sourceTree = "<group>"; };
 		181CB22420EF4E0D0095572F /* NoBossSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBossSoundViewController.m; sourceTree = "<group>"; };
 		181CB22620EF69CE0095572F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		181CB22820F306430095572F /* 8270.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8270.mp3; sourceTree = "<group>"; };
+		181CB22A20F330490095572F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181CB22B20F330490095572F /* AVFoundation.framework in Frameworks */,
 				181CB22720EF69CE0095572F /* CoreBluetooth.framework in Frameworks */,
 				22C174E28DD9B54F691AAC18 /* Pods_ios_GM.framework in Frameworks */,
 			);
@@ -188,6 +193,7 @@
 				188D7B1820EB66C300F283CD /* LoginViewController.h */,
 				188D7B1920EB66C300F283CD /* LoginViewController.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
+				181CB22820F306430095572F /* 8270.mp3 */,
 				188D7AB020EA116E00F283CD /* Info.plist */,
 				188D7AB120EA116E00F283CD /* main.m */,
 				188D7AD720EA211700F283CD /* PrefixHeader.pch */,
@@ -297,6 +303,7 @@
 		258D51280129C83D81D6E848 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				181CB22A20F330490095572F /* AVFoundation.framework */,
 				181CB22620EF69CE0095572F /* CoreBluetooth.framework */,
 				96ADF0588862AC73DF7CDC66 /* Pods_ios_GM.framework */,
 			);
@@ -420,6 +427,7 @@
 				188D7B0F20EA27E900F283CD /* README.mdown in Resources */,
 				188D7B0D20EA27E900F283CD /* LICENSE in Resources */,
 				188D7AAC20EA116E00F283CD /* Assets.xcassets in Resources */,
+				181CB22920F306430095572F /* 8270.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

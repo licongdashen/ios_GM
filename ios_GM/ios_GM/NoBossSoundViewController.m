@@ -9,8 +9,10 @@
 #import "NoBossSoundViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface NoBossSoundViewController ()<CBCentralManagerDelegate>
-
+@interface NoBossSoundViewController ()<CBCentralManagerDelegate,AVAudioPlayerDelegate>
+{
+    AVPlayer *player;
+}
 @property (nonatomic,strong)CBCentralManager *centralManager;
 
 @property BOOL blueToothOpen;
@@ -19,7 +21,12 @@
 
 @implementation NoBossSoundViewController
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
 
+}
 
 
 
@@ -66,6 +73,39 @@
     
 }
 
+-(void)playFinished:(NSNotification *)obj
+{
+    
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"status"]) {
+        switch (player.status) {
+            case AVPlayerStatusUnknown:
+            {
+                NSLog(@"未知转态");
+            }
+                break;
+            case AVPlayerStatusReadyToPlay:
+            {
+                NSLog(@"准备播放");
+            }
+                break;
+            case AVPlayerStatusFailed:
+            {
+                NSLog(@"加载失败");
+            }
+                break;
+                
+            default:
+                break;
+        }
+        
+    }
+}
+
+
 -(void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
     //第一次打开或者每次蓝牙状态改变都会调用这个函数
@@ -86,7 +126,19 @@
     if (self.blueToothOpen == NO) {
         
     }else{
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+        // (2)把音频文件转化成url格式
+        NSURL *url = [NSURL fileURLWithPath:path];
         
+        AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
+        player = [[AVPlayer alloc] initWithPlayerItem:item];
+        [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(playFinished:)
+                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+                                                   object:player.currentItem];
+        
+        [player play];
     }
 }
 
