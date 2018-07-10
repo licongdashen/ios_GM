@@ -8,8 +8,9 @@
 
 #import "NoBossSoundViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "NoBossSoundBeginViewController.h"
 
-@interface NoBossSoundViewController ()<CBCentralManagerDelegate,AVAudioPlayerDelegate>
+@interface NoBossSoundViewController ()<CBCentralManagerDelegate,AVAudioPlayerDelegate,UIAlertViewDelegate>
 {
     AVPlayer *player;
 }
@@ -71,11 +72,15 @@
     
     self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:nil];
     
+   
 }
 
 -(void)playFinished:(NSNotification *)obj
 {
-    
+    [player pause];
+    NoBossSoundBeginViewController *vc = [[NoBossSoundBeginViewController alloc]init];
+    vc.dic = self.dic;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
@@ -121,9 +126,35 @@
     }
 }
 
+//监听点击事件 代理方法
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *btnTitle = [alertView buttonTitleAtIndex:buttonIndex];
+    if ([btnTitle isEqualToString:@"确定"]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+        // (2)把音频文件转化成url格式
+        NSURL *url = [NSURL fileURLWithPath:path];
+        
+        AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
+        player = [[AVPlayer alloc] initWithPlayerItem:item];
+        [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(playFinished:)
+                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+                                                   object:player.currentItem];
+        [player play];
+
+    }else if ([btnTitle isEqualToString:@"去支付"] ) {
+
+    }
+}
+
 -(void)kaishi
 {
     if (self.blueToothOpen == NO) {
+        UIAlertView *WXinstall=[[UIAlertView alloc]initWithTitle:@"提示" message:@"请打开蓝牙连接车载设备"delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        WXinstall.delegate = self;
+        [WXinstall show];
         
     }else{
         NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
@@ -137,7 +168,6 @@
                                                  selector:@selector(playFinished:)
                                                      name:AVPlayerItemDidPlayToEndTimeNotification
                                                    object:player.currentItem];
-        
         [player play];
     }
 }
