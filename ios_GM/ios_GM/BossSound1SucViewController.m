@@ -1,19 +1,18 @@
 //
-//  BossSound2ViewController.m
+//  BossSound1SucViewController.m
 //  ios_GM
 //
 //  Created by Apple on 2018/7/10.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "BossSound2ViewController.h"
+#import "BossSound1SucViewController.h"
 
-@interface BossSound2ViewController ()
-
+@interface BossSound1SucViewController ()
 
 @end
 
-@implementation BossSound2ViewController
+@implementation BossSound1SucViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

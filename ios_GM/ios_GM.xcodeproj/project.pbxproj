@@ -20,6 +20,8 @@
 		181CB24020F49ED70095572F /* BossSound1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB23F20F49ED70095572F /* BossSound1ViewController.m */; };
 		181CB24320F49EE80095572F /* BossSound2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB24220F49EE80095572F /* BossSound2ViewController.m */; };
 		181CB24620F49EFF0095572F /* BossSound3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB24520F49EFF0095572F /* BossSound3ViewController.m */; };
+		181CB24920F4AEA70095572F /* BossSound1BeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB24820F4AEA70095572F /* BossSound1BeginViewController.m */; };
+		181CB24C20F4AECC0095572F /* BossSound1SucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB24B20F4AECC0095572F /* BossSound1SucViewController.m */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -89,6 +91,10 @@
 		181CB24220F49EE80095572F /* BossSound2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound2ViewController.m; sourceTree = "<group>"; };
 		181CB24420F49EFF0095572F /* BossSound3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSound3ViewController.h; sourceTree = "<group>"; };
 		181CB24520F49EFF0095572F /* BossSound3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound3ViewController.m; sourceTree = "<group>"; };
+		181CB24720F4AEA70095572F /* BossSound1BeginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSound1BeginViewController.h; sourceTree = "<group>"; };
+		181CB24820F4AEA70095572F /* BossSound1BeginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound1BeginViewController.m; sourceTree = "<group>"; };
+		181CB24A20F4AECC0095572F /* BossSound1SucViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSound1SucViewController.h; sourceTree = "<group>"; };
+		181CB24B20F4AECC0095572F /* BossSound1SucViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound1SucViewController.m; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -225,6 +231,10 @@
 				181CB23C20F488A10095572F /* BossSoundViewController.m */,
 				181CB23E20F49ED70095572F /* BossSound1ViewController.h */,
 				181CB23F20F49ED70095572F /* BossSound1ViewController.m */,
+				181CB24720F4AEA70095572F /* BossSound1BeginViewController.h */,
+				181CB24820F4AEA70095572F /* BossSound1BeginViewController.m */,
+				181CB24A20F4AECC0095572F /* BossSound1SucViewController.h */,
+				181CB24B20F4AECC0095572F /* BossSound1SucViewController.m */,
 				181CB24120F49EE80095572F /* BossSound2ViewController.h */,
 				181CB24220F49EE80095572F /* BossSound2ViewController.m */,
 				181CB24420F49EFF0095572F /* BossSound3ViewController.h */,
@@ -558,6 +568,7 @@
 				181CB23720F44A2E0095572F /* CACVersionUpdateKit.m in Sources */,
 				181CB23620F44A2E0095572F /* UserDefaultsTool.m in Sources */,
 				181CB22520EF4E0D0095572F /* NoBossSoundViewController.m in Sources */,
+				181CB24920F4AEA70095572F /* BossSound1BeginViewController.m in Sources */,
 				188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */,
 				182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */,
 				188D7B0920EA27E900F283CD /* CACUtility.m in Sources */,
@@ -570,6 +581,7 @@
 				181CB23D20F488A10095572F /* BossSoundViewController.m in Sources */,
 				182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */,
 				188D7B1320EA27E900F283CD /* RequestOperationManager.m in Sources */,
+				181CB24C20F4AECC0095572F /* BossSound1SucViewController.m in Sources */,
 				188D7B1120EA27E900F283CD /* RiskAppraisalViewController.m in Sources */,
 				188D7B0720EA27E900F283CD /* CACBaseNavigationController.m in Sources */,
 				181CB22E20F358DF0095572F /* NoBossSoundBeginViewController.m in Sources */,

@@ -88,6 +88,7 @@
     UILabel *carLb = [[UILabel alloc]initWithFrame:CGRectMake(carImagv.right, 0, 175, 25)];
     carLb.font = DEF_MyFont(14);
     carLb.textColor = DEF_APP_MAIN_TITLECOLOR;
+    carLb.text = DEF_MyAppDelegate.carDic[@"name"];
     [carView addSubview:carLb];
     self.carLb = carLb;
     

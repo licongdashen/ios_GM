@@ -1,5 +1,5 @@
 //
-//  BossSound1ViewController.h
+//  BossSound1SucViewController.h
 //  ios_GM
 //
 //  Created by Apple on 2018/7/10.
@@ -8,7 +8,6 @@
 
 #import "CACBaseViewController.h"
 
-@interface BossSound1ViewController : CACBaseViewController
-@property (nonatomic, strong) NSMutableDictionary *dic;
+@interface BossSound1SucViewController : CACBaseViewController
 
 @end

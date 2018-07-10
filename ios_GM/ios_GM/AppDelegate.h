@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) NSDictionary *loginDic;
 
+@property (nonatomic, strong) NSDictionary *carDic;
+
 
 - (void)loadingHomeController;
 

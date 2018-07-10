@@ -9,5 +9,6 @@
 #import "CACBaseViewController.h"
 
 @interface BossSound2ViewController : CACBaseViewController
+@property (nonatomic, strong) NSMutableDictionary *dic;
 
 @end

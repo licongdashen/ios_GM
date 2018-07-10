@@ -113,6 +113,8 @@
 {
     MainViewController *vc = [[MainViewController alloc]init];
     vc.dic = self.arr[indexPath.row];
+    
+    DEF_MyAppDelegate.carDic = self.arr[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
