@@ -13,6 +13,13 @@
 		181CB22B20F330490095572F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181CB22A20F330490095572F /* AVFoundation.framework */; };
 		181CB22E20F358DF0095572F /* NoBossSoundBeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB22D20F358DF0095572F /* NoBossSoundBeginViewController.m */; };
 		181CB23120F359B40095572F /* NoBossSoundSucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB23020F359B40095572F /* NoBossSoundSucViewController.m */; };
+		181CB23620F44A2E0095572F /* UserDefaultsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB23220F44A2E0095572F /* UserDefaultsTool.m */; };
+		181CB23720F44A2E0095572F /* CACVersionUpdateKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB23420F44A2E0095572F /* CACVersionUpdateKit.m */; };
+		181CB23A20F44B420095572F /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB23920F44B420095572F /* GuideViewController.m */; };
+		181CB23D20F488A10095572F /* BossSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB23C20F488A10095572F /* BossSoundViewController.m */; };
+		181CB24020F49ED70095572F /* BossSound1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB23F20F49ED70095572F /* BossSound1ViewController.m */; };
+		181CB24320F49EE80095572F /* BossSound2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB24220F49EE80095572F /* BossSound2ViewController.m */; };
+		181CB24620F49EFF0095572F /* BossSound3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB24520F49EFF0095572F /* BossSound3ViewController.m */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -68,6 +75,20 @@
 		181CB22D20F358DF0095572F /* NoBossSoundBeginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBossSoundBeginViewController.m; sourceTree = "<group>"; };
 		181CB22F20F359B40095572F /* NoBossSoundSucViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoBossSoundSucViewController.h; sourceTree = "<group>"; };
 		181CB23020F359B40095572F /* NoBossSoundSucViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoBossSoundSucViewController.m; sourceTree = "<group>"; };
+		181CB23220F44A2E0095572F /* UserDefaultsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsTool.m; sourceTree = "<group>"; };
+		181CB23320F44A2E0095572F /* UserDefaultsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsTool.h; sourceTree = "<group>"; };
+		181CB23420F44A2E0095572F /* CACVersionUpdateKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CACVersionUpdateKit.m; sourceTree = "<group>"; };
+		181CB23520F44A2E0095572F /* CACVersionUpdateKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CACVersionUpdateKit.h; sourceTree = "<group>"; };
+		181CB23820F44B420095572F /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		181CB23920F44B420095572F /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		181CB23B20F488A10095572F /* BossSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSoundViewController.h; sourceTree = "<group>"; };
+		181CB23C20F488A10095572F /* BossSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSoundViewController.m; sourceTree = "<group>"; };
+		181CB23E20F49ED70095572F /* BossSound1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSound1ViewController.h; sourceTree = "<group>"; };
+		181CB23F20F49ED70095572F /* BossSound1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound1ViewController.m; sourceTree = "<group>"; };
+		181CB24120F49EE80095572F /* BossSound2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSound2ViewController.h; sourceTree = "<group>"; };
+		181CB24220F49EE80095572F /* BossSound2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound2ViewController.m; sourceTree = "<group>"; };
+		181CB24420F49EFF0095572F /* BossSound3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSound3ViewController.h; sourceTree = "<group>"; };
+		181CB24520F49EFF0095572F /* BossSound3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound3ViewController.m; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -200,6 +221,14 @@
 				181CB22D20F358DF0095572F /* NoBossSoundBeginViewController.m */,
 				181CB22F20F359B40095572F /* NoBossSoundSucViewController.h */,
 				181CB23020F359B40095572F /* NoBossSoundSucViewController.m */,
+				181CB23B20F488A10095572F /* BossSoundViewController.h */,
+				181CB23C20F488A10095572F /* BossSoundViewController.m */,
+				181CB23E20F49ED70095572F /* BossSound1ViewController.h */,
+				181CB23F20F49ED70095572F /* BossSound1ViewController.m */,
+				181CB24120F49EE80095572F /* BossSound2ViewController.h */,
+				181CB24220F49EE80095572F /* BossSound2ViewController.m */,
+				181CB24420F49EFF0095572F /* BossSound3ViewController.h */,
+				181CB24520F49EFF0095572F /* BossSound3ViewController.m */,
 				188D7B1820EB66C300F283CD /* LoginViewController.h */,
 				188D7B1920EB66C300F283CD /* LoginViewController.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
@@ -276,6 +305,12 @@
 		188D7AE320EA27E900F283CD /* MD5 */ = {
 			isa = PBXGroup;
 			children = (
+				181CB23820F44B420095572F /* GuideViewController.h */,
+				181CB23920F44B420095572F /* GuideViewController.m */,
+				181CB23520F44A2E0095572F /* CACVersionUpdateKit.h */,
+				181CB23420F44A2E0095572F /* CACVersionUpdateKit.m */,
+				181CB23320F44A2E0095572F /* UserDefaultsTool.h */,
+				181CB23220F44A2E0095572F /* UserDefaultsTool.m */,
 				188D7AE420EA27E900F283CD /* NSString+MD5.h */,
 				188D7AE520EA27E900F283CD /* NSString+MD5.m */,
 			);
@@ -518,7 +553,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				188D7AB220EA116E00F283CD /* main.m in Sources */,
+				181CB24020F49ED70095572F /* BossSound1ViewController.m in Sources */,
 				188D7B1020EA27E900F283CD /* CACProgressHUD.m in Sources */,
+				181CB23720F44A2E0095572F /* CACVersionUpdateKit.m in Sources */,
+				181CB23620F44A2E0095572F /* UserDefaultsTool.m in Sources */,
 				181CB22520EF4E0D0095572F /* NoBossSoundViewController.m in Sources */,
 				188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */,
 				182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */,
@@ -529,6 +567,7 @@
 				188D7B0620EA27E900F283CD /* CACBaseViewController.m in Sources */,
 				188D7B1720EA2E3900F283CD /* HomeViewController.m in Sources */,
 				188D7B0E20EA27E900F283CD /* WebViewController.m in Sources */,
+				181CB23D20F488A10095572F /* BossSoundViewController.m in Sources */,
 				182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */,
 				188D7B1320EA27E900F283CD /* RequestOperationManager.m in Sources */,
 				188D7B1120EA27E900F283CD /* RiskAppraisalViewController.m in Sources */,
@@ -538,7 +577,10 @@
 				188D7B1A20EB66C300F283CD /* LoginViewController.m in Sources */,
 				181CB23120F359B40095572F /* NoBossSoundSucViewController.m in Sources */,
 				188D7B1220EA27E900F283CD /* UIImage+Color.m in Sources */,
+				181CB23A20F44B420095572F /* GuideViewController.m in Sources */,
 				188D7B0420EA27E900F283CD /* CACBaseViewModel.m in Sources */,
+				181CB24620F49EFF0095572F /* BossSound3ViewController.m in Sources */,
+				181CB24320F49EE80095572F /* BossSound2ViewController.m in Sources */,
 				188D7B0820EA27E900F283CD /* NSString+MD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

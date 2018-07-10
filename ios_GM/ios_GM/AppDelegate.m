@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
+#import "GuideViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,11 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    
+    [DEF_UserDefaults setObject:@"0" forKey:@"1111"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"2222"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"3333"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"4444"];
+
     self.loginDic = @{@"access_token"   : @"bb20320c9898263fee62a0ae3eb81208",
                       @"accountName"    : @"陈杰"
                       };
@@ -34,10 +39,18 @@
 
 -(void)loadingHomeController
 {
-    HomeViewController *tabBar = [[HomeViewController alloc]init];
-    CACBaseNavigationController *Nav = [[CACBaseNavigationController alloc]initWithRootViewController:tabBar];
-    self.window.rootViewController = Nav;
-    self.mainNav = Nav;
+    
+    if ([CACVersionUpdateKit existNewVersion]) {
+        // 跳转引导页
+        GuideViewController *guideVC = [[GuideViewController alloc] init];
+        self.window.rootViewController = guideVC;
+    } else {
+        
+        HomeViewController *tabBar = [[HomeViewController alloc]init];
+        CACBaseNavigationController *Nav = [[CACBaseNavigationController alloc]initWithRootViewController:tabBar];
+        self.window.rootViewController = Nav;
+        self.mainNav = Nav;
+    }
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {

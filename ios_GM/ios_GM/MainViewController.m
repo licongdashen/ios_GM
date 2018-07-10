@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "NoBossSoundViewController.h"
+#import "BossSoundViewController.h"
 
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -18,6 +19,8 @@
 
 @property (nonatomic, strong) NSArray *imagvArr;
 
+@property (nonatomic, weak) UILabel *typeLb11;
+
 @end
 
 @implementation MainViewController
@@ -25,6 +28,43 @@
 -(void)rightBtnClick
 {
     [super rightBtnClick];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+ 
+    [self setType];
+}
+
+-(void)setType
+{
+    if ([[DEF_UserDefaults objectForKey:@"1111"] isEqualToString:@"0"]) {
+        UILabel *arrowImagv = [self.view viewWithTag:2000];
+        arrowImagv.hidden = YES;
+    }else{
+        UILabel *arrowImagv = [self.view viewWithTag:2000];
+        arrowImagv.hidden = NO;
+    }
+    if ([[DEF_UserDefaults objectForKey:@"2222"] isEqualToString:@"0"]) {
+        UILabel *arrowImagv = [self.view viewWithTag:2001];
+        arrowImagv.hidden = YES;
+    }else{
+        UILabel *arrowImagv = [self.view viewWithTag:2001];
+        arrowImagv.hidden = NO;
+    }
+    if ([[DEF_UserDefaults objectForKey:@"3333"] isEqualToString:@"0"]) {
+        UILabel *arrowImagv = [self.view viewWithTag:2002];
+        arrowImagv.hidden = YES;
+    }else{
+        UILabel *arrowImagv = [self.view viewWithTag:2002];
+        arrowImagv.hidden = NO;
+    }
+    if ([[DEF_UserDefaults objectForKey:@"4444"] isEqualToString:@"0"]) {
+        self.typeLb11.hidden = YES;
+    }else{
+        self.typeLb11.hidden = NO;
+    }
 }
 
 - (void)viewDidLoad {
@@ -92,6 +132,10 @@
 
 -(void)change
 {
+    [DEF_UserDefaults setObject:@"0" forKey:@"1111"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"2222"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"3333"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"4444"];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -180,9 +224,17 @@
                 [tap.rac_gestureSignal subscribeNext:^(UIGestureRecognizer * x) {
                     NSLog(@"vvvvvv%ld",x.view.tag);
                     if (x.view.tag == 200) {
-                        NoBossSoundViewController *vc = [[NoBossSoundViewController alloc]init];
-                        vc.dic = self.dic;
-                        [self.navigationController pushViewController:vc animated:YES];
+                        
+                        if ([self.dic[@"voice_type"] intValue] == 0) {
+                            NoBossSoundViewController *vc = [[NoBossSoundViewController alloc]init];
+                            vc.dic = self.dic;
+                            [self.navigationController pushViewController:vc animated:YES];
+                        }else{
+                            BossSoundViewController *vc = [[BossSoundViewController alloc]init];
+                            vc.dic = self.dic;
+                            [self.navigationController pushViewController:vc animated:YES];
+                        }
+
                     }else if (x.view.tag == 201){
                         
                     }else if (x.view.tag == 202){
@@ -212,6 +264,18 @@
                 arrowImagv.contentMode = UIViewContentModeCenter;
                 [bakccc addSubview:arrowImagv];
                 
+                UILabel *typeLb = [[UILabel alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(340 - 48 - 20), (204/3 - 20)/2, 35 + 20, 20)];
+                typeLb.tag = 2000 + i;
+                typeLb.text = @"已体验";
+                typeLb.textColor = [UIColor whiteColor];
+                typeLb.backgroundColor = [UIColor grayColor];
+                typeLb.layer.cornerRadius = 10;
+                typeLb.layer.masksToBounds = YES;
+                typeLb.font = DEF_MyFont(12);
+                typeLb.hidden = YES;
+                typeLb.textAlignment = NSTextAlignmentCenter;
+                [bakccc addSubview:typeLb];
+
                 y += 204/3;
             }
             
@@ -252,9 +316,25 @@
             arrowImagv.image = DEF_IMAGE(@"右箭头");
             arrowImagv.contentMode = UIViewContentModeCenter;
             [bakccc addSubview:arrowImagv];
+            
+            UILabel *typeLb11 = [[UILabel alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(340 - 48 - 50), (204/3 - 20)/2, 35 + 50, 20)];
+            typeLb11.tag = 3000;
+            typeLb11.text = @"查看试驾报告";
+            typeLb11.textColor = [UIColor whiteColor];
+            typeLb11.backgroundColor = [UIColor grayColor];
+            typeLb11.layer.cornerRadius = 10;
+            typeLb11.hidden = YES;
+            typeLb11.font = DEF_MyFont(12);
+            typeLb11.layer.masksToBounds = YES;
+            typeLb11.textAlignment = NSTextAlignmentCenter;
+            [bakccc addSubview:typeLb11];
+            self.typeLb11 = typeLb11;
+            
         }
+        [self setType];
+
     }
-    
+
     return cell;
     
 }
