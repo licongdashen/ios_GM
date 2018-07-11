@@ -73,7 +73,7 @@
     [imagv addSubview:zhengqueImagv];
     zhengqueImagv.hidden = YES;
     self.zhengqueImagv = zhengqueImagv;
-    
+     
     UILabel *titeLb = [[UILabel alloc]initWithFrame:CGRectMake(0, imagv.bottom + DEF_RESIZE_UI(22), loginBtn.width, 15)];
     titeLb.text = @"翻滚的海浪";
     titeLb.textAlignment = NSTextAlignmentCenter;
