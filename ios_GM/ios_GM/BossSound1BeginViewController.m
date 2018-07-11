@@ -7,6 +7,7 @@
 //
 
 #import "BossSound1BeginViewController.h"
+#import "BossSound1SucViewController.h"
 
 @interface BossSound1BeginViewController ()<AVAudioPlayerDelegate>
 {
@@ -73,7 +74,7 @@
     [imagv addSubview:zhengqueImagv];
     zhengqueImagv.hidden = YES;
     self.zhengqueImagv = zhengqueImagv;
-     
+    
     UILabel *titeLb = [[UILabel alloc]initWithFrame:CGRectMake(0, imagv.bottom + DEF_RESIZE_UI(22), loginBtn.width, 15)];
     titeLb.text = @"翻滚的海浪";
     titeLb.textAlignment = NSTextAlignmentCenter;
@@ -151,6 +152,7 @@
 
     [self playav];
 }
+
 
 -(void)kaishi
 {
@@ -244,9 +246,8 @@
 {
     [player pause];
     
-//    NoBossSoundSucViewController *vc = [[NoBossSoundSucViewController alloc]init];
-//    vc.dic = self.dic;
-//    [self.navigationController pushViewController:vc animated:YES];
+    BossSound1SucViewController *vc = [[BossSound1SucViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
