@@ -29,6 +29,11 @@
 		181CB25820F5DB950095572F /* Hero.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB25720F5DB950095572F /* Hero.mp3 */; };
 		181CB25B20F5DD6F0095572F /* BossSound3BeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB25A20F5DD6F0095572F /* BossSound3BeginViewController.m */; };
 		181CB25E20F5DD7D0095572F /* BossSound3SucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB25D20F5DD7D0095572F /* BossSound3SucViewController.m */; };
+		181CB26120F6F1E20095572F /* AirConditionerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB26020F6F1E20095572F /* AirConditionerViewController.m */; };
+		181CB26420F724F10095572F /* AirConditionerBeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB26320F724F10095572F /* AirConditionerBeginViewController.m */; };
+		181CB26620F729260095572F /* douyin.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB26520F729260095572F /* douyin.mp4 */; };
+		181CB26920F732A00095572F /* DecibelMeterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB26820F732A00095572F /* DecibelMeterHelper.m */; };
+		181CB26C20F746A10095572F /* AirConditionerSucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB26B20F746A10095572F /* AirConditionerSucViewController.m */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -113,6 +118,15 @@
 		181CB25A20F5DD6F0095572F /* BossSound3BeginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound3BeginViewController.m; sourceTree = "<group>"; };
 		181CB25C20F5DD7D0095572F /* BossSound3SucViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSound3SucViewController.h; sourceTree = "<group>"; };
 		181CB25D20F5DD7D0095572F /* BossSound3SucViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound3SucViewController.m; sourceTree = "<group>"; };
+		181CB25F20F6F1E20095572F /* AirConditionerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirConditionerViewController.h; sourceTree = "<group>"; };
+		181CB26020F6F1E20095572F /* AirConditionerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirConditionerViewController.m; sourceTree = "<group>"; };
+		181CB26220F724F10095572F /* AirConditionerBeginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirConditionerBeginViewController.h; sourceTree = "<group>"; };
+		181CB26320F724F10095572F /* AirConditionerBeginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirConditionerBeginViewController.m; sourceTree = "<group>"; };
+		181CB26520F729260095572F /* douyin.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = douyin.mp4; sourceTree = "<group>"; };
+		181CB26720F732A00095572F /* DecibelMeterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecibelMeterHelper.h; sourceTree = "<group>"; };
+		181CB26820F732A00095572F /* DecibelMeterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecibelMeterHelper.m; sourceTree = "<group>"; };
+		181CB26A20F746A10095572F /* AirConditionerSucViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirConditionerSucViewController.h; sourceTree = "<group>"; };
+		181CB26B20F746A10095572F /* AirConditionerSucViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirConditionerSucViewController.m; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -265,9 +279,16 @@
 				181CB25A20F5DD6F0095572F /* BossSound3BeginViewController.m */,
 				181CB25C20F5DD7D0095572F /* BossSound3SucViewController.h */,
 				181CB25D20F5DD7D0095572F /* BossSound3SucViewController.m */,
+				181CB25F20F6F1E20095572F /* AirConditionerViewController.h */,
+				181CB26020F6F1E20095572F /* AirConditionerViewController.m */,
+				181CB26220F724F10095572F /* AirConditionerBeginViewController.h */,
+				181CB26320F724F10095572F /* AirConditionerBeginViewController.m */,
+				181CB26A20F746A10095572F /* AirConditionerSucViewController.h */,
+				181CB26B20F746A10095572F /* AirConditionerSucViewController.m */,
 				188D7B1820EB66C300F283CD /* LoginViewController.h */,
 				188D7B1920EB66C300F283CD /* LoginViewController.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
+				181CB26520F729260095572F /* douyin.mp4 */,
 				181CB25720F5DB950095572F /* Hero.mp3 */,
 				181CB25520F5DB8F0095572F /* Someone Like You.mp3 */,
 				181CB25320F5DB800095572F /* I Will Always Love You.mp3 */,
@@ -344,6 +365,8 @@
 		188D7AE320EA27E900F283CD /* MD5 */ = {
 			isa = PBXGroup;
 			children = (
+				181CB26720F732A00095572F /* DecibelMeterHelper.h */,
+				181CB26820F732A00095572F /* DecibelMeterHelper.m */,
 				181CB23820F44B420095572F /* GuideViewController.h */,
 				181CB23920F44B420095572F /* GuideViewController.m */,
 				181CB23520F44A2E0095572F /* CACVersionUpdateKit.h */,
@@ -509,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181CB25620F5DB8F0095572F /* Someone Like You.mp3 in Resources */,
+				181CB26620F729260095572F /* douyin.mp4 in Resources */,
 				188D7B0F20EA27E900F283CD /* README.mdown in Resources */,
 				181CB25420F5DB800095572F /* I Will Always Love You.mp3 in Resources */,
 				188D7B0D20EA27E900F283CD /* LICENSE in Resources */,
@@ -602,12 +626,15 @@
 				181CB25E20F5DD7D0095572F /* BossSound3SucViewController.m in Sources */,
 				181CB22520EF4E0D0095572F /* NoBossSoundViewController.m in Sources */,
 				181CB24920F4AEA70095572F /* BossSound1BeginViewController.m in Sources */,
+				181CB26C20F746A10095572F /* AirConditionerSucViewController.m in Sources */,
 				188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */,
 				182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */,
 				188D7B0920EA27E900F283CD /* CACUtility.m in Sources */,
 				188D7B0520EA27E900F283CD /* CACTabBarViewController.m in Sources */,
+				181CB26420F724F10095572F /* AirConditionerBeginViewController.m in Sources */,
 				188D7B0C20EA27E900F283CD /* MBProgressHUD.m in Sources */,
 				188D7B0A20EA27E900F283CD /* UIView+Positioning.m in Sources */,
+				181CB26920F732A00095572F /* DecibelMeterHelper.m in Sources */,
 				188D7B0620EA27E900F283CD /* CACBaseViewController.m in Sources */,
 				188D7B1720EA2E3900F283CD /* HomeViewController.m in Sources */,
 				188D7B0E20EA27E900F283CD /* WebViewController.m in Sources */,
@@ -625,6 +652,7 @@
 				181CB24F20F5AC3B0095572F /* BossSound2BeginViewController.m in Sources */,
 				188D7B1220EA27E900F283CD /* UIImage+Color.m in Sources */,
 				181CB25B20F5DD6F0095572F /* BossSound3BeginViewController.m in Sources */,
+				181CB26120F6F1E20095572F /* AirConditionerViewController.m in Sources */,
 				181CB23A20F44B420095572F /* GuideViewController.m in Sources */,
 				188D7B0420EA27E900F283CD /* CACBaseViewModel.m in Sources */,
 				181CB24620F49EFF0095572F /* BossSound3ViewController.m in Sources */,

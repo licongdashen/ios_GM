@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "NoBossSoundViewController.h"
 #import "BossSoundViewController.h"
+#import "AirConditionerViewController.h"
 
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -247,7 +248,8 @@
                         }
 
                     }else if (x.view.tag == 201){
-                        
+                        AirConditionerViewController *vc = [[AirConditionerViewController alloc]init];
+                        [self.navigationController pushViewController:vc animated:YES];
                     }else if (x.view.tag == 202){
                         
                     }

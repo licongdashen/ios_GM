@@ -1,21 +1,22 @@
 //
-//  BossSound2SucViewController.m
+//  AirConditionerViewController.m
 //  ios_GM
 //
-//  Created by Apple on 2018/7/11.
+//  Created by Apple on 2018/7/12.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "BossSound2SucViewController.h"
-#import "MainViewController.h"
+#import "AirConditionerViewController.h"
+#import "AirConditionerBeginViewController.h"
 
-@interface BossSound2SucViewController ()<AVAudioPlayerDelegate>
+@interface AirConditionerViewController ()<AVAudioPlayerDelegate>
 {
     AVPlayer *player;
 }
+
 @end
 
-@implementation BossSound2SucViewController
+@implementation AirConditionerViewController
 
 -(void)dealloc
 {
@@ -24,43 +25,41 @@
     
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titleLb.text = @"环绕音效体验";
+    self.titleLb.text = @"空调体验";
     self.carView.hidden = NO;
     
-    UIImageView *imagv = [[UIImageView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(27), DEF_NAVIGATIONBAR_HEIGHT + DEF_RESIZE_UI(63), DEF_DEVICE_WIDTH - DEF_RESIZE_UI(27*2), DEF_RESIZE_UI(348))];
-    imagv.image = DEF_IMAGE(@"非bose");
-    imagv.layer.cornerRadius = 5;
-    imagv.contentMode = UIViewContentModeScaleAspectFit;
-    [self.view addSubview:imagv];
+    UIImageView *centerImagv = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.carView.bottom + DEF_RESIZE_UI(54), DEF_RESIZE_UI(282), DEF_RESIZE_UI(282))];
+    centerImagv.image = DEF_IMAGE(@"空调");
+    centerImagv.contentMode = UIViewContentModeScaleAspectFit;
+    centerImagv.centerX = self.view.centerX;
+    [self.view addSubview:centerImagv];
     
-    UIImageView *cardImagv = [[UIImageView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(117), DEF_RESIZE_UI(118), DEF_RESIZE_UI(90), DEF_RESIZE_UI(40))];
-    cardImagv.image = DEF_IMAGE(@"汽车");
-    cardImagv.contentMode = UIViewContentModeCenter;
-    [imagv addSubview:cardImagv];
+    UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, centerImagv.bottom + DEF_RESIZE_UI(42), DEF_DEVICE_WIDTH, 17 + 25)];
+    titleLb.font = DEF_MyFont(16);
+    titleLb.text = @"开启空调\n并把手机靠近空调出风口";
+    titleLb.textAlignment = NSTextAlignmentCenter;
+    titleLb.numberOfLines = 2;
+    titleLb.textColor = DEF_UICOLORFROMRGB(0x848484);
+    [self.view addSubview:titleLb];
     
-    UILabel *contentLb = [[UILabel alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(70.5), cardImagv.bottom + DEF_RESIZE_UI(12), DEF_RESIZE_UI(190), DEF_RESIZE_UI(84))];
-    contentLb.textAlignment = NSTextAlignmentCenter;
-    contentLb.textColor = [UIColor whiteColor];
-    contentLb.numberOfLines = 3;
-    contentLb.font = DEF_MyBoldFont(DEF_RESIZE_UI(18));
-    contentLb.text = @"BOSE音响\n音乐表现饱满细节清晰\n带给您如临现场的保真音质";
-    [imagv addSubview:contentLb];
-    
-    UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), imagv.bottom + DEF_RESIZE_UI(52), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
-    [loginBtn setTitle:@"体验其他项目" forState:0];
+    UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), titleLb.bottom + DEF_RESIZE_UI(16), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
+    [loginBtn setTitle:@"开始体验" forState:0];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:0];
     loginBtn.titleLabel.font = DEF_MyFont(22);
-    loginBtn.layer.cornerRadius = DEF_RESIZE_UI(48)/2;
+    loginBtn.layer.cornerRadius = 8;
     loginBtn.layer.masksToBounds = YES;
-    [loginBtn addTarget:self action:@selector(jieshu) forControlEvents:UIControlEventTouchUpInside];
+    [loginBtn addTarget:self action:@selector(kaishi) forControlEvents:UIControlEventTouchUpInside];
     loginBtn.centerX = self.view.centerX;
     loginBtn.backgroundColor = DEF_UICOLORFROMRGB(0xffbf17);
     [self.view addSubview:loginBtn];
     
     [self playav];
+
 }
+
 
 -(void)playav
 {
@@ -78,10 +77,11 @@
     [player play];
 }
 
+
 -(void)playFinished:(NSNotification *)obj
 {
     [player pause];
-    
+
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
@@ -111,20 +111,14 @@
     }
 }
 
-
--(void)jieshu
+-(void)kaishi
 {
-    [DEF_UserDefaults setObject:@"1" forKey:@"1111"];
-    
-    for (UIViewController *vc in self.navigationController.viewControllers) {
-        if ([vc isKindOfClass:[MainViewController class]]) {
-            [player pause];
-            [self.navigationController popToViewController:vc animated:YES];
-            return;
-        }
-    }
-}
+    [player pause];
+    AirConditionerBeginViewController *vc = [[AirConditionerBeginViewController alloc]init];
 
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

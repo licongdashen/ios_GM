@@ -1,21 +1,21 @@
 //
-//  BossSound2SucViewController.m
+//  AirConditionerSucViewController.m
 //  ios_GM
 //
-//  Created by Apple on 2018/7/11.
+//  Created by Apple on 2018/7/12.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "BossSound2SucViewController.h"
+#import "AirConditionerSucViewController.h"
 #import "MainViewController.h"
 
-@interface BossSound2SucViewController ()<AVAudioPlayerDelegate>
+@interface AirConditionerSucViewController ()<AVAudioPlayerDelegate>
 {
     AVPlayer *player;
 }
 @end
 
-@implementation BossSound2SucViewController
+@implementation AirConditionerSucViewController
 
 -(void)dealloc
 {
@@ -26,11 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titleLb.text = @"环绕音效体验";
+    self.titleLb.text = @"空调体验";
     self.carView.hidden = NO;
     
     UIImageView *imagv = [[UIImageView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(27), DEF_NAVIGATIONBAR_HEIGHT + DEF_RESIZE_UI(63), DEF_DEVICE_WIDTH - DEF_RESIZE_UI(27*2), DEF_RESIZE_UI(348))];
-    imagv.image = DEF_IMAGE(@"非bose");
     imagv.layer.cornerRadius = 5;
     imagv.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:imagv];
@@ -40,12 +39,11 @@
     cardImagv.contentMode = UIViewContentModeCenter;
     [imagv addSubview:cardImagv];
     
-    UILabel *contentLb = [[UILabel alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(70.5), cardImagv.bottom + DEF_RESIZE_UI(12), DEF_RESIZE_UI(190), DEF_RESIZE_UI(84))];
+    UILabel *contentLb = [[UILabel alloc]initWithFrame:CGRectMake(20, cardImagv.bottom + DEF_RESIZE_UI(12), imagv.width - 40, DEF_RESIZE_UI(100))];
     contentLb.textAlignment = NSTextAlignmentCenter;
     contentLb.textColor = [UIColor whiteColor];
-    contentLb.numberOfLines = 3;
+    contentLb.numberOfLines = 4;
     contentLb.font = DEF_MyBoldFont(DEF_RESIZE_UI(18));
-    contentLb.text = @"BOSE音响\n音乐表现饱满细节清晰\n带给您如临现场的保真音质";
     [imagv addSubview:contentLb];
     
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), imagv.bottom + DEF_RESIZE_UI(52), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
@@ -59,12 +57,51 @@
     loginBtn.backgroundColor = DEF_UICOLORFROMRGB(0xffbf17);
     [self.view addSubview:loginBtn];
     
-    [self playav];
+    if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝XL"]) {
+        [self playav:@"8270"];
+        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热；同时为了您的呼吸健康，我们配备了PM2.5过滤系统";
+        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"探界者"]){
+        [self playav:@"8270"];
+        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热；同时为了您的呼吸健康，我们配备了PM2.5过滤系统";
+        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝"]){
+        [self playav:@"8270"];
+        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热";
+        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹"]){
+        [self playav:@"8270"];
+        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热";
+        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹两厢"]){
+        [self playav:@"8270"];
+        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热";
+        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科沃兹"]){
+        [self playav:@"8270"];
+        contentLb.text = @"强劲的空调系统，快速制冷热，体贴您的冷暖；为了让您呼吸更健康的空气，我们配备了PM2.5过滤系统。";
+        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"创酷"]){
+        [self playav:@"8270"];
+        contentLb.text = @"我有多快，营造冷暖空间的速度就有多快";
+        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+
+    }else{
+        [self playav:@"8270"];
+        contentLb.text = @"我有多快，营造冷暖空间的速度就有多快";
+        imagv.image = DEF_IMAGE(@"汽车");
+    }
 }
 
--(void)playav
+-(void)playav:(NSString *)str
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:str ofType:@"mp3"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     
@@ -114,7 +151,7 @@
 
 -(void)jieshu
 {
-    [DEF_UserDefaults setObject:@"1" forKey:@"1111"];
+    [DEF_UserDefaults setObject:@"1" forKey:@"2222"];
     
     for (UIViewController *vc in self.navigationController.viewControllers) {
         if ([vc isKindOfClass:[MainViewController class]]) {
