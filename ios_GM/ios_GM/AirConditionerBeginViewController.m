@@ -44,7 +44,7 @@
     self.titleLb.text = @"空调体验";
     self.carView.hidden = NO;
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"douyin" ofType:@"mp4"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"蒲公英" ofType:@"mp4"];
     NSURL *url = [NSURL fileURLWithPath:path];
     self.item = [AVPlayerItem playerItemWithURL:url];
     self.myPlayer = [AVPlayer playerWithPlayerItem:self.item];

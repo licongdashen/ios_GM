@@ -34,6 +34,10 @@
 		181CB26620F729260095572F /* douyin.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB26520F729260095572F /* douyin.mp4 */; };
 		181CB26920F732A00095572F /* DecibelMeterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB26820F732A00095572F /* DecibelMeterHelper.m */; };
 		181CB26C20F746A10095572F /* AirConditionerSucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB26B20F746A10095572F /* AirConditionerSucViewController.m */; };
+		181CB26F20F75A690095572F /* DenoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB26E20F75A690095572F /* DenoiseViewController.m */; };
+		181CB27220F75A840095572F /* DenoiseBeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB27120F75A840095572F /* DenoiseBeginViewController.m */; };
+		181CB27520F75A910095572F /* DenoiseSucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB27420F75A910095572F /* DenoiseSucViewController.m */; };
+		181CB27720F830160095572F /* 蒲公英.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB27620F830160095572F /* 蒲公英.mp4 */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -127,6 +131,13 @@
 		181CB26820F732A00095572F /* DecibelMeterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecibelMeterHelper.m; sourceTree = "<group>"; };
 		181CB26A20F746A10095572F /* AirConditionerSucViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirConditionerSucViewController.h; sourceTree = "<group>"; };
 		181CB26B20F746A10095572F /* AirConditionerSucViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirConditionerSucViewController.m; sourceTree = "<group>"; };
+		181CB26D20F75A690095572F /* DenoiseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenoiseViewController.h; sourceTree = "<group>"; };
+		181CB26E20F75A690095572F /* DenoiseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DenoiseViewController.m; sourceTree = "<group>"; };
+		181CB27020F75A840095572F /* DenoiseBeginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenoiseBeginViewController.h; sourceTree = "<group>"; };
+		181CB27120F75A840095572F /* DenoiseBeginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DenoiseBeginViewController.m; sourceTree = "<group>"; };
+		181CB27320F75A910095572F /* DenoiseSucViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenoiseSucViewController.h; sourceTree = "<group>"; };
+		181CB27420F75A910095572F /* DenoiseSucViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DenoiseSucViewController.m; sourceTree = "<group>"; };
+		181CB27620F830160095572F /* 蒲公英.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "蒲公英.mp4"; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -285,9 +296,16 @@
 				181CB26320F724F10095572F /* AirConditionerBeginViewController.m */,
 				181CB26A20F746A10095572F /* AirConditionerSucViewController.h */,
 				181CB26B20F746A10095572F /* AirConditionerSucViewController.m */,
+				181CB26D20F75A690095572F /* DenoiseViewController.h */,
+				181CB26E20F75A690095572F /* DenoiseViewController.m */,
+				181CB27020F75A840095572F /* DenoiseBeginViewController.h */,
+				181CB27120F75A840095572F /* DenoiseBeginViewController.m */,
+				181CB27320F75A910095572F /* DenoiseSucViewController.h */,
+				181CB27420F75A910095572F /* DenoiseSucViewController.m */,
 				188D7B1820EB66C300F283CD /* LoginViewController.h */,
 				188D7B1920EB66C300F283CD /* LoginViewController.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
+				181CB27620F830160095572F /* 蒲公英.mp4 */,
 				181CB26520F729260095572F /* douyin.mp4 */,
 				181CB25720F5DB950095572F /* Hero.mp3 */,
 				181CB25520F5DB8F0095572F /* Someone Like You.mp3 */,
@@ -537,6 +555,7 @@
 				181CB25420F5DB800095572F /* I Will Always Love You.mp3 in Resources */,
 				188D7B0D20EA27E900F283CD /* LICENSE in Resources */,
 				188D7AAC20EA116E00F283CD /* Assets.xcassets in Resources */,
+				181CB27720F830160095572F /* 蒲公英.mp4 in Resources */,
 				181CB22920F306430095572F /* 8270.mp3 in Resources */,
 				181CB25820F5DB950095572F /* Hero.mp3 in Resources */,
 			);
@@ -645,10 +664,13 @@
 				181CB24C20F4AECC0095572F /* BossSound1SucViewController.m in Sources */,
 				188D7B1120EA27E900F283CD /* RiskAppraisalViewController.m in Sources */,
 				188D7B0720EA27E900F283CD /* CACBaseNavigationController.m in Sources */,
+				181CB26F20F75A690095572F /* DenoiseViewController.m in Sources */,
 				181CB22E20F358DF0095572F /* NoBossSoundBeginViewController.m in Sources */,
 				188D7B0B20EA27E900F283CD /* WebJSBridgeKit.m in Sources */,
 				188D7B1A20EB66C300F283CD /* LoginViewController.m in Sources */,
 				181CB23120F359B40095572F /* NoBossSoundSucViewController.m in Sources */,
+				181CB27220F75A840095572F /* DenoiseBeginViewController.m in Sources */,
+				181CB27520F75A910095572F /* DenoiseSucViewController.m in Sources */,
 				181CB24F20F5AC3B0095572F /* BossSound2BeginViewController.m in Sources */,
 				188D7B1220EA27E900F283CD /* UIImage+Color.m in Sources */,
 				181CB25B20F5DD6F0095572F /* BossSound3BeginViewController.m in Sources */,

@@ -10,6 +10,7 @@
 #import "NoBossSoundViewController.h"
 #import "BossSoundViewController.h"
 #import "AirConditionerViewController.h"
+#import "DenoiseViewController.h"
 
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -251,7 +252,8 @@
                         AirConditionerViewController *vc = [[AirConditionerViewController alloc]init];
                         [self.navigationController pushViewController:vc animated:YES];
                     }else if (x.view.tag == 202){
-                        
+                        DenoiseViewController *vc = [[DenoiseViewController alloc]init];
+                        [self.navigationController pushViewController:vc animated:YES];
                     }
                 }];
                 [bakccc addGestureRecognizer:tap];
