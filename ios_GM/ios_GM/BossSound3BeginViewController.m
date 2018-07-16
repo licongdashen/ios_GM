@@ -16,6 +16,8 @@
 @property (nonatomic, strong) NSArray *imagvArr;
 @property (nonatomic, strong) NSArray *titleArr;
 @property (nonatomic, strong) NSArray *musicArr;
+@property (nonatomic, strong) NSMutableArray *musicArr1;
+
 @property (nonatomic, weak) UILabel *titleLb1;
 @property (nonatomic, weak) UIImageView *musicImagv;
 @property int count;
@@ -45,7 +47,10 @@
     self.imagvArr = @[@"玛丽莲凯丽",@"阿黛尔",@"惠妮休斯顿"];
     self.titleArr = @[@"Hero",@"Someone Like You",@"I Will Always Love You"];
     self.musicArr = @[@"Mariah+Carey+-+Hero",@"Adele（阿黛尔）+-+Someone+Like+You",@"I Will Always Love You"];
-
+    self.musicArr1 = [[NSMutableArray alloc]init];
+    for (int i = 0; i < 201; i ++) {
+        [self.musicArr1 addObject:DEF_IMAGE([NSString stringWithFormat:@"合成 1_00%d"])];
+    }
     self.titleLb.text = @"高低音效体验";
     self.carView.hidden = NO;
     
@@ -110,6 +115,12 @@
     [backView2 addSubview:musicImagv];
     self.musicImagv = musicImagv;
 
+    UIImageView *musicImagv1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, titleLb1.bottom + DEF_RESIZE_UI(10), DEF_RESIZE_UI(270), DEF_RESIZE_UI(270))];
+    musicImagv1.centerX = self.view.centerX;
+    musicImagv1.contentMode = UIViewContentModeCenter;
+//    musicImagv1.animationImages =
+    [backView2 addSubview:musicImagv1]
+    
     UIButton *nexBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(74), musicImagv.bottom + DEF_RESIZE_UI(24), 16, 16)];
     [nexBtn setImage:DEF_IMAGE(@"切歌") forState:0];
     [nexBtn addTarget:self action:@selector(next) forControlEvents:UIControlEventTouchUpInside];
