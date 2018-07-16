@@ -8,6 +8,7 @@
 
 #import "SuspendSucViewController.h"
 #import "MainViewController.h"
+#import "ReportViewController.h"
 
 @interface SuspendSucViewController ()<AVAudioPlayerDelegate>
 {
@@ -49,7 +50,7 @@
     [imagv addSubview:contentLb];
     
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), imagv.bottom + DEF_RESIZE_UI(52), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
-    [loginBtn setTitle:@"体验其他项目" forState:0];
+    [loginBtn setTitle:@"查看试驾报告" forState:0];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:0];
     loginBtn.titleLabel.font = DEF_MyFont(22);
     loginBtn.layer.cornerRadius = DEF_RESIZE_UI(48)/2;
@@ -158,15 +159,12 @@
 
 -(void)jieshu
 {
-    [DEF_UserDefaults setObject:@"1" forKey:@"3333"];
+    [DEF_UserDefaults setObject:@"1" forKey:@"4444"];
+    [player pause];
+
+    ReportViewController *vc = [[ReportViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
     
-    for (UIViewController *vc in self.navigationController.viewControllers) {
-        if ([vc isKindOfClass:[MainViewController class]]) {
-            [player pause];
-            [self.navigationController popToViewController:vc animated:YES];
-            return;
-        }
-    }
 }
 
 - (void)didReceiveMemoryWarning {

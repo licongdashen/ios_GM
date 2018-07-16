@@ -12,6 +12,7 @@
 #import "AirConditionerViewController.h"
 #import "DenoiseViewController.h"
 #import "SuspendViewController.h"
+#import "ReportViewController.h"
 
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -314,8 +315,14 @@
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]init];
             [tap.rac_gestureSignal subscribeNext:^(UIGestureRecognizer * x) {
                 NSLog(@"vvvvvv%ld",x.view.tag);
-                SuspendViewController *vc = [[SuspendViewController alloc]init];
-                [self.navigationController pushViewController:vc animated:YES];
+                
+                if ([[DEF_UserDefaults objectForKey:@"4444"] isEqualToString:@"0"]) {
+                    SuspendViewController *vc = [[SuspendViewController alloc]init];
+                    [self.navigationController pushViewController:vc animated:YES];
+                }else{
+                    ReportViewController *vc = [[ReportViewController alloc]init];
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
 
             }];
             [bakccc addGestureRecognizer:tap];
