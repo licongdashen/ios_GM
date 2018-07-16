@@ -49,7 +49,8 @@
     self.musicArr = @[@"Mariah+Carey+-+Hero",@"Adele（阿黛尔）+-+Someone+Like+You",@"I Will Always Love You"];
     self.musicArr1 = [[NSMutableArray alloc]init];
     for (int i = 0; i < 201; i ++) {
-        [self.musicArr1 addObject:DEF_IMAGE([NSString stringWithFormat:@"合成 1_00%d"])];
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",i]];
+        [self.musicArr1 addObject:image];
     }
     self.titleLb.text = @"高低音效体验";
     self.carView.hidden = NO;
@@ -115,12 +116,13 @@
     [backView2 addSubview:musicImagv];
     self.musicImagv = musicImagv;
 
-    UIImageView *musicImagv1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, titleLb1.bottom + DEF_RESIZE_UI(10), DEF_RESIZE_UI(270), DEF_RESIZE_UI(270))];
+    UIImageView *musicImagv1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, titleLb1.bottom + DEF_RESIZE_UI(60), DEF_RESIZE_UI(270), DEF_RESIZE_UI(270))];
     musicImagv1.centerX = self.view.centerX;
-    musicImagv1.contentMode = UIViewContentModeCenter;
-//    musicImagv1.animationImages =
-    [backView2 addSubview:musicImagv1]
-    
+    musicImagv1.contentMode = UIViewContentModeScaleAspectFill;
+    musicImagv1.animationImages = self.musicArr1;
+    [backView2 addSubview:musicImagv1];
+    [musicImagv1 startAnimating];
+
     UIButton *nexBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(74), musicImagv.bottom + DEF_RESIZE_UI(24), 16, 16)];
     [nexBtn setImage:DEF_IMAGE(@"切歌") forState:0];
     [nexBtn addTarget:self action:@selector(next) forControlEvents:UIControlEventTouchUpInside];
