@@ -11,6 +11,7 @@
 #import "BossSoundViewController.h"
 #import "AirConditionerViewController.h"
 #import "DenoiseViewController.h"
+#import "SuspendViewController.h"
 
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -313,7 +314,9 @@
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]init];
             [tap.rac_gestureSignal subscribeNext:^(UIGestureRecognizer * x) {
                 NSLog(@"vvvvvv%ld",x.view.tag);
-                
+                SuspendViewController *vc = [[SuspendViewController alloc]init];
+                [self.navigationController pushViewController:vc animated:YES];
+
             }];
             [bakccc addGestureRecognizer:tap];
             

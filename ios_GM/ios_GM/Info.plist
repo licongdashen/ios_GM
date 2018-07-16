@@ -56,5 +56,7 @@
 	</array>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>开启录音</string>
+	<key>NSMotionUsageDescription</key>
+	<string>获取三轴陀螺仪</string>
 </dict>
 </plist>
