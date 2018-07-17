@@ -24,11 +24,14 @@
      [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     
     [DEF_UserDefaults setObject:@"0" forKey:@"1111"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"1112"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"1113"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"1114"];
     [DEF_UserDefaults setObject:@"0" forKey:@"2222"];
     [DEF_UserDefaults setObject:@"0" forKey:@"3333"];
     [DEF_UserDefaults setObject:@"0" forKey:@"4444"];
 
-    self.loginDic = @{@"access_token"   : @"bb20320c9898263fee62a0ae3eb81208",
+    self.loginDic = @{@"access_token"   : @"47b167f3e46b544e5d7e7eaa25331956",
                       @"accountName"    : @"陈杰"
                       };
     
@@ -84,7 +87,6 @@
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options{
     
-
     
     NSString *str = [url query];
     NSString *aaa = [self decodeString:str];
@@ -97,7 +99,27 @@
                                                           error:&err];
     self.loginDic = dic;
     NSLog(@"loginDic:%@",dic);
+    
+    NSDictionary *dic1 = @{
+                          @"access_token" :self.loginDic[@"access_token"],
+                          @"accountCode"         :self.loginDic[@"accountCode"],
+                          @"accountName"       :self.loginDic[@"accountName"],
+                          @"mobile"           :self.loginDic[@"mobile"],
+                          @"positionName"     :self.loginDic[@"positionName"],
+                          };
+    [RequestOperationManager getValidImgParametersDic:dic1 success:^(NSMutableDictionary *result) {
 
+        if (result == nil) {
+            return;
+        }
+        if ([result[@"code"] intValue] != 1) {
+            return;
+        }
+
+    } failture:^(id result) {
+        
+    }];
+    
     [self loadingHomeController];
     
     return YES;

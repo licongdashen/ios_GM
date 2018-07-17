@@ -24,9 +24,6 @@
 		181CB24C20F4AECC0095572F /* BossSound1SucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB24B20F4AECC0095572F /* BossSound1SucViewController.m */; };
 		181CB24F20F5AC3B0095572F /* BossSound2BeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB24E20F5AC3B0095572F /* BossSound2BeginViewController.m */; };
 		181CB25220F5AC4A0095572F /* BossSound2SucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB25120F5AC490095572F /* BossSound2SucViewController.m */; };
-		181CB25420F5DB800095572F /* I Will Always Love You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB25320F5DB800095572F /* I Will Always Love You.mp3 */; };
-		181CB25620F5DB8F0095572F /* Someone Like You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB25520F5DB8F0095572F /* Someone Like You.mp3 */; };
-		181CB25820F5DB950095572F /* Hero.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB25720F5DB950095572F /* Hero.mp3 */; };
 		181CB25B20F5DD6F0095572F /* BossSound3BeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB25A20F5DD6F0095572F /* BossSound3BeginViewController.m */; };
 		181CB25E20F5DD7D0095572F /* BossSound3SucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB25D20F5DD7D0095572F /* BossSound3SucViewController.m */; };
 		181CB26120F6F1E20095572F /* AirConditionerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB26020F6F1E20095572F /* AirConditionerViewController.m */; };
@@ -44,6 +41,9 @@
 		181CB28220FC4B680095572F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181CB28120FC4B680095572F /* CoreMotion.framework */; };
 		181CB28520FC9CCB0095572F /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB28420FC9CCB0095572F /* ReportViewController.m */; };
 		181CB28720FC9F4F0095572F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181CB28620FC9F4F0095572F /* CoreImage.framework */; };
+		181CB28B20FD9ADF0095572F /* Evil Force.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB28820FD9ADE0095572F /* Evil Force.MP3 */; };
+		181CB28C20FD9ADF0095572F /* Clair de Lune.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB28920FD9ADE0095572F /* Clair de Lune.MP3 */; };
+		181CB28D20FD9ADF0095572F /* The Nutcracker Basses.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB28A20FD9ADE0095572F /* The Nutcracker Basses.MP3 */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -121,9 +121,6 @@
 		181CB24E20F5AC3B0095572F /* BossSound2BeginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound2BeginViewController.m; sourceTree = "<group>"; };
 		181CB25020F5AC490095572F /* BossSound2SucViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSound2SucViewController.h; sourceTree = "<group>"; };
 		181CB25120F5AC490095572F /* BossSound2SucViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound2SucViewController.m; sourceTree = "<group>"; };
-		181CB25320F5DB800095572F /* I Will Always Love You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "I Will Always Love You.mp3"; sourceTree = "<group>"; };
-		181CB25520F5DB8F0095572F /* Someone Like You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Someone Like You.mp3"; sourceTree = "<group>"; };
-		181CB25720F5DB950095572F /* Hero.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hero.mp3; sourceTree = "<group>"; };
 		181CB25920F5DD6F0095572F /* BossSound3BeginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSound3BeginViewController.h; sourceTree = "<group>"; };
 		181CB25A20F5DD6F0095572F /* BossSound3BeginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BossSound3BeginViewController.m; sourceTree = "<group>"; };
 		181CB25C20F5DD7D0095572F /* BossSound3SucViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BossSound3SucViewController.h; sourceTree = "<group>"; };
@@ -154,6 +151,9 @@
 		181CB28320FC9CCB0095572F /* ReportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportViewController.h; sourceTree = "<group>"; };
 		181CB28420FC9CCB0095572F /* ReportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
 		181CB28620FC9F4F0095572F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		181CB28820FD9ADE0095572F /* Evil Force.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Evil Force.MP3"; sourceTree = "<group>"; };
+		181CB28920FD9ADE0095572F /* Clair de Lune.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Clair de Lune.MP3"; sourceTree = "<group>"; };
+		181CB28A20FD9ADE0095572F /* The Nutcracker Basses.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Nutcracker Basses.MP3"; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -333,9 +333,9 @@
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
 				181CB27620F830160095572F /* 蒲公英.mp4 */,
 				181CB26520F729260095572F /* douyin.mp4 */,
-				181CB25720F5DB950095572F /* Hero.mp3 */,
-				181CB25520F5DB8F0095572F /* Someone Like You.mp3 */,
-				181CB25320F5DB800095572F /* I Will Always Love You.mp3 */,
+				181CB28920FD9ADE0095572F /* Clair de Lune.MP3 */,
+				181CB28820FD9ADE0095572F /* Evil Force.MP3 */,
+				181CB28A20FD9ADE0095572F /* The Nutcracker Basses.MP3 */,
 				181CB22820F306430095572F /* 8270.mp3 */,
 				188D7AB020EA116E00F283CD /* Info.plist */,
 				188D7AB120EA116E00F283CD /* main.m */,
@@ -577,15 +577,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181CB25620F5DB8F0095572F /* Someone Like You.mp3 in Resources */,
 				181CB26620F729260095572F /* douyin.mp4 in Resources */,
 				188D7B0F20EA27E900F283CD /* README.mdown in Resources */,
-				181CB25420F5DB800095572F /* I Will Always Love You.mp3 in Resources */,
+				181CB28D20FD9ADF0095572F /* The Nutcracker Basses.MP3 in Resources */,
+				181CB28C20FD9ADF0095572F /* Clair de Lune.MP3 in Resources */,
 				188D7B0D20EA27E900F283CD /* LICENSE in Resources */,
 				188D7AAC20EA116E00F283CD /* Assets.xcassets in Resources */,
 				181CB27720F830160095572F /* 蒲公英.mp4 in Resources */,
 				181CB22920F306430095572F /* 8270.mp3 in Resources */,
-				181CB25820F5DB950095572F /* Hero.mp3 in Resources */,
+				181CB28B20FD9ADF0095572F /* Evil Force.MP3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,8 +57,37 @@
     loginBtn.backgroundColor = DEF_UICOLORFROMRGB(0xffbf17);
     [self.view addSubview:loginBtn];
     
+    [self planRefresh];
 }
 
+-(void)planRefresh
+{
+    
+    NSDictionary *dic = @{
+                          @"access-token" :DEF_MyAppDelegate.loginDic[@"access_token"],
+                          @"body"         :@{@"acar_id"      :DEF_MyAppDelegate.carDic[@"id"],
+                            @"item_2"       :[DEF_UserDefaults objectForKey:@"4444"],
+                            @"item_11"      :[DEF_UserDefaults objectForKey:@"1111"],
+                            @"item_12"      :[DEF_UserDefaults objectForKey:@"1112"],
+                            @"item_13"      :[DEF_UserDefaults objectForKey:@"1113"],
+                            @"item_14"      :[DEF_UserDefaults objectForKey:@"1114"],
+                            @"item_15"      :[DEF_UserDefaults objectForKey:@"2222"],
+                            @"item_16"      :[DEF_UserDefaults objectForKey:@"3333"],
+                            }
+                          };
+    [RequestOperationManager userRegisterParametersDic:dic success:^(NSMutableDictionary *result) {
+        
+        if (result == nil) {
+            return;
+        }
+        if ([result[@"code"] intValue] != 1) {
+            return;
+        }
+        
+    } failture:^(id result) {
+        
+    }];
+}
 
 /**
    2  *  根据CIImage生成指定大小的UIImage

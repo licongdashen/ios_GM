@@ -44,9 +44,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.imagvArr = @[@"玛丽莲凯丽",@"阿黛尔",@"惠妮休斯顿"];
-    self.titleArr = @[@"Hero",@"Someone Like You",@"I Will Always Love You"];
-    self.musicArr = @[@"Mariah+Carey+-+Hero",@"Adele（阿黛尔）+-+Someone+Like+You",@"I Will Always Love You"];
+    self.imagvArr = @[@"Clair de Lune",@"Evil Force",@"The Nutcracker Basses"];
+    self.titleArr = @[@"Clair de Lune",@"Evil Force",@"The Nutcracker Basses"];
+    self.musicArr = @[@"Clair de Lune",@"Evil Force",@"The Nutcracker Basses"];
     self.musicArr1 = [[NSMutableArray alloc]init];
     for (int i = 0; i < 201; i ++) {
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",i]];
@@ -180,7 +180,7 @@
 
 -(void)playAv:(int)index;
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:self.titleArr[index] ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:self.titleArr[index] ofType:@"MP3"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     

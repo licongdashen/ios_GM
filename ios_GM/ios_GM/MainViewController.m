@@ -54,7 +54,7 @@
 
 -(void)setType
 {
-    if ([[DEF_UserDefaults objectForKey:@"1111"] isEqualToString:@"0"]) {
+    if ([[DEF_UserDefaults objectForKey:@"1111"] isEqualToString:@"0"]&&[[DEF_UserDefaults objectForKey:@"1112"] isEqualToString:@"0"]&&[[DEF_UserDefaults objectForKey:@"1113"] isEqualToString:@"0"]&&[[DEF_UserDefaults objectForKey:@"1114"] isEqualToString:@"0"]) {
         UILabel *arrowImagv = [self.view viewWithTag:2000];
         arrowImagv.hidden = YES;
     }else{
@@ -148,6 +148,9 @@
 -(void)change
 {
     [DEF_UserDefaults setObject:@"0" forKey:@"1111"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"1112"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"1113"];
+    [DEF_UserDefaults setObject:@"0" forKey:@"1114"];
     [DEF_UserDefaults setObject:@"0" forKey:@"2222"];
     [DEF_UserDefaults setObject:@"0" forKey:@"3333"];
     [DEF_UserDefaults setObject:@"0" forKey:@"4444"];

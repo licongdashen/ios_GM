@@ -114,7 +114,7 @@
 
 -(void)jieshu
 {
-    [DEF_UserDefaults setObject:@"1" forKey:@"1111"];
+    [DEF_UserDefaults setObject:@"1" forKey:@"1113"];
     
     for (UIViewController *vc in self.navigationController.viewControllers) {
         if ([vc isKindOfClass:[MainViewController class]]) {
