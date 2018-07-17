@@ -30,7 +30,6 @@
 }
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -131,7 +130,7 @@
 {
     NSString *btnTitle = [alertView buttonTitleAtIndex:buttonIndex];
     if ([btnTitle isEqualToString:@"确定"]) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"普通音响_开始" ofType:@"wav"];
         // (2)把音频文件转化成url格式
         NSURL *url = [NSURL fileURLWithPath:path];
         
@@ -157,7 +156,7 @@
         [WXinstall show];
         
     }else{
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"普通音响_开始" ofType:@"wav"];
         // (2)把音频文件转化成url格式
         NSURL *url = [NSURL fileURLWithPath:path];
         

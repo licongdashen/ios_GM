@@ -40,7 +40,7 @@
     cardImagv.contentMode = UIViewContentModeCenter;
     [imagv addSubview:cardImagv];
     
-    UILabel *contentLb = [[UILabel alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(70.5), cardImagv.bottom + DEF_RESIZE_UI(12), DEF_RESIZE_UI(190), DEF_RESIZE_UI(84))];
+    UILabel *contentLb = [[UILabel alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(35), cardImagv.bottom + DEF_RESIZE_UI(12), DEF_RESIZE_UI(260), DEF_RESIZE_UI(84))];
     contentLb.textAlignment = NSTextAlignmentCenter;
     contentLb.textColor = [UIColor whiteColor];
     contentLb.numberOfLines = 3;
@@ -64,7 +64,7 @@
 
 -(void)playav
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"BOSE_6 环绕音效 结束" ofType:@"wav"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     

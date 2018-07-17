@@ -27,6 +27,11 @@
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [player pause];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -80,7 +85,7 @@
 
 -(void)playav
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Two Steps From Hell-Red Tower" ofType:@"mp3"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     

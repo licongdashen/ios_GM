@@ -44,6 +44,16 @@
 		181CB28B20FD9ADF0095572F /* Evil Force.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB28820FD9ADE0095572F /* Evil Force.MP3 */; };
 		181CB28C20FD9ADF0095572F /* Clair de Lune.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB28920FD9ADE0095572F /* Clair de Lune.MP3 */; };
 		181CB28D20FD9ADF0095572F /* The Nutcracker Basses.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB28A20FD9ADE0095572F /* The Nutcracker Basses.MP3 */; };
+		181CB28F20FDCFAF0095572F /* 普通音响_开始.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB28E20FDCFAF0095572F /* 普通音响_开始.wav */; };
+		181CB29120FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB29020FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 */; };
+		181CB29320FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB29220FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav */; };
+		181CB29520FDD35B0095572F /* BOSE_1 选择页面.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB29420FDD35B0095572F /* BOSE_1 选择页面.wav */; };
+		181CB29720FDD4880095572F /* BOSE_3 真实音效 开始.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB29620FDD4880095572F /* BOSE_3 真实音效 开始.wav */; };
+		181CB29920FDD4EE0095572F /* 真实音效 海浪_15s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 181CB29820FDD4ED0095572F /* 真实音效 海浪_15s.mp3 */; };
+		181CB29B20FDD5D30095572F /* BOSE_4 真实音效 结束.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB29A20FDD5D30095572F /* BOSE_4 真实音效 结束.wav */; };
+		181CB29D20FDD81F0095572F /* BOSE_5 环绕音效 开始.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB29C20FDD81F0095572F /* BOSE_5 环绕音效 开始.wav */; };
+		181CB29F20FDD8670095572F /* Introduction.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB29E20FDD8670095572F /* Introduction.wav */; };
+		181CB2A120FDD9370095572F /* BOSE_6 环绕音效 结束.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2A020FDD9370095572F /* BOSE_6 环绕音效 结束.wav */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -154,6 +164,16 @@
 		181CB28820FD9ADE0095572F /* Evil Force.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Evil Force.MP3"; sourceTree = "<group>"; };
 		181CB28920FD9ADE0095572F /* Clair de Lune.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Clair de Lune.MP3"; sourceTree = "<group>"; };
 		181CB28A20FD9ADE0095572F /* The Nutcracker Basses.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Nutcracker Basses.MP3"; sourceTree = "<group>"; };
+		181CB28E20FDCFAF0095572F /* 普通音响_开始.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "普通音响_开始.wav"; sourceTree = "<group>"; };
+		181CB29020FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Two Steps From Hell-Red Tower.mp3"; sourceTree = "<group>"; };
+		181CB29220FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "普通音响_科鲁兹23&创酷&迈锐宝.wav"; sourceTree = "<group>"; };
+		181CB29420FDD35B0095572F /* BOSE_1 选择页面.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "BOSE_1 选择页面.wav"; sourceTree = "<group>"; };
+		181CB29620FDD4880095572F /* BOSE_3 真实音效 开始.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "BOSE_3 真实音效 开始.wav"; sourceTree = "<group>"; };
+		181CB29820FDD4ED0095572F /* 真实音效 海浪_15s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "真实音效 海浪_15s.mp3"; sourceTree = "<group>"; };
+		181CB29A20FDD5D30095572F /* BOSE_4 真实音效 结束.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "BOSE_4 真实音效 结束.wav"; sourceTree = "<group>"; };
+		181CB29C20FDD81F0095572F /* BOSE_5 环绕音效 开始.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "BOSE_5 环绕音效 开始.wav"; sourceTree = "<group>"; };
+		181CB29E20FDD8670095572F /* Introduction.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Introduction.wav; sourceTree = "<group>"; };
+		181CB2A020FDD9370095572F /* BOSE_6 环绕音效 结束.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "BOSE_6 环绕音效 结束.wav"; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -331,6 +351,16 @@
 				188D7B1820EB66C300F283CD /* LoginViewController.h */,
 				188D7B1920EB66C300F283CD /* LoginViewController.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
+				181CB29020FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 */,
+				181CB28E20FDCFAF0095572F /* 普通音响_开始.wav */,
+				181CB29220FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav */,
+				181CB29420FDD35B0095572F /* BOSE_1 选择页面.wav */,
+				181CB29620FDD4880095572F /* BOSE_3 真实音效 开始.wav */,
+				181CB29820FDD4ED0095572F /* 真实音效 海浪_15s.mp3 */,
+				181CB29A20FDD5D30095572F /* BOSE_4 真实音效 结束.wav */,
+				181CB29C20FDD81F0095572F /* BOSE_5 环绕音效 开始.wav */,
+				181CB29E20FDD8670095572F /* Introduction.wav */,
+				181CB2A020FDD9370095572F /* BOSE_6 环绕音效 结束.wav */,
 				181CB27620F830160095572F /* 蒲公英.mp4 */,
 				181CB26520F729260095572F /* douyin.mp4 */,
 				181CB28920FD9ADE0095572F /* Clair de Lune.MP3 */,
@@ -578,14 +608,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				181CB26620F729260095572F /* douyin.mp4 in Resources */,
+				181CB29120FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 in Resources */,
 				188D7B0F20EA27E900F283CD /* README.mdown in Resources */,
 				181CB28D20FD9ADF0095572F /* The Nutcracker Basses.MP3 in Resources */,
+				181CB2A120FDD9370095572F /* BOSE_6 环绕音效 结束.wav in Resources */,
+				181CB29D20FDD81F0095572F /* BOSE_5 环绕音效 开始.wav in Resources */,
+				181CB29B20FDD5D30095572F /* BOSE_4 真实音效 结束.wav in Resources */,
 				181CB28C20FD9ADF0095572F /* Clair de Lune.MP3 in Resources */,
 				188D7B0D20EA27E900F283CD /* LICENSE in Resources */,
+				181CB29F20FDD8670095572F /* Introduction.wav in Resources */,
+				181CB28F20FDCFAF0095572F /* 普通音响_开始.wav in Resources */,
+				181CB29320FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav in Resources */,
+				181CB29520FDD35B0095572F /* BOSE_1 选择页面.wav in Resources */,
 				188D7AAC20EA116E00F283CD /* Assets.xcassets in Resources */,
+				181CB29720FDD4880095572F /* BOSE_3 真实音效 开始.wav in Resources */,
 				181CB27720F830160095572F /* 蒲公英.mp4 in Resources */,
 				181CB22920F306430095572F /* 8270.mp3 in Resources */,
 				181CB28B20FD9ADF0095572F /* Evil Force.MP3 in Resources */,
+				181CB29920FDD4EE0095572F /* 真实音效 海浪_15s.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,27 @@
 #import "NoBossSoundSucViewController.h"
 #import "MainViewController.h"
 
-@interface NoBossSoundSucViewController ()
+@interface NoBossSoundSucViewController ()<AVAudioPlayerDelegate>
+{
+    AVPlayer *player;
+}
 
 @end
 
 @implementation NoBossSoundSucViewController
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [player pause];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,7 +53,7 @@
     contentLb.textColor = [UIColor whiteColor];
     contentLb.numberOfLines = 3;
     contentLb.font = DEF_MyBoldFont(DEF_RESIZE_UI(18));
-    contentLb.text = @"原厂定制剧院级音响\n6扬声器豪华配置\n为你把剧院搬进车里来";
+    contentLb.text = @"原厂定制级音响\n6扬声器豪华配置\n为您带来非凡体验。";
     [imagv addSubview:contentLb];
     
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), imagv.bottom + DEF_RESIZE_UI(52), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
@@ -51,7 +67,60 @@
     loginBtn.backgroundColor = DEF_UICOLORFROMRGB(0xffbf17);
     [self.view addSubview:loginBtn];
     
+    [self playav];
+
 }
+
+-(void)playav
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"普通音响_科鲁兹23&创酷&迈锐宝" ofType:@"wav"];
+    // (2)把音频文件转化成url格式
+    NSURL *url = [NSURL fileURLWithPath:path];
+    
+    AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
+    player = [[AVPlayer alloc] initWithPlayerItem:item];
+    [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playFinished:)
+                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+                                               object:player.currentItem];
+    [player play];
+}
+
+-(void)playFinished:(NSNotification *)obj
+{
+    [player pause];
+    
+    
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"status"]) {
+        switch (player.status) {
+            case AVPlayerStatusUnknown:
+            {
+                NSLog(@"未知转态");
+            }
+                break;
+            case AVPlayerStatusReadyToPlay:
+            {
+                NSLog(@"准备播放");
+            }
+                break;
+            case AVPlayerStatusFailed:
+            {
+                NSLog(@"加载失败");
+            }
+                break;
+                
+            default:
+                break;
+        }
+        
+    }
+}
+
 
 -(void)jieshu
 {
@@ -59,6 +128,8 @@
 
     for (UIViewController *vc in self.navigationController.viewControllers) {
         if ([vc isKindOfClass:[MainViewController class]]) {
+            [player pause];
+
             [self.navigationController popToViewController:vc animated:YES];
             return;
         }

@@ -31,6 +31,11 @@
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [player pause];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.titleLb.text = @"真实音效体验";
@@ -193,7 +198,7 @@
 
 -(void)playav
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"真实音效 海浪_15s" ofType:@"mp3"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     

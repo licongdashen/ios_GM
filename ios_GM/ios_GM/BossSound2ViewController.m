@@ -44,7 +44,7 @@
     
     UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, centerImagv.bottom + DEF_RESIZE_UI(75), DEF_DEVICE_WIDTH, 17 + 25)];
     titleLb.font = DEF_MyFont(16);
-    titleLb.text = @"即将播放一段声音\n您觉得他们来自哪里";
+    titleLb.text = @"来感受一下\nBose音响的超凡立体声技术吧";
     titleLb.textAlignment = NSTextAlignmentCenter;
     titleLb.numberOfLines = 2;
     titleLb.textColor = DEF_UICOLORFROMRGB(0x848484);
@@ -76,7 +76,7 @@
 
 -(void)playAv
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"BOSE_5 环绕音效 开始" ofType:@"wav"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     
