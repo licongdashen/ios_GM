@@ -44,7 +44,7 @@
     
     UILabel *titleLb1 = [[UILabel alloc]initWithFrame:CGRectMake(0, titleLb.bottom + DEF_RESIZE_UI(11), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(100))];
     titleLb1.font = DEF_MyBoldFont(DEF_RESIZE_UI(16));
-    titleLb1.text = @"画面中有盛满水的水杯\n洒水程度取决于\n您的架势情况哦！";
+    titleLb1.text = @"画面中有盛满水的水杯\n洒水程度取决于\n您的驾驶情况哦！";
     titleLb1.textAlignment = NSTextAlignmentCenter;
     titleLb1.textColor = DEF_UICOLORFROMRGB(0x909090);
     titleLb1.numberOfLines = 3;
@@ -81,7 +81,7 @@
 
 -(void)playav
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"试驾体验_1 准备出发" ofType:@"wav"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     

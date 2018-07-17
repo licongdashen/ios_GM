@@ -156,6 +156,24 @@
     btn.centerX = self.view.centerX;
     [self.view addSubview:btn];
     
+    //
+    [self playAv];
+}
+
+-(void)playAv
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"BOSE_8 高低音效 音乐选择" ofType:@"wav"];
+    // (2)把音频文件转化成url格式
+    NSURL *url = [NSURL fileURLWithPath:path];
+    
+    AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
+    self.player = [[AVPlayer alloc] initWithPlayerItem:item];
+    [self.player .currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playFinished:)
+                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+                                               object:self.player .currentItem];
+    [self.player  play];
 }
 
 -(void)jieshu

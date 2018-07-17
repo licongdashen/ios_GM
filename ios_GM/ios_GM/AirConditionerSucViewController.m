@@ -58,42 +58,42 @@
     [self.view addSubview:loginBtn];
     
     if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝XL"]) {
-        [self playav:@"8270"];
-        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热；同时为了您的呼吸健康，我们配备了PM2.5过滤系统";
+        [self playav:@"空调体验_3（探界者&迈锐宝XL）"];
+        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热;同时为了您的呼吸健康，我们配备了PM2.5过滤系统";
         imagv.image = DEF_IMAGE(@"shutterstock_774468421");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"探界者"]){
-        [self playav:@"8270"];
-        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热；同时为了您的呼吸健康，我们配备了PM2.5过滤系统";
+        [self playav:@"空调体验_3（探界者&迈锐宝XL）"];
+        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热;同时为了您的呼吸健康，我们配备了PM2.5过滤系统";
         imagv.image = DEF_IMAGE(@"shutterstock_774468421");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝"]){
-        [self playav:@"8270"];
+        [self playav:@"空调体验_5（迈锐宝）"];
         contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热";
         imagv.image = DEF_IMAGE(@"shutterstock_774468421");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹"]){
-        [self playav:@"8270"];
+        [self playav:@"空调体验_6（科鲁兹&科鲁兹两厢）"];
         contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热";
         imagv.image = DEF_IMAGE(@"shutterstock_774468421");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹两厢"]){
-        [self playav:@"8270"];
+        [self playav:@"空调体验_6（科鲁兹&科鲁兹两厢）"];
         contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热";
         imagv.image = DEF_IMAGE(@"shutterstock_774468421");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科沃兹"]){
-        [self playav:@"8270"];
+        [self playav:@"空调体验_7（科沃兹）"];
         contentLb.text = @"强劲的空调系统，快速制冷热，体贴您的冷暖；为了让您呼吸更健康的空气，我们配备了PM2.5过滤系统。";
         imagv.image = DEF_IMAGE(@"shutterstock_774468421");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"创酷"]){
-        [self playav:@"8270"];
+        [self playav:@"空调体验_4（创酷）"];
         contentLb.text = @"我有多快，营造冷暖空间的速度就有多快";
         imagv.image = DEF_IMAGE(@"shutterstock_774468421");
 
     }else{
-        [self playav:@"8270"];
+        [self playav:@"空调体验_4（创酷）"];
         contentLb.text = @"我有多快，营造冷暖空间的速度就有多快";
         imagv.image = DEF_IMAGE(@"汽车");
     }
@@ -101,7 +101,7 @@
 
 -(void)playav:(NSString *)str
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:str ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:str ofType:@"wav"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     

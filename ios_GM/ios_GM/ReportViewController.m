@@ -10,14 +10,22 @@
 #import "MainViewController.h"
 #import <CoreImage/CoreImage.h>
 
-@interface ReportViewController ()
-
+@interface ReportViewController ()<AVAudioPlayerDelegate>
+{
+    AVPlayer *player;
+}
 @property (nonatomic, strong)UIImageView *imagv;
 
 @end
 
 @implementation ReportViewController
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -58,7 +66,60 @@
     [self.view addSubview:loginBtn];
     
     [self planRefresh];
+    
+    [self playav];
 }
+
+-(void)playav
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"试驾体验_8 领取试驾报告" ofType:@"wav"];
+    // (2)把音频文件转化成url格式
+    NSURL *url = [NSURL fileURLWithPath:path];
+    
+    AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
+    player = [[AVPlayer alloc] initWithPlayerItem:item];
+    [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playFinished:)
+                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+                                               object:player.currentItem];
+    [player play];
+}
+
+
+-(void)playFinished:(NSNotification *)obj
+{
+    [player pause];
+    
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"status"]) {
+        switch (player.status) {
+            case AVPlayerStatusUnknown:
+            {
+                NSLog(@"未知转态");
+            }
+                break;
+            case AVPlayerStatusReadyToPlay:
+            {
+                NSLog(@"准备播放");
+            }
+                break;
+            case AVPlayerStatusFailed:
+            {
+                NSLog(@"加载失败");
+            }
+                break;
+                
+            default:
+                break;
+        }
+        
+    }
+}
+
 
 -(void)planRefresh
 {

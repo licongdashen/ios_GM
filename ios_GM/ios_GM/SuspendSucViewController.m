@@ -67,42 +67,42 @@
         str = @"即使百公里加速，也能做到滴水不洒！水杯中的水还剩余100%.";
     }
     if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝XL"]) {
-        [self playav:@"8270"];
+        [self playav:@"试驾体验_4（迈锐宝XL）"];
         contentLb.text = [NSString stringWithFormat:@"全框式副车架，确保底盘刚性的同时，带来驾·无所限的动力和操控体验。%@",str];
         imagv.image = DEF_IMAGE(@"迈锐宝XL底盘");
         
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"探界者"]){
-        [self playav:@"8270"];
+        [self playav:@"试驾体验_2（探界者）"];
         contentLb.text = [NSString stringWithFormat:@"基于通用汽车全球平台，以优化的底盘结构、更富操控感的悬挂调校，表现出强大的驾控能力。%@",str];
         imagv.image = DEF_IMAGE(@"探界者底盘");
         
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝"]){
-        [self playav:@"8270"];
+        [self playav:@"试驾体验_5（迈锐宝）"];
         contentLb.text = [NSString stringWithFormat:@"美式运动底盘辅以CCI动态调校，搭配高效动能组合，为您带来完美平衡优化的操控体验。%@",str];
         imagv.image = DEF_IMAGE(@"迈锐宝XL底盘");
         
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹"]){
-        [self playav:@"8270"];
+        [self playav:@"试驾体验_6（科鲁兹&科鲁兹两厢）"];
         contentLb.text = [NSString stringWithFormat:@"纽博格林赛道底盘调校，拥有WTCC三冠王荣耀，全框式副车架配合增强型瓦特连杆，带来超越期待的驾乘乐趣。%@",str];
         imagv.image = DEF_IMAGE(@"科鲁兹底盘");
         
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹两厢"]){
-        [self playav:@"8270"];
+        [self playav:@"试驾体验_6（科鲁兹&科鲁兹两厢）"];
         contentLb.text = [NSString stringWithFormat:@"纽博格林赛道底盘调校，拥有WTCC三冠王荣耀，全框式副车架配合增强型瓦特连杆，带来超越期待的驾乘乐趣。%@",str];
         imagv.image = DEF_IMAGE(@"科鲁兹两厢底盘");
         
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科沃兹"]){
-        [self playav:@"8270"];
+        [self playav:@"试驾体验_7（科沃兹）"];
         contentLb.text = [NSString stringWithFormat:@"美式运动底盘，加上家族式运动基因调校，为您带来更精准更稳健的驾驶体验。%@",str];
         imagv.image = DEF_IMAGE(@"科鲁兹底盘");
         
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"创酷"]){
-        [self playav:@"8270"];
+        [self playav:@"试驾体验_3（创酷）"];
         contentLb.text = [NSString stringWithFormat:@"采用运动化底盘调教，麦弗逊独立悬挂搭配EPS电子随速助力转向系统，带给您舒适的驾乘体验。%@",str];
         imagv.image = DEF_IMAGE(@"创酷底盘");
         
     }else{
-        [self playav:@"8270"];
+        [self playav:@"试驾体验_3（创酷）"];
         contentLb.text = [NSString stringWithFormat:@"全框式副车架，确保底盘刚性的同时，带来驾·无所限的动力和操控体验。%@",str];
         imagv.image = DEF_IMAGE(@"迈锐宝XL底盘");
     }

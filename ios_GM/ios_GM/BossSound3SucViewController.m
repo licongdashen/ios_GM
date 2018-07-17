@@ -45,7 +45,7 @@
     contentLb.textColor = [UIColor whiteColor];
     contentLb.numberOfLines = 3;
     contentLb.font = DEF_MyBoldFont(DEF_RESIZE_UI(18));
-    contentLb.text = @"您可手动调节BOSE音响的\n高，中，低音\n让耳朵去找到您最舒服的那个声音";
+    contentLb.text = @"您可手动调节BOSE音响的\n高，中，低音\n让耳朵去找到您最舒适的那个声音";
     [imagv addSubview:contentLb];
     
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), imagv.bottom + DEF_RESIZE_UI(52), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
@@ -64,7 +64,7 @@
 
 -(void)playav
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"BOSE_9 高低音效 结束" ofType:@"wav"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     

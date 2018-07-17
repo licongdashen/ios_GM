@@ -61,7 +61,7 @@
 
 -(void)playav
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"8270" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"降噪体验_1 开启车窗" ofType:@"wav"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     

@@ -141,7 +141,7 @@
 }
 
 -(void)playav:(NSString *)str{
-    NSString *path = [[NSBundle mainBundle] pathForResource:str ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:str ofType:@"wav"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     
@@ -230,12 +230,12 @@
                 
                 if (self.isFrist == YES) {
                     self.titleLb1.text = @"当前环境较为嘈杂\n现在请关闭车窗再次测试";
-                    [self playav:@"8270"];
+                    [self playav:@"降噪体验_2 再次测试"];
 
                 }else{
                     int db = [self.first intValue] - [self.second intValue];
                     self.titleLb1.text = [NSString stringWithFormat:@"当前分贝比开窗时降低了%d\n您当前身处静谧的空间内",db];
-                    [self playav:@"8270"];
+                    [self playav:@"降噪体验_3 结束测试"];
                 }
 
                 self.loginBtn.enabled = YES;
