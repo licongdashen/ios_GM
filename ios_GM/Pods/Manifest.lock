@@ -17,6 +17,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - lottie-ios (2.5.0)
   - Masonry (1.0.2)
   - MJRefresh (3.1.15.3)
   - Reachability (3.2)
@@ -36,6 +37,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - FMDB (~> 2.6.2)
+  - lottie-ios
   - Masonry (~> 1.0.2)
   - MJRefresh (~> 3.1.12)
   - Reachability (~> 3.2)
@@ -48,6 +50,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - FMDB
+    - lottie-ios
     - Masonry
     - MJRefresh
     - Reachability
@@ -59,6 +62,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
@@ -67,6 +71,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: b0a098e0ff2a033c603bd44285ac698cc6ac99c6
+PODFILE CHECKSUM: 2b1b84b7c16574dbba79bd5fde16d756691e0b01
 
 COCOAPODS: 1.5.3

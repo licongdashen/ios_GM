@@ -26,6 +26,7 @@
     [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
     
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

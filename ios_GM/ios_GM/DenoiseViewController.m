@@ -8,6 +8,7 @@
 
 #import "DenoiseViewController.h"
 #import "DenoiseBeginViewController.h"
+#import <Lottie/Lottie.h>
 
 @interface DenoiseViewController ()<AVAudioPlayerDelegate>
 {
@@ -29,13 +30,23 @@
     self.titleLb.text = @"降噪体验";
     self.carView.hidden = NO;
     
-    UIImageView *centerImagv = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.carView.bottom + DEF_RESIZE_UI(54), DEF_RESIZE_UI(282), DEF_RESIZE_UI(282))];
-    centerImagv.image = DEF_IMAGE(@"Group 2");
-    centerImagv.contentMode = UIViewContentModeScaleAspectFit;
-    centerImagv.centerX = self.view.centerX;
-    [self.view addSubview:centerImagv];
+//    UIImageView *centerImagv = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.carView.bottom + DEF_RESIZE_UI(54), DEF_RESIZE_UI(282), DEF_RESIZE_UI(282))];
+//    centerImagv.image = DEF_IMAGE(@"Group 2");
+//    centerImagv.contentMode = UIViewContentModeScaleAspectFit;
+//    centerImagv.centerX = self.view.centerX;
+//    [self.view addSubview:centerImagv];
     
-    UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, centerImagv.bottom + DEF_RESIZE_UI(42), DEF_DEVICE_WIDTH, 17 + 25)];
+    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"data"];
+    animation.frame = CGRectMake(0, self.carView.bottom + DEF_RESIZE_UI(54), DEF_RESIZE_UI(282), DEF_RESIZE_UI(282));
+    animation.centerX = self.view.centerX;
+    animation.loopAnimation = YES;
+    animation.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:animation];
+    [animation playWithCompletion:^(BOOL animationFinished) {
+        // Do Something
+    }];
+    
+    UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, animation.bottom + DEF_RESIZE_UI(42), DEF_DEVICE_WIDTH, 17 + 25)];
     titleLb.font = DEF_MyFont(16);
     titleLb.text = @"请开启车窗测试分贝";
     titleLb.textAlignment = NSTextAlignmentCenter;
