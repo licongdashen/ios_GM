@@ -34,12 +34,29 @@
     self.loginDic = @{@"access_token"   : @"47b167f3e46b544e5d7e7eaa25331956",
                       @"accountName"    : @"陈杰"
                       };
+    [self performSelector:@selector(panduan) withObject:nil afterDelay:0.1];
     
-    [self loadingHomeController];
-    
-    [self.window makeKeyAndVisible];
 
     return YES;
+}
+
+-(void)panduan
+{
+    if (self.loginDic) {
+        [self loadingHomeController];
+        
+    }else{
+        
+        UIViewController *vc = [[UIViewController alloc]init];
+        vc.view.backgroundColor = [UIColor whiteColor];
+        self.window.rootViewController = vc;
+        
+        UIAlertView *WXinstall=[[UIAlertView alloc]initWithTitle:@"提示" message:@"请打开母APP授权登录"delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        WXinstall.delegate = self;
+        [WXinstall show];
+    }
+    [self.window makeKeyAndVisible];
+
 }
 
 -(void)loadingHomeController

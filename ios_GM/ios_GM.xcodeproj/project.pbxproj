@@ -84,6 +84,7 @@
 		181CB2DD20FECF910095572F /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2DA20FECF910095572F /* img_1.png */; };
 		181CB2DE20FECF910095572F /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2DB20FECF910095572F /* img_0.png */; };
 		181CB2DF20FECF910095572F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2DC20FECF910095572F /* data.json */; };
+		181CB30720FF25FB0095572F /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB30620FF25FB0095572F /* FeedbackViewController.m */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -234,6 +235,8 @@
 		181CB2DA20FECF910095572F /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_1.png; sourceTree = "<group>"; };
 		181CB2DB20FECF910095572F /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
 		181CB2DC20FECF910095572F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		181CB30520FF25FB0095572F /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		181CB30620FF25FB0095572F /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -428,6 +431,8 @@
 				181CB28420FC9CCB0095572F /* ReportViewController.m */,
 				188D7B1820EB66C300F283CD /* LoginViewController.h */,
 				188D7B1920EB66C300F283CD /* LoginViewController.m */,
+				181CB30520FF25FB0095572F /* FeedbackViewController.h */,
+				181CB30620FF25FB0095572F /* FeedbackViewController.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
 				181CB2D820FECF910095572F /* 降噪 */,
 				181CB29020FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 */,
@@ -866,6 +871,7 @@
 				181CB27A20FC36AC0095572F /* SuspendViewController.m in Sources */,
 				188D7B0E20EA27E900F283CD /* WebViewController.m in Sources */,
 				181CB23D20F488A10095572F /* BossSoundViewController.m in Sources */,
+				181CB30720FF25FB0095572F /* FeedbackViewController.m in Sources */,
 				182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */,
 				181CB25220F5AC4A0095572F /* BossSound2SucViewController.m in Sources */,
 				188D7B1320EA27E900F283CD /* RequestOperationManager.m in Sources */,
