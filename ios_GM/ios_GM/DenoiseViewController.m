@@ -31,7 +31,7 @@
     self.titleLb.text = @"降噪体验";
     self.carView.hidden = NO;
     
-    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"1112"];
+    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"data"];
     animation.frame = CGRectMake(0, self.carView.bottom + DEF_RESIZE_UI(54), DEF_RESIZE_UI(282), DEF_RESIZE_UI(282));
     animation.centerX = self.view.centerX;
     animation.loopAnimation = YES;
