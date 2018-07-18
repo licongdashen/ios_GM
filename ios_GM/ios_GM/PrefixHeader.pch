@@ -33,5 +33,6 @@
 #import "CACBaseViewModel.h"
 #import "CACVersionUpdateKit.h"
 #import "UserDefaultsTool.h"
+#import <Lottie/Lottie.h>
 
 #endif /* PrefixHeader_pch */

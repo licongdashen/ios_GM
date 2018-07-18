@@ -8,7 +8,6 @@
 
 #import "DenoiseViewController.h"
 #import "DenoiseBeginViewController.h"
-#import <Lottie/Lottie.h>
 
 @interface DenoiseViewController ()<AVAudioPlayerDelegate>
 {
@@ -18,25 +17,21 @@
 @end
 
 @implementation DenoiseViewController
+
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
     [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
     
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.titleLb.text = @"降噪体验";
     self.carView.hidden = NO;
     
-//    UIImageView *centerImagv = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.carView.bottom + DEF_RESIZE_UI(54), DEF_RESIZE_UI(282), DEF_RESIZE_UI(282))];
-//    centerImagv.image = DEF_IMAGE(@"Group 2");
-//    centerImagv.contentMode = UIViewContentModeScaleAspectFit;
-//    centerImagv.centerX = self.view.centerX;
-//    [self.view addSubview:centerImagv];
-    
-    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"data"];
+    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"1112"];
     animation.frame = CGRectMake(0, self.carView.bottom + DEF_RESIZE_UI(54), DEF_RESIZE_UI(282), DEF_RESIZE_UI(282));
     animation.centerX = self.view.centerX;
     animation.loopAnimation = YES;
