@@ -7,6 +7,7 @@
 //
 
 #import "CACBaseViewController.h"
+#import "FeedbackViewController.h"
 
 @interface CACBaseViewController ()
 
@@ -92,8 +93,6 @@
     [carView addSubview:carLb];
     self.carLb = carLb;
     
-
-    
 }
 
 /**
@@ -109,7 +108,8 @@
  */
 -(void)rightBtnClick
 {
-    
+    FeedbackViewController *vc = [[FeedbackViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
