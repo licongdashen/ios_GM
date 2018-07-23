@@ -85,6 +85,7 @@
 		181CB2DE20FECF910095572F /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2DB20FECF910095572F /* img_0.png */; };
 		181CB2DF20FECF910095572F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2DC20FECF910095572F /* data.json */; };
 		181CB30720FF25FB0095572F /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB30620FF25FB0095572F /* FeedbackViewController.m */; };
+		181CB30C2105C4940095572F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181CB30B2105C4930095572F /* CoreLocation.framework */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -237,6 +238,7 @@
 		181CB2DC20FECF910095572F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		181CB30520FF25FB0095572F /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		181CB30620FF25FB0095572F /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		181CB30B2105C4930095572F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181CB30C2105C4940095572F /* CoreLocation.framework in Frameworks */,
 				181CB28720FC9F4F0095572F /* CoreImage.framework in Frameworks */,
 				181CB28220FC4B680095572F /* CoreMotion.framework in Frameworks */,
 				181CB22B20F330490095572F /* AVFoundation.framework in Frameworks */,
@@ -595,6 +598,7 @@
 		258D51280129C83D81D6E848 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				181CB30B2105C4930095572F /* CoreLocation.framework */,
 				181CB28620FC9F4F0095572F /* CoreImage.framework */,
 				181CB28120FC4B680095572F /* CoreMotion.framework */,
 				181CB22A20F330490095572F /* AVFoundation.framework */,
@@ -682,6 +686,11 @@
 				TargetAttributes = {
 					188D7A9E20EA116D00F283CD = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					188D7AB620EA116E00F283CD = {
 						CreatedOnToolsVersion = 9.4;
