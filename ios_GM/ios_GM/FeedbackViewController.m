@@ -60,6 +60,23 @@
 -(void)jieshu
 {
     
+    NSDictionary *dic1 = @{
+                          @"access-token" :DEF_MyAppDelegate.loginDic[@"access_token"],
+                          @"content"         :self.tv2.text,
+                          @"image"           :[[NSArray alloc]init]
+                          };
+    [RequestOperationManager checkValidImgParametersDic:dic1 success:^(NSMutableDictionary *result) {
+        
+        if (result == nil) {
+            return;
+        }
+        if ([result[@"code"] intValue] != 1) {
+            return;
+        }
+        
+    } failture:^(id result) {
+        
+    }];
 }
 
 -(void)textViewDidChange:(UITextView *)textView

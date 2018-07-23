@@ -131,7 +131,7 @@ static NSString *const UMENG_APPKEY = @"5a55ab57a40fa36edc000103";
 #define DEF_API_LOGIN            @"api/v1/cars"           //登录接口
 #define DEF_API_REGISTER         @"api/v1/experience"     //注册接口
 #define DEF_API_GETVALIDIMG      @"api/v1/login"       //请求图片验证码接口
-#define DEF_API_CHECKVALIDIMG    @"api/RrfreshInteractiveScore"      //校验图片验证码接口
+#define DEF_API_CHECKVALIDIMG    @"api/v1/feedback"      //校验图片验证码接口
 #define DEF_API_SENDTELSMS       @"api/new/AddEbookOrder"        //请求短信验证码接口
 #define DEF_API_CHECKSMSCODE     @"api/GetForgetPwdVeryCode"    //校验短信验证码接口
 #define DEF_API_FORGETPASSWORD   @"/api/SetPhone"  //忘记密码接口
