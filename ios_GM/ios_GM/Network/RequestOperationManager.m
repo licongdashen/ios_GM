@@ -298,8 +298,13 @@ static RequestOperationManager *sessionManager1;
 +(void)userRegisterParametersDic:(NSDictionary *)parameterDic
                          success:(void (^)(NSMutableDictionary *result))successBlock
                         failture:(void (^)(id result))failtureBlock{
+    
+    NSMutableString *str = [NSMutableString stringWithFormat:DEF_API_REGISTER];
+    [str appendString:@"?"];
+    [str appendFormat:@"%@=%@", @"access-token", DEF_MyAppDelegate.loginDic[@"access_token"]];
+
     [RequestOperationManager requestPostWithParameters:parameterDic
-                                             urlString: DEF_API_REGISTER
+                                             urlString: str
                                           finishHandle:^(id result) {
                                               successBlock(result);
                                           } failHandle:^(id result) {
@@ -360,8 +365,11 @@ static RequestOperationManager *sessionManager1;
                           success:(void (^)(NSMutableDictionary *result))successBlock
                          failture:(void (^)(id result))failtureBlock{
     
+    NSMutableString *str = [NSMutableString stringWithFormat:DEF_API_CHECKVALIDIMG];
+    [str appendString:@"?"];
+    [str appendFormat:@"%@=%@", @"access-token", DEF_MyAppDelegate.loginDic[@"access_token"]];
     [RequestOperationManager requestPostWithParameters:parameterDic
-                                             urlString: DEF_API_CHECKVALIDIMG
+                                             urlString: str
                                           finishHandle:^(id result) {
                                               successBlock(result);
                                           } failHandle:^(id result) {

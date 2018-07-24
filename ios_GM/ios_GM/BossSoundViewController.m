@@ -36,13 +36,17 @@
     self.carView.hidden = NO;
     self.carLb.text = self.dic[@"name"];
     
-    UIImageView *centerImagv = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.carView.bottom + 12, DEF_RESIZE_UI(282), DEF_RESIZE_UI(282))];
-    centerImagv.image = DEF_IMAGE(@"音响");
-    centerImagv.contentMode = UIViewContentModeScaleAspectFit;
-    centerImagv.centerX = self.view.centerX;
-    [self.view addSubview:centerImagv];
+    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"sound"];
+    animation.frame = CGRectMake(0, self.carView.bottom + DEF_RESIZE_UI(54), DEF_RESIZE_UI(282), DEF_RESIZE_UI(282));
+    animation.centerX = self.view.centerX;
+    animation.loopAnimation = YES;
+    animation.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:animation];
+    [animation playWithCompletion:^(BOOL animationFinished) {
+        // Do Something
+    }];
     
-    UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, centerImagv.bottom, DEF_DEVICE_WIDTH, 17)];
+    UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, animation.bottom, DEF_DEVICE_WIDTH, 17)];
     titleLb.font = DEF_MyFont(16);
     titleLb.text = @"请选择您想体验的效果";
     titleLb.textAlignment = NSTextAlignmentCenter;
@@ -106,7 +110,7 @@
     titeLb2.textColor = DEF_APP_MAIN_TITLECOLOR;
     [loginBtn2 addSubview:titeLb2];
     
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, centerImagv.bottom + DEF_RESIZE_UI(208), 268, 20)];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, animation.bottom + DEF_RESIZE_UI(208), 268, 20)];
     [btn setTitle:@"请使用蓝牙或数据线连接车载音响" forState:0];
     btn.titleLabel.font = DEF_MyFont(14);
     [btn setImage:DEF_IMAGE(@"蓝牙") forState:0];

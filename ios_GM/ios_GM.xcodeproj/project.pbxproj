@@ -81,11 +81,27 @@
 		181CB2D520FDE95B0095572F /* 试驾体验_8 领取试驾报告.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2CD20FDE95B0095572F /* 试驾体验_8 领取试驾报告.wav */; };
 		181CB2D620FDE95B0095572F /* 试驾体验_3（创酷）.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2CE20FDE95B0095572F /* 试驾体验_3（创酷）.wav */; };
 		181CB2D720FDE95B0095572F /* 试驾体验_4（迈锐宝XL）.wav in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2CF20FDE95B0095572F /* 试驾体验_4（迈锐宝XL）.wav */; };
-		181CB2DD20FECF910095572F /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2DA20FECF910095572F /* img_1.png */; };
-		181CB2DE20FECF910095572F /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2DB20FECF910095572F /* img_0.png */; };
-		181CB2DF20FECF910095572F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB2DC20FECF910095572F /* data.json */; };
 		181CB30720FF25FB0095572F /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CB30620FF25FB0095572F /* FeedbackViewController.m */; };
 		181CB30C2105C4940095572F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181CB30B2105C4930095572F /* CoreLocation.framework */; };
+		181CB3262107312D0095572F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB3222107312D0095572F /* data.json */; };
+		181CB3272107312D0095572F /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB3242107312D0095572F /* img_1.png */; };
+		181CB3282107312D0095572F /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB3252107312D0095572F /* img_0.png */; };
+		181CB32F2107319F0095572F /* KTimg_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB32B2107319F0095572F /* KTimg_1.png */; };
+		181CB3302107319F0095572F /* KTimg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB32C2107319F0095572F /* KTimg_0.png */; };
+		181CB3312107319F0095572F /* KTimg_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB32D2107319F0095572F /* KTimg_2.png */; };
+		181CB3322107319F0095572F /* wind.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB32E2107319F0095572F /* wind.json */; };
+		181CB338210734210095572F /* YXimg_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB335210734210095572F /* YXimg_1.png */; };
+		181CB339210734210095572F /* YXimg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB336210734210095572F /* YXimg_0.png */; };
+		181CB33A210734210095572F /* sound.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB337210734210095572F /* sound.json */; };
+		181CB3402107351F0095572F /* ZSimg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB33D2107351F0095572F /* ZSimg_0.png */; };
+		181CB3412107351F0095572F /* ZSimg_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB33E2107351F0095572F /* ZSimg_1.png */; };
+		181CB3422107351F0095572F /* real.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB33F2107351F0095572F /* real.json */; };
+		181CB348210735C60095572F /* HRimg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB345210735C60095572F /* HRimg_0.png */; };
+		181CB349210735C60095572F /* HRimg_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB346210735C60095572F /* HRimg_1.png */; };
+		181CB34A210735C60095572F /* round.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB347210735C60095572F /* round.json */; };
+		181CB350210736560095572F /* GDimg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB34D210736560095572F /* GDimg_0.png */; };
+		181CB351210736560095572F /* GDimg_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB34E210736560095572F /* GDimg_1.png */; };
+		181CB352210736560095572F /* high.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB34F210736560095572F /* high.json */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -233,12 +249,28 @@
 		181CB2CD20FDE95B0095572F /* 试驾体验_8 领取试驾报告.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "试驾体验_8 领取试驾报告.wav"; sourceTree = "<group>"; };
 		181CB2CE20FDE95B0095572F /* 试驾体验_3（创酷）.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "试驾体验_3（创酷）.wav"; sourceTree = "<group>"; };
 		181CB2CF20FDE95B0095572F /* 试驾体验_4（迈锐宝XL）.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "试驾体验_4（迈锐宝XL）.wav"; sourceTree = "<group>"; };
-		181CB2DA20FECF910095572F /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_1.png; sourceTree = "<group>"; };
-		181CB2DB20FECF910095572F /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
-		181CB2DC20FECF910095572F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		181CB30520FF25FB0095572F /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		181CB30620FF25FB0095572F /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		181CB30B2105C4930095572F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		181CB3222107312D0095572F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		181CB3242107312D0095572F /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_1.png; sourceTree = "<group>"; };
+		181CB3252107312D0095572F /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
+		181CB32B2107319F0095572F /* KTimg_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KTimg_1.png; sourceTree = "<group>"; };
+		181CB32C2107319F0095572F /* KTimg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KTimg_0.png; sourceTree = "<group>"; };
+		181CB32D2107319F0095572F /* KTimg_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KTimg_2.png; sourceTree = "<group>"; };
+		181CB32E2107319F0095572F /* wind.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wind.json; sourceTree = "<group>"; };
+		181CB335210734210095572F /* YXimg_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YXimg_1.png; sourceTree = "<group>"; };
+		181CB336210734210095572F /* YXimg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YXimg_0.png; sourceTree = "<group>"; };
+		181CB337210734210095572F /* sound.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sound.json; sourceTree = "<group>"; };
+		181CB33D2107351F0095572F /* ZSimg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSimg_0.png; sourceTree = "<group>"; };
+		181CB33E2107351F0095572F /* ZSimg_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZSimg_1.png; sourceTree = "<group>"; };
+		181CB33F2107351F0095572F /* real.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = real.json; sourceTree = "<group>"; };
+		181CB345210735C60095572F /* HRimg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HRimg_0.png; sourceTree = "<group>"; };
+		181CB346210735C60095572F /* HRimg_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HRimg_1.png; sourceTree = "<group>"; };
+		181CB347210735C60095572F /* round.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = round.json; sourceTree = "<group>"; };
+		181CB34D210736560095572F /* GDimg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GDimg_0.png; sourceTree = "<group>"; };
+		181CB34E210736560095572F /* GDimg_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GDimg_1.png; sourceTree = "<group>"; };
+		181CB34F210736560095572F /* high.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = high.json; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -332,22 +364,113 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		181CB2D820FECF910095572F /* 降噪 */ = {
+		181CB3212107312D0095572F /* 降噪 */ = {
 			isa = PBXGroup;
 			children = (
-				181CB2D920FECF910095572F /* images */,
-				181CB2DC20FECF910095572F /* data.json */,
+				181CB3222107312D0095572F /* data.json */,
+				181CB3232107312D0095572F /* JZimages */,
 			);
 			path = "降噪";
 			sourceTree = "<group>";
 		};
-		181CB2D920FECF910095572F /* images */ = {
+		181CB3232107312D0095572F /* JZimages */ = {
 			isa = PBXGroup;
 			children = (
-				181CB2DA20FECF910095572F /* img_1.png */,
-				181CB2DB20FECF910095572F /* img_0.png */,
+				181CB3242107312D0095572F /* img_1.png */,
+				181CB3252107312D0095572F /* img_0.png */,
 			);
-			path = images;
+			path = JZimages;
+			sourceTree = "<group>";
+		};
+		181CB3292107319F0095572F /* 空调 */ = {
+			isa = PBXGroup;
+			children = (
+				181CB32A2107319F0095572F /* KTimages */,
+				181CB32E2107319F0095572F /* wind.json */,
+			);
+			path = "空调";
+			sourceTree = "<group>";
+		};
+		181CB32A2107319F0095572F /* KTimages */ = {
+			isa = PBXGroup;
+			children = (
+				181CB32B2107319F0095572F /* KTimg_1.png */,
+				181CB32C2107319F0095572F /* KTimg_0.png */,
+				181CB32D2107319F0095572F /* KTimg_2.png */,
+			);
+			path = KTimages;
+			sourceTree = "<group>";
+		};
+		181CB333210734210095572F /* 音响体验 */ = {
+			isa = PBXGroup;
+			children = (
+				181CB334210734210095572F /* YXimages */,
+				181CB337210734210095572F /* sound.json */,
+			);
+			path = "音响体验";
+			sourceTree = "<group>";
+		};
+		181CB334210734210095572F /* YXimages */ = {
+			isa = PBXGroup;
+			children = (
+				181CB335210734210095572F /* YXimg_1.png */,
+				181CB336210734210095572F /* YXimg_0.png */,
+			);
+			path = YXimages;
+			sourceTree = "<group>";
+		};
+		181CB33B2107351F0095572F /* 真实音效 */ = {
+			isa = PBXGroup;
+			children = (
+				181CB33C2107351F0095572F /* ZSimages */,
+				181CB33F2107351F0095572F /* real.json */,
+			);
+			path = "真实音效";
+			sourceTree = "<group>";
+		};
+		181CB33C2107351F0095572F /* ZSimages */ = {
+			isa = PBXGroup;
+			children = (
+				181CB33D2107351F0095572F /* ZSimg_0.png */,
+				181CB33E2107351F0095572F /* ZSimg_1.png */,
+			);
+			path = ZSimages;
+			sourceTree = "<group>";
+		};
+		181CB343210735C60095572F /* 环绕音效 */ = {
+			isa = PBXGroup;
+			children = (
+				181CB344210735C60095572F /* HRimages */,
+				181CB347210735C60095572F /* round.json */,
+			);
+			path = "环绕音效";
+			sourceTree = "<group>";
+		};
+		181CB344210735C60095572F /* HRimages */ = {
+			isa = PBXGroup;
+			children = (
+				181CB345210735C60095572F /* HRimg_0.png */,
+				181CB346210735C60095572F /* HRimg_1.png */,
+			);
+			path = HRimages;
+			sourceTree = "<group>";
+		};
+		181CB34B210736560095572F /* 高低音 */ = {
+			isa = PBXGroup;
+			children = (
+				181CB34C210736560095572F /* GDimages */,
+				181CB34F210736560095572F /* high.json */,
+			);
+			path = "高低音";
+			sourceTree = "<group>";
+		};
+		181CB34C210736560095572F /* GDimages */ = {
+			isa = PBXGroup;
+			children = (
+				181CB34D210736560095572F /* GDimg_0.png */,
+				181CB34E210736560095572F /* GDimg_1.png */,
+			);
+			path = GDimages;
 			sourceTree = "<group>";
 		};
 		188D7A9620EA116D00F283CD = {
@@ -437,7 +560,12 @@
 				181CB30520FF25FB0095572F /* FeedbackViewController.h */,
 				181CB30620FF25FB0095572F /* FeedbackViewController.m */,
 				188D7AAB20EA116E00F283CD /* Assets.xcassets */,
-				181CB2D820FECF910095572F /* 降噪 */,
+				181CB3212107312D0095572F /* 降噪 */,
+				181CB3292107319F0095572F /* 空调 */,
+				181CB333210734210095572F /* 音响体验 */,
+				181CB33B2107351F0095572F /* 真实音效 */,
+				181CB343210735C60095572F /* 环绕音效 */,
+				181CB34B210736560095572F /* 高低音 */,
 				181CB29020FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 */,
 				181CB28E20FDCFAF0095572F /* 普通音响_开始.wav */,
 				181CB29220FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav */,
@@ -728,7 +856,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				181CB2A920FDE2420095572F /* 空调体验_1 开始.wav in Resources */,
-				181CB2DF20FECF910095572F /* data.json in Resources */,
 				181CB2B520FDE3C60095572F /* 空调体验_6（科鲁兹&科鲁兹两厢）.wav in Resources */,
 				181CB2D720FDE95B0095572F /* 试驾体验_4（迈锐宝XL）.wav in Resources */,
 				181CB2D320FDE95B0095572F /* 试驾体验_2（探界者）.wav in Resources */,
@@ -736,40 +863,57 @@
 				181CB26620F729260095572F /* douyin.mp4 in Resources */,
 				181CB29120FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 in Resources */,
 				181CB2B420FDE3C60095572F /* 空调体验_7（科沃兹）.wav in Resources */,
-				181CB2DE20FECF910095572F /* img_0.png in Resources */,
 				181CB2C120FDE7C90095572F /* 降噪体验_3 结束测试.wav in Resources */,
+				181CB3322107319F0095572F /* wind.json in Resources */,
 				181CB2C320FDE7C90095572F /* 降噪体验_2 再次测试.wav in Resources */,
+				181CB3312107319F0095572F /* KTimg_2.png in Resources */,
 				188D7B0F20EA27E900F283CD /* README.mdown in Resources */,
 				181CB2C420FDE7C90095572F /* 降噪体验_9（科沃兹）.wav in Resources */,
 				181CB2B320FDE3C60095572F /* 空调体验_3（探界者&迈锐宝XL）.wav in Resources */,
 				181CB2D520FDE95B0095572F /* 试驾体验_8 领取试驾报告.wav in Resources */,
 				181CB2B720FDE7BE0095572F /* 降噪体验_1 开启车窗.wav in Resources */,
+				181CB338210734210095572F /* YXimg_1.png in Resources */,
 				181CB2D620FDE95B0095572F /* 试驾体验_3（创酷）.wav in Resources */,
 				181CB2A520FDDEDC0095572F /* BOSE_8 高低音效 音乐选择.wav in Resources */,
-				181CB2DD20FECF910095572F /* img_1.png in Resources */,
+				181CB3282107312D0095572F /* img_0.png in Resources */,
 				181CB28D20FD9ADF0095572F /* The Nutcracker Basses.MP3 in Resources */,
+				181CB351210736560095572F /* GDimg_1.png in Resources */,
+				181CB3402107351F0095572F /* ZSimg_0.png in Resources */,
+				181CB350210736560095572F /* GDimg_0.png in Resources */,
 				181CB2AB20FDE2820095572F /* 空调体验_2 蒲公英.wav in Resources */,
 				181CB2A120FDD9370095572F /* BOSE_6 环绕音效 结束.wav in Resources */,
 				181CB29D20FDD81F0095572F /* BOSE_5 环绕音效 开始.wav in Resources */,
 				181CB2D220FDE95B0095572F /* 试驾体验_5（迈锐宝）.wav in Resources */,
 				181CB2C520FDE7C90095572F /* 降噪体验_4（探界者）.wav in Resources */,
 				181CB29B20FDD5D30095572F /* BOSE_4 真实音效 结束.wav in Resources */,
+				181CB3422107351F0095572F /* real.json in Resources */,
 				181CB28C20FD9ADF0095572F /* Clair de Lune.MP3 in Resources */,
+				181CB349210735C60095572F /* HRimg_1.png in Resources */,
 				188D7B0D20EA27E900F283CD /* LICENSE in Resources */,
+				181CB352210736560095572F /* high.json in Resources */,
+				181CB348210735C60095572F /* HRimg_0.png in Resources */,
 				181CB2A320FDDE910095572F /* BOSE_7 高低音效 开始.wav in Resources */,
 				181CB2C620FDE7C90095572F /* 降噪体验_7（迈锐宝）.wav in Resources */,
 				181CB29F20FDD8670095572F /* Introduction.wav in Resources */,
 				181CB2D420FDE95B0095572F /* 试驾体验_6（科鲁兹&科鲁兹两厢）.wav in Resources */,
 				181CB2C720FDE7C90095572F /* 降噪体验_5（迈锐宝XL）.wav in Resources */,
+				181CB339210734210095572F /* YXimg_0.png in Resources */,
 				181CB2C220FDE7C90095572F /* 降噪体验_6（创酷）.wav in Resources */,
+				181CB32F2107319F0095572F /* KTimg_1.png in Resources */,
 				181CB28F20FDCFAF0095572F /* 普通音响_开始.wav in Resources */,
+				181CB3412107351F0095572F /* ZSimg_1.png in Resources */,
+				181CB3302107319F0095572F /* KTimg_0.png in Resources */,
 				181CB29320FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav in Resources */,
 				181CB2A720FDE0270095572F /* BOSE_9 高低音效 结束.wav in Resources */,
 				181CB2D120FDE95B0095572F /* 试驾体验_1 准备出发.wav in Resources */,
+				181CB34A210735C60095572F /* round.json in Resources */,
+				181CB33A210734210095572F /* sound.json in Resources */,
 				181CB29520FDD35B0095572F /* BOSE_1 选择页面.wav in Resources */,
 				188D7AAC20EA116E00F283CD /* Assets.xcassets in Resources */,
+				181CB3262107312D0095572F /* data.json in Resources */,
 				181CB2C020FDE7C90095572F /* 降噪体验_8（科鲁兹&科鲁兹两厢）.wav in Resources */,
 				181CB2B220FDE3C60095572F /* 空调体验_5（迈锐宝）.wav in Resources */,
+				181CB3272107312D0095572F /* img_1.png in Resources */,
 				181CB29720FDD4880095572F /* BOSE_3 真实音效 开始.wav in Resources */,
 				181CB27720F830160095572F /* 蒲公英.mp4 in Resources */,
 				181CB22920F306430095572F /* 8270.mp3 in Resources */,

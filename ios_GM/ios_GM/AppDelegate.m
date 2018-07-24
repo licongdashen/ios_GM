@@ -31,7 +31,7 @@
     [DEF_UserDefaults setObject:@"0" forKey:@"3333"];
     [DEF_UserDefaults setObject:@"0" forKey:@"4444"];
 
-    self.loginDic = @{@"access_token"   : @"47b167f3e46b544e5d7e7eaa25331956",
+    self.loginDic = @{@"access_token"   : @"59a1af448c3cd7f250e0635c39a05a5a",
                       @"accountName"    : @"陈杰"
                       };
     [self performSelector:@selector(panduan) withObject:nil afterDelay:0.1];
@@ -117,13 +117,11 @@
     self.loginDic = dic;
     NSLog(@"loginDic:%@",dic);
     
-    NSDictionary *dic1 = @{
-                          @"access_token" :self.loginDic[@"access_token"],
-                          @"accountCode"         :self.loginDic[@"accountCode"],
-                          @"accountName"       :self.loginDic[@"accountName"],
-                          @"mobile"           :self.loginDic[@"mobile"],
-                          @"positionName"     :self.loginDic[@"positionName"],
-                          };
+
+    NSMutableDictionary *dic1 = [[NSMutableDictionary alloc]initWithDictionary:self.loginDic];
+    [dic1 removeObjectForKey:@"skipName"];
+    [dic1 removeObjectForKey:@"skipImage"];
+
     [RequestOperationManager getValidImgParametersDic:dic1 success:^(NSMutableDictionary *result) {
 
         if (result == nil) {

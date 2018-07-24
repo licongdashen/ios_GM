@@ -110,7 +110,7 @@
 
 -(void)playav:(NSString *)str
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:str ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:str ofType:@"wav"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     

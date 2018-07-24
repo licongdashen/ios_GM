@@ -193,7 +193,7 @@
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
     CLLocation *currentLocation = (CLLocation *)[locations lastObject];
-    NSLog(@"纬度=%f，经度=%f",currentLocation.coordinate.latitude,currentLocation.coordinate.longitude);
+//    NSLog(@"纬度=%f，经度=%f",currentLocation.coordinate.latitude,currentLocation.coordinate.longitude);
     
 }
 
@@ -211,7 +211,7 @@
             double y = fabs(newaccelerometerData.acceleration.y);
             double z = fabs(newaccelerometerData.acceleration.z);
 
-            if (x > 1.6 || y > 1.6 || z > 2.6) {
+            if (x > 1.3 || y > 1.3 || z > 1.8) {
                 NSLog(@">>>>>>>>>>>>>>>");
             }
         }
