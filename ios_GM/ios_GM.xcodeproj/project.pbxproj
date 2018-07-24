@@ -102,6 +102,8 @@
 		181CB350210736560095572F /* GDimg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB34D210736560095572F /* GDimg_0.png */; };
 		181CB351210736560095572F /* GDimg_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB34E210736560095572F /* GDimg_1.png */; };
 		181CB352210736560095572F /* high.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB34F210736560095572F /* high.json */; };
+		181CB3572107370B0095572F /* DPimg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB3552107370A0095572F /* DPimg_0.png */; };
+		181CB3582107370B0095572F /* pan.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB3562107370A0095572F /* pan.json */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -271,6 +273,8 @@
 		181CB34D210736560095572F /* GDimg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GDimg_0.png; sourceTree = "<group>"; };
 		181CB34E210736560095572F /* GDimg_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GDimg_1.png; sourceTree = "<group>"; };
 		181CB34F210736560095572F /* high.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = high.json; sourceTree = "<group>"; };
+		181CB3552107370A0095572F /* DPimg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DPimg_0.png; sourceTree = "<group>"; };
+		181CB3562107370A0095572F /* pan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pan.json; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -473,6 +477,23 @@
 			path = GDimages;
 			sourceTree = "<group>";
 		};
+		181CB3532107370A0095572F /* 底盘 */ = {
+			isa = PBXGroup;
+			children = (
+				181CB3542107370A0095572F /* DPimages */,
+				181CB3562107370A0095572F /* pan.json */,
+			);
+			path = "底盘";
+			sourceTree = "<group>";
+		};
+		181CB3542107370A0095572F /* DPimages */ = {
+			isa = PBXGroup;
+			children = (
+				181CB3552107370A0095572F /* DPimg_0.png */,
+			);
+			path = DPimages;
+			sourceTree = "<group>";
+		};
 		188D7A9620EA116D00F283CD = {
 			isa = PBXGroup;
 			children = (
@@ -566,6 +587,7 @@
 				181CB33B2107351F0095572F /* 真实音效 */,
 				181CB343210735C60095572F /* 环绕音效 */,
 				181CB34B210736560095572F /* 高低音 */,
+				181CB3532107370A0095572F /* 底盘 */,
 				181CB29020FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 */,
 				181CB28E20FDCFAF0095572F /* 普通音响_开始.wav */,
 				181CB29220FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav */,
@@ -871,6 +893,7 @@
 				181CB2C420FDE7C90095572F /* 降噪体验_9（科沃兹）.wav in Resources */,
 				181CB2B320FDE3C60095572F /* 空调体验_3（探界者&迈锐宝XL）.wav in Resources */,
 				181CB2D520FDE95B0095572F /* 试驾体验_8 领取试驾报告.wav in Resources */,
+				181CB3572107370B0095572F /* DPimg_0.png in Resources */,
 				181CB2B720FDE7BE0095572F /* 降噪体验_1 开启车窗.wav in Resources */,
 				181CB338210734210095572F /* YXimg_1.png in Resources */,
 				181CB2D620FDE95B0095572F /* 试驾体验_3（创酷）.wav in Resources */,
@@ -904,6 +927,7 @@
 				181CB3412107351F0095572F /* ZSimg_1.png in Resources */,
 				181CB3302107319F0095572F /* KTimg_0.png in Resources */,
 				181CB29320FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav in Resources */,
+				181CB3582107370B0095572F /* pan.json in Resources */,
 				181CB2A720FDE0270095572F /* BOSE_9 高低音效 结束.wav in Resources */,
 				181CB2D120FDE95B0095572F /* 试驾体验_1 准备出发.wav in Resources */,
 				181CB34A210735C60095572F /* round.json in Resources */,

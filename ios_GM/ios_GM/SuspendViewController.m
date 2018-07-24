@@ -29,13 +29,17 @@
     self.titleLb.text = @"底盘悬挂体验";
     self.carView.hidden = NO;
     
-    UIImageView *centerImagv = [[UIImageView alloc]initWithFrame:CGRectMake(0, DEF_NAVIGATIONBAR_HEIGHT + DEF_RESIZE_UI(34), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(139))];
-    centerImagv.image = DEF_IMAGE(@"底盘开始");
-    centerImagv.contentMode = UIViewContentModeScaleAspectFit;
-    centerImagv.centerX = self.view.centerX;
-    [self.view addSubview:centerImagv];
+    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"pan"];
+    animation.frame = CGRectMake(0, DEF_NAVIGATIONBAR_HEIGHT + DEF_RESIZE_UI(34), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(139));
+    animation.centerX = self.view.centerX;
+    animation.loopAnimation = YES;
+    animation.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:animation];
+    [animation playWithCompletion:^(BOOL animationFinished) {
+        // Do Something
+    }];
     
-    UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, centerImagv.bottom + DEF_RESIZE_UI(34), DEF_DEVICE_WIDTH, 25)];
+    UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, animation.bottom + DEF_RESIZE_UI(34), DEF_DEVICE_WIDTH, 25)];
     titleLb.font = DEF_MyBoldFont(24);
     titleLb.text = @"欢迎参加雪佛兰试驾";
     titleLb.textAlignment = NSTextAlignmentCenter;
