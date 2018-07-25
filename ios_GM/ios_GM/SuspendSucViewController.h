@@ -12,4 +12,11 @@
 
 @property (nonatomic, strong) NSString *score;
 
+@property (nonatomic, strong) NSString *fousname;
+@property (nonatomic, strong) NSString *uid;
+@property (nonatomic, strong) NSString *carid;
+@property (nonatomic, strong) NSString *time;
+@property (nonatomic, strong) NSString *speed;
+@property (nonatomic, strong) NSString *stability;
+
 @end

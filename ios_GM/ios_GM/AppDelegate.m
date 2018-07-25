@@ -31,8 +31,9 @@
     [DEF_UserDefaults setObject:@"0" forKey:@"3333"];
     [DEF_UserDefaults setObject:@"0" forKey:@"4444"];
 
-    self.loginDic = @{@"access_token"   : @"59a1af448c3cd7f250e0635c39a05a5a",
-                      @"accountName"    : @"陈杰"
+    self.loginDic = @{@"access_token"   : @"bb20320c9898263fee62a0ae3eb81208",
+                      @"accountName"    : @"陈杰",
+                      @"storeShortName" : @"宜兴汇通"
                       };
     [self performSelector:@selector(panduan) withObject:nil afterDelay:0.1];
     

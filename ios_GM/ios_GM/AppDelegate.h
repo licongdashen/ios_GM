@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NSDictionary *carDic;
 
+@property (nonatomic, strong) NSDictionary *baogaoDic;
+
 
 - (void)loadingHomeController;
 

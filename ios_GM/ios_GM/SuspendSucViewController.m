@@ -28,7 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.score = @"90";
     self.titleLb.text = @"底盘悬挂体验";
     self.carView.hidden = NO;
     

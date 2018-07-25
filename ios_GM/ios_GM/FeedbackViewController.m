@@ -8,9 +8,13 @@
 
 #import "FeedbackViewController.h"
 
-@interface FeedbackViewController ()<UITextViewDelegate>
+@interface FeedbackViewController ()<UITextViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic, strong) UITextView *tv2;
 @property (nonatomic, strong) UILabel *ploaderLb1;
+@property (nonatomic, weak) UIButton *xiangceBtn;
+@property (nonatomic, strong) NSMutableArray *photoArr;
+
+@property (nonatomic, weak) UIView *backView;
 
 @end
 
@@ -21,8 +25,9 @@
     
     self.rightBtn.hidden = YES;
     self.titleLb.text = @"意见反馈";
-    
 
+    self.photoArr = [[NSMutableArray alloc]init];
+    
     self.tv2 = [[UITextView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(40), DEF_NAVIGATIONBAR_HEIGHT + DEF_RESIZE_UI(40), DEF_DEVICE_WIDTH - DEF_RESIZE_UI(80), DEF_RESIZE_UI(137))];
     self.tv2.delegate = self;
     [self.view addSubview:self.tv2];
@@ -37,6 +42,10 @@
     self.ploaderLb1.text = @"请输入您的意见";
     [self.tv2 addSubview:self.ploaderLb1];
     
+    UIView *backView = [[UIView alloc]initWithFrame:CGRectMake(0, lineView.bottom + DEF_RESIZE_UI(20), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(160))];
+    [self.view addSubview:backView];
+    self.backView = backView;
+
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), lineView.bottom + DEF_RESIZE_UI(325), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
     [loginBtn setTitle:@"提交意见" forState:0];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:0];
@@ -55,25 +64,161 @@
         [self.tv2 resignFirstResponder];
     }];
     [self.view addGestureRecognizer:tap];
+    
+    [self loadphotoView];
+
 }
+
+-(void)loadphotoView
+{
+    for (UIView *view in self.backView.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    int x = DEF_RESIZE_UI(39);
+    int y = 0;
+    
+    for (int i = 0; i < self.photoArr.count + 1; i++) {
+        if (i == self.photoArr.count) {
+            if (i < 5) {
+                UIButton *xiangceBtn = [[UIButton alloc]initWithFrame:CGRectMake(x, y, DEF_RESIZE_UI(70), DEF_RESIZE_UI(70))];
+                [xiangceBtn setImage:DEF_IMAGE(@"照相") forState:0];
+                [xiangceBtn addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+                [self.backView addSubview:xiangceBtn];
+                self.xiangceBtn = xiangceBtn;
+            }
+        }else{
+            UIImageView *imagv = [[UIImageView alloc]initWithFrame:CGRectMake(x, y, DEF_RESIZE_UI(70), DEF_RESIZE_UI(70))];
+            imagv.image = self.photoArr[i];
+            imagv.layer.cornerRadius = 6;
+            imagv.layer.masksToBounds = YES;
+            imagv.contentMode = UIViewContentModeScaleAspectFill;
+            [self.backView addSubview:imagv];
+        }
+       
+        x += DEF_RESIZE_UI(90);
+        
+        if (i == 2) {
+            y += DEF_RESIZE_UI(90);
+            x = DEF_RESIZE_UI(39);
+        }
+        
+    }
+}
+
+-(void)action
+{
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照",@"从相册选择" , nil];
+    [sheet showInView:self.view];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [picker dismissViewControllerAnimated:YES completion:^{}];
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage]; //通过key值获取到图片
+    [self.photoArr addObject:image];
+
+    [self loadphotoView];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:^{}];
+}
+
+#pragma mark - CustomActionSheetDelegate
+
+- (BOOL) isCameraAvailable
+{
+    return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    NSLog(@"%ld", buttonIndex);
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.editing = YES;
+    imagePicker.allowsEditing = YES;
+    imagePicker.delegate = self;
+    if (buttonIndex == actionSheet.cancelButtonIndex) {
+        return;
+    }
+    switch (buttonIndex) {
+        case 0: {
+            if ([self isCameraAvailable])
+            {
+                imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                [self presentViewController:imagePicker animated:YES completion:nil];
+            }
+            else
+            {
+            }
+            break;
+        }
+            
+        case 1: {
+            imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            [self presentViewController:imagePicker animated:YES completion:nil];
+            break;
+        }
+        default:
+            return;
+    }
+}
+
 
 -(void)jieshu
 {
-    NSDictionary *dic1 = @{
-                          @"content"         :self.tv2.text,
+
+    [CACProgressHUD showMBProgress:DEF_MyUIWindow message:@""];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    NSMutableString *str = [NSMutableString stringWithFormat:DEF_IPAddress];
+    [str appendString:DEF_API_CHECKVALIDIMG];
+    [str appendString:@"?"];
+    [str appendFormat:@"%@=%@", @"access-token", DEF_MyAppDelegate.loginDic[@"access_token"]];
+    
+    NSDictionary *dic = @{@"content"      :self.tv2.text,
                           };
-    [RequestOperationManager checkValidImgParametersDic:dic1 success:^(NSMutableDictionary *result) {
+    //formData: 专门用于拼接需要上传的数据,在此位置生成一个要上传的数据体
+    [manager POST:str parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
-        if (result == nil) {
+        for (int i = 0; i < self.photoArr.count; i ++) {
+            
+            NSData *data = UIImageJPEGRepresentation(self.photoArr[i], 0.5);
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            formatter.dateFormat = @"yyyyMMddHHmmss";
+            NSString *str = [formatter stringFromDate:[NSDate date]];
+            NSString *fileName = [NSString stringWithFormat:@"%d%@.png",i,str];
+            NSLog(@"ffffffff%@",fileName);
+            [formData appendPartWithFileData:data name:@"image[]" fileName:fileName mimeType:@"image/png"];
+        }
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"上传成功 %@", responseObject);
+        [CACProgressHUD hideMBProgress:DEF_MyUIWindow];
+        if (responseObject == nil) {
+            [CACUtility showTips:@"提交失败"];
             return;
         }
-        if ([result[@"code"] intValue] != 1) {
+        if ([responseObject[@"code"] intValue] != 1) {
+            [CACUtility showTips:@"提交失败"];
             return;
         }
         
-    } failture:^(id result) {
+        [CACUtility showTips:@"提交成功"];
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [CACProgressHUD hideMBProgress:DEF_MyUIWindow];
         
+        NSLog(@"提交失败 %@", error);
     }];
+    
+    
+    
 }
 
 -(void)textViewDidChange:(UITextView *)textView

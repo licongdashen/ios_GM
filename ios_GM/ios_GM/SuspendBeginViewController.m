@@ -19,6 +19,26 @@
 @property (nonatomic) CMMotionManager *motionManager;
 
 @property (nonatomic) CMAccelerometerData *data;
+@property (nonatomic, strong) NSMutableArray *musicArr1;
+@property (nonatomic, strong) NSMutableArray *musicArr2;
+@property (nonatomic, strong) NSMutableArray *musicArr3;
+@property (nonatomic, strong) NSMutableArray *musicArr4;
+
+@property (nonatomic, weak)UIImageView *musicImagv1;
+
+@property int shuiwei;
+
+@property (nonatomic, strong) NSString* stability;
+
+@property CLLocation *fristLocation;
+
+@property CLLocation *endLocation;
+
+@property BOOL isfrist;
+
+@property (nonatomic) dispatch_source_t timer;
+
+@property int timeCount;
 
 @end
 
@@ -29,28 +49,79 @@
     [self removeObserver:self forKeyPath:@"data"];
 
 }
-
 -(void)viewWillDisappear:(BOOL)animated
 {
     [self.motionManager stopAccelerometerUpdates];
     [_manger stopUpdatingLocation];
 
+    dispatch_source_cancel(self.timer);
 }
 
 -(void)kaishi
 {
+    CLLocation *loc1=[[CLLocation alloc]initWithLatitude:self.fristLocation.coordinate.latitude longitude:self.fristLocation.coordinate.longitude];
+    CLLocation *loc2=[[CLLocation alloc]initWithLatitude:self.endLocation.coordinate.latitude longitude:self.endLocation.coordinate.longitude];
+    CLLocationDistance distance=[loc1 distanceFromLocation:loc2];
+    NSLog(@"距离=%fM",distance);
+    
+    dispatch_source_cancel(self.timer);
     [self.motionManager stopAccelerometerUpdates];
     [_manger stopUpdatingLocation];
     SuspendSucViewController *vc = [[SuspendSucViewController alloc]init];
+    vc.score = [NSString stringWithFormat:@"%d",self.shuiwei];
+    vc.uid = DEF_MyAppDelegate.loginDic[@"access_token"];
+    vc.carid = DEF_MyAppDelegate.carDic[@"id"];
+    vc.fousname = DEF_MyAppDelegate.loginDic[@"storeShortName"];
+    vc.stability = self.stability;
+    vc.time = [NSString stringWithFormat:@"%f",(float)self.timeCount/(float)60];
+    float sudu = (float)distance/(float)self.timeCount * 3.6;
+    vc.speed = [NSString stringWithFormat:@"%f",sudu];
+    
+    DEF_MyAppDelegate.baogaoDic = @{@"uid":DEF_MyAppDelegate.loginDic[@"access_token"],
+                                    @"carid":[NSString stringWithFormat:@"%@",DEF_MyAppDelegate.carDic[@"id"]],
+                                    @"fousname":DEF_MyAppDelegate.loginDic[@"storeShortName"],
+                                    @"time":[NSString stringWithFormat:@"%.2f",(float)self.timeCount/(float)60],
+                                    @"speed":[NSString stringWithFormat:@"%.2f",sudu],
+                                    @"stability":self.stability,
+                                    };
     [self.navigationController pushViewController:vc animated:YES];
+    
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.isfrist = YES;
+    
     self.titleLb.text = @"底盘悬挂体验";
     self.carView.hidden = NO;
     
+    self.shuiwei = 100;
+    
+    self.stability = @"4";
+    
+    self.musicArr1 = [[NSMutableArray alloc]init];
+    for (int i = 1; i <= 143; i ++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"water%d",i]];
+        [self.musicArr1 addObject:image];
+    }
+    
+    self.musicArr2 = [[NSMutableArray alloc]init];
+    for (int i = 1; i <= 143; i ++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",i]];
+        [self.musicArr2 addObject:image];
+    }
+    
+    UIImageView *musicImagv1 = [[UIImageView alloc]initWithFrame:CGRectMake(0,  DEF_RESIZE_UI(167), DEF_RESIZE_UI(232), DEF_RESIZE_UI(251))];
+    musicImagv1.centerX = self.view.centerX;
+    musicImagv1.contentMode = UIViewContentModeScaleAspectFill;
+    musicImagv1.animationRepeatCount = 1;
+    [self.view addSubview:musicImagv1];
+    [musicImagv1 startAnimating];
+    self.musicImagv1 = musicImagv1;
+    self.musicImagv1.image = DEF_IMAGE(@"water1");
+
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), DEF_NAVIGATIONBAR_HEIGHT + DEF_RESIZE_UI(463), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
     [loginBtn setTitle:@"结束试驾" forState:0];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:0];
@@ -113,7 +184,57 @@
     [_manger startUpdatingLocation];
     [_manger location];
     
-    [self countDistance];
+//    [self countDistance];
+    
+    @weakify(self);
+   [[RACObserve(self, shuiwei)skip:1] subscribeNext:^(id x) {
+        @strongify(self);
+        int count = [x intValue];
+        NSLog(@"shu%d",count);
+        if (count < 100 && count >= 90) {
+            self.stability = @"4";
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.musicImagv1.image = DEF_IMAGE(@"water1");
+                self.musicImagv1.animationImages = self.musicArr1;
+                [self.musicImagv1 startAnimating];
+            });
+        }else if (count < 90 && count >= 80){
+            self.stability = @"3";
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.musicImagv1.image = DEF_IMAGE(@"water1");
+                self.musicImagv1.animationImages = self.musicArr1;
+                [self.musicImagv1 startAnimating];
+            });
+        }else if (count < 80 && count >= 70){
+            self.stability = @"2";
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.musicImagv1.image = DEF_IMAGE(@"water1");
+                self.musicImagv1.animationImages = self.musicArr1;
+                [self.musicImagv1 startAnimating];
+            });
+        }else{
+            self.stability = @"1";
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.musicImagv1.image = DEF_IMAGE(@"water1");
+                self.musicImagv1.animationImages = self.musicArr1;
+                [self.musicImagv1 startAnimating];
+            });
+        }
+    }];
+    
+    self.timeCount = 0;
+    dispatch_queue_t queue1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue1);
+    dispatch_source_set_timer(self.timer,dispatch_walltime(NULL, 0),1*NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(self.timer, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.timeCount ++;
+        });
+    });
+    dispatch_resume(self.timer);
+    
 }
 
 //当定位权限的授权状态发生改变时调用该方法
@@ -193,8 +314,16 @@
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
     CLLocation *currentLocation = (CLLocation *)[locations lastObject];
-//    NSLog(@"纬度=%f，经度=%f",currentLocation.coordinate.latitude,currentLocation.coordinate.longitude);
-    
+ 
+    if (self.isfrist == YES) {
+        self.fristLocation =currentLocation;
+        self.isfrist = NO;
+        NSLog(@"纬度1=%f，经度1=%f",self.fristLocation.coordinate.latitude,self.fristLocation.coordinate.longitude);
+
+    }
+    self.endLocation = currentLocation;
+    NSLog(@"纬度2=%f，经度2=%f",self.endLocation.coordinate.latitude,self.endLocation.coordinate.longitude);
+
 }
 
 
@@ -212,7 +341,8 @@
             double z = fabs(newaccelerometerData.acceleration.z);
 
             if (x > 1.3 || y > 1.3 || z > 1.8) {
-                NSLog(@">>>>>>>>>>>>>>>");
+               
+                self.shuiwei -= 2;
             }
         }
         

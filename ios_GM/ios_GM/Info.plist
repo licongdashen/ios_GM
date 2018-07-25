@@ -45,6 +45,10 @@
 	<string>开启录音</string>
 	<key>NSMotionUsageDescription</key>
 	<string>获取三轴陀螺仪</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App需要您的同意,才能访问相册</string>
+	<key>NSCameraUsageDescription</key>
+	<string>App需要您的同意,才能访问相机</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
