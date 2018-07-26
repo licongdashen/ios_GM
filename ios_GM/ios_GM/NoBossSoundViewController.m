@@ -25,7 +25,7 @@
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-    [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
+//    [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
 
 }
 
@@ -140,7 +140,7 @@
         
         AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
         player = [[AVPlayer alloc] initWithPlayerItem:item];
-        [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+//        [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(playFinished:)
                                                      name:AVPlayerItemDidPlayToEndTimeNotification
@@ -166,11 +166,11 @@
         
         AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
         player = [[AVPlayer alloc] initWithPlayerItem:item];
-        [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(playFinished:)
-                                                     name:AVPlayerItemDidPlayToEndTimeNotification
-                                                   object:player.currentItem];
+//        [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(playFinished:)
+//                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+//                                                   object:player.currentItem];
         [player play];
     }
 }

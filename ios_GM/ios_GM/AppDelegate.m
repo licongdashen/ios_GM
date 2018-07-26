@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "GuideViewController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -31,10 +32,10 @@
     [DEF_UserDefaults setObject:@"0" forKey:@"3333"];
     [DEF_UserDefaults setObject:@"0" forKey:@"4444"];
 
-//    self.loginDic = @{@"access_token"   : @"bb20320c9898263fee62a0ae3eb81208",
-//                      @"accountName"    : @"陈杰",
-//                      @"storeShortName" : @"宜兴汇通"
-//                      };
+    self.loginDic = @{@"access_token"   : @"bb20320c9898263fee62a0ae3eb81208",
+                      @"accountName"    : @"陈杰",
+                      @"storeShortName" : @"宜兴汇通"
+                      };
     [self performSelector:@selector(panduan) withObject:nil afterDelay:0.1];
     
 
@@ -48,13 +49,10 @@
         
     }else{
         
-        UIViewController *vc = [[UIViewController alloc]init];
-        vc.view.backgroundColor = [UIColor whiteColor];
-        self.window.rootViewController = vc;
-        
-        UIAlertView *WXinstall=[[UIAlertView alloc]initWithTitle:@"提示" message:@"请打开母APP授权登录"delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-        WXinstall.delegate = self;
-        [WXinstall show];
+        LoginViewController *tabBar = [[LoginViewController alloc]init];
+        CACBaseNavigationController *Nav = [[CACBaseNavigationController alloc]initWithRootViewController:tabBar];
+        DEF_MyAppDelegate.window.rootViewController = Nav;
+        DEF_MyAppDelegate.mainNav = Nav;
     }
     [self.window makeKeyAndVisible];
 

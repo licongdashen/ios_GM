@@ -6,8 +6,7 @@
 //  Copyright (c) 2015年 caimiao. All rights reserved.
 //
 
-#import "NowAndSoonCollectionCell.h"
-
+#import "NowAndSoonCollectionCell.h" 
 @interface NowAndSoonCollectionCell()
 
 /**

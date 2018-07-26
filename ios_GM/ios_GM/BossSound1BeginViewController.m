@@ -27,7 +27,7 @@
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-    [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
+//    [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
     
 }
 
@@ -35,7 +35,6 @@
 {
     [player pause];
 }
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.titleLb.text = @"真实音效体验";
@@ -204,7 +203,7 @@
     
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
     player = [[AVPlayer alloc] initWithPlayerItem:item];
-    [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+//    [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(playFinished:)
                                                  name:AVPlayerItemDidPlayToEndTimeNotification
@@ -219,32 +218,32 @@
     self.centerImagv.image = DEF_IMAGE(@"播放按钮");
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:@"status"]) {
-        switch (player.status) {
-            case AVPlayerStatusUnknown:
-            {
-                NSLog(@"未知转态");
-            }
-                break;
-            case AVPlayerStatusReadyToPlay:
-            {
-                NSLog(@"准备播放");
-            }
-                break;
-            case AVPlayerStatusFailed:
-            {
-                NSLog(@"加载失败");
-            }
-                break;
-                
-            default:
-                break;
-        }
-        
-    }
-}
+//-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+//{
+//    if ([keyPath isEqualToString:@"status"]) {
+//        switch (player.status) {
+//            case AVPlayerStatusUnknown:
+//            {
+//                NSLog(@"未知转态");
+//            }
+//                break;
+//            case AVPlayerStatusReadyToPlay:
+//            {
+//                NSLog(@"准备播放");
+//            }
+//                break;
+//            case AVPlayerStatusFailed:
+//            {
+//                NSLog(@"加载失败");
+//            }
+//                break;
+//
+//            default:
+//                break;
+//        }
+//
+//    }
+//}
 
 
 -(void)jieshu

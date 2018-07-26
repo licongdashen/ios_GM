@@ -246,7 +246,7 @@
         case kCLAuthorizationStatusNotDetermined:
             
             NSLog(@"用户尚未确定是否授权！");
-            [CACUtility showTips:@"用户尚未确定是否授权！"];
+//            [CACUtility showTips:@"用户尚未确定是否授权！"];
 
             break;
             

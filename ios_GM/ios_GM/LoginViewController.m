@@ -66,7 +66,7 @@
     [self.view addSubview:loginBtn];
     
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, loginBtn.bottom + DEF_RESIZE_UI(28), 150, 20)];
-    [btn setTitle:@"打开Mychevy授权" forState:0];
+    [btn setTitle:@"打开掌上4S店授权" forState:0];
     [btn setTitleColor:DEF_UICOLORFROMRGB(0x4b4948) forState:0];
     btn.titleLabel.font = DEF_MyFont(16);
     [btn addTarget:self action:@selector(shouquan) forControlEvents:UIControlEventTouchUpInside];

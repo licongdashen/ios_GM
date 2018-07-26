@@ -32,8 +32,8 @@
 
 -(void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-    [self.player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+//    [self.player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
     if (self.timeObserve) {
         [self.player removeTimeObserver:self.timeObserve];
         self.timeObserve = nil;
@@ -168,11 +168,11 @@
     
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
     self.player = [[AVPlayer alloc] initWithPlayerItem:item];
-    [self.player .currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playFinished:)
-                                                 name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:self.player .currentItem];
+//    [self.player .currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(playFinished:)
+//                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+//                                               object:self.player .currentItem];
     [self.player  play];
 }
 
@@ -204,11 +204,11 @@
     
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
     self.player = [[AVPlayer alloc] initWithPlayerItem:item];
-    [self.player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playFinished:)
-                                                 name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:self.player.currentItem];
+//    [self.player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(playFinished:)
+//                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+//                                               object:self.player.currentItem];
     [self.player play];
     
     
@@ -233,38 +233,38 @@
     
 }
 
--(void)playFinished:(NSNotification *)obj
-{
-    [self.player pause];
-    
-}
+//-(void)playFinished:(NSNotification *)obj
+//{
+//    [self.player pause];
+//
+//}
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:@"status"]) {
-        switch (self.player.status) {
-            case AVPlayerStatusUnknown:
-            {
-                NSLog(@"未知转态");
-            }
-                break;
-            case AVPlayerStatusReadyToPlay:
-            {
-                NSLog(@"准备播放");
-            }
-                break;
-            case AVPlayerStatusFailed:
-            {
-                NSLog(@"加载失败");
-            }
-                break;
-                
-            default:
-                break;
-        }
-        
-    }
-}
+//-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+//{
+//    if ([keyPath isEqualToString:@"status"]) {
+//        switch (self.player.status) {
+//            case AVPlayerStatusUnknown:
+//            {
+//                NSLog(@"未知转态");
+//            }
+//                break;
+//            case AVPlayerStatusReadyToPlay:
+//            {
+//                NSLog(@"准备播放");
+//            }
+//                break;
+//            case AVPlayerStatusFailed:
+//            {
+//                NSLog(@"加载失败");
+//            }
+//                break;
+//                
+//            default:
+//                break;
+//        }
+//        
+//    }
+//}
 
 -(void)next
 {

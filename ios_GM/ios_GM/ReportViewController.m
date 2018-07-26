@@ -23,7 +23,7 @@
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-    [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
+//    [player.currentItem removeObserver:self forKeyPath:@"status" context:nil];
     
 }
 
@@ -53,7 +53,7 @@
     
     UIImageView *imagv1 = [[UIImageView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(27), imagv.bottom + DEF_RESIZE_UI(44), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(40))];
     imagv1.centerX = self.view.centerX;
-    imagv1.contentMode = UIViewContentModeScaleAspectFit;
+    imagv1.contentMode = UIViewContentModeScaleAspectFit; 
     imagv1.image = DEF_IMAGE(@"透底logo-3");
     [self.view addSubview:imagv1];
     
@@ -67,7 +67,7 @@
     loginBtn.centerX = self.view.centerX;
     loginBtn.backgroundColor = DEF_UICOLORFROMRGB(0xffbf17);
     [self.view addSubview:loginBtn];
-    
+    //https://chevrolet-static.zedigital.com.cn/h5/index.html?param=stability=2&time=0.08&speed=0.65&uid=bb20320c9898263fee62a0ae3eb81208&fousname=宜兴汇通&param=&carid=6
     [self planRefresh];
     
     [self playav];
@@ -81,7 +81,7 @@
     
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
     player = [[AVPlayer alloc] initWithPlayerItem:item];
-    [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+//    [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(playFinished:)
                                                  name:AVPlayerItemDidPlayToEndTimeNotification

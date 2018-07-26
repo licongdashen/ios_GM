@@ -33,7 +33,7 @@
 
 -(void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:self.myPlayer.currentItem];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:self.myPlayer.currentItem];
     
     [self.item removeObserver:self forKeyPath:@"status"];
 
@@ -56,7 +56,7 @@
     self.playerLayer.borderColor = DEF_RGB(111, 117, 119).CGColor;
     self.playerLayer.borderWidth = 8;
     [self.view.layer addSublayer:self.playerLayer];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:self.myPlayer.currentItem];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:self.myPlayer.currentItem];
     [self.item addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
     
     UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0,DEF_RESIZE_UI(400) + DEF_NAVIGATIONBAR_HEIGHT, DEF_DEVICE_WIDTH, 17 + 25)];
@@ -117,11 +117,11 @@
     
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
     player = [[AVPlayer alloc] initWithPlayerItem:item];
-    [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playFinished:)
-                                                 name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:player.currentItem];
+//    [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+////    [[NSNotificationCenter defaultCenter] addObserver:self
+////                                             selector:@selector(playFinished:)
+////                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+////                                               object:player.currentItem];
     [player play];
 }
 
