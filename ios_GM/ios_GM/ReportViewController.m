@@ -41,13 +41,12 @@
     titleLb.textColor = DEF_APP_MAIN_TITLECOLOR;
     [self.view addSubview:titleLb];
     
-    NSLog(@"ffffffff%@",DEF_MyAppDelegate.baogaoDic);
-    NSLog(@"dddddddddd%@",[CACUtility formatHtmlURL:@"http://cdn.qiniu.com/report.html" withParams:DEF_MyAppDelegate.baogaoDic]);
+    NSLog(@"dddddddddd%@",[CACUtility formatHtmlURL:@"https://chevrolet-static.zedigital.com.cn/h5/index.html" withParams:DEF_MyAppDelegate.baogaoDic]);
 
     UIImageView *imagv = [[UIImageView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(27), DEF_NAVIGATIONBAR_HEIGHT + DEF_RESIZE_UI(139), DEF_RESIZE_UI(213), DEF_RESIZE_UI(213))];
     imagv.centerX = self.view.centerX;
     imagv.contentMode = UIViewContentModeScaleAspectFit;
-    CIImage *image = [self creatQRcodeWithUrlstring:[CACUtility formatHtmlURL:@"http://cdn.qiniu.com/report.html" withParams:DEF_MyAppDelegate.baogaoDic]];
+    CIImage *image = [self creatQRcodeWithUrlstring:[CACUtility formatHtmlURL:@"https://chevrolet-static.zedigital.com.cn/h5/index.html" withParams:DEF_MyAppDelegate.baogaoDic]];
     imagv.image = [self createNonInterpolatedUIImageFormCIImage:image withSize:DEF_RESIZE_UI(213)];
     [self.view addSubview:imagv];
     self.imagv = imagv;

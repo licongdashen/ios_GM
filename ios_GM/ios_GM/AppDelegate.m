@@ -31,10 +31,10 @@
     [DEF_UserDefaults setObject:@"0" forKey:@"3333"];
     [DEF_UserDefaults setObject:@"0" forKey:@"4444"];
 
-    self.loginDic = @{@"access_token"   : @"bb20320c9898263fee62a0ae3eb81208",
-                      @"accountName"    : @"陈杰",
-                      @"storeShortName" : @"宜兴汇通"
-                      };
+//    self.loginDic = @{@"access_token"   : @"bb20320c9898263fee62a0ae3eb81208",
+//                      @"accountName"    : @"陈杰",
+//                      @"storeShortName" : @"宜兴汇通"
+//                      };
     [self performSelector:@selector(panduan) withObject:nil afterDelay:0.1];
     
 

@@ -17,7 +17,7 @@
 //@"http://172.16.21.240:6789"
 
 //测试环境ip地址
-#define DEF_IPAddress           @"http://140.143.193.19:8080/"
+#define DEF_IPAddress           @"https://chevrolet-app.zedigital.com.cn/"
 
 //张最本地ip地址
 //#define DEF_IPAddress          @"http://172.16.21.58:8022"
