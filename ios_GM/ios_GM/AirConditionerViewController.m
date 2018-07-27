@@ -43,7 +43,7 @@
     
     UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, animation.bottom + DEF_RESIZE_UI(42), DEF_DEVICE_WIDTH, 17 + 25)];
     titleLb.font = DEF_MyFont(16);
-    titleLb.text = @"开启空调\n并把手机靠近空调出风口";
+    titleLb.text = @"开启空调\n将手机下方话筒靠近空调出风口";
     titleLb.textAlignment = NSTextAlignmentCenter;
     titleLb.numberOfLines = 2;
     titleLb.textColor = DEF_UICOLORFROMRGB(0x848484);

@@ -137,7 +137,7 @@
     NSLog(@"%ld", buttonIndex);
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.editing = YES;
-    imagePicker.allowsEditing = YES;
+    imagePicker.allowsEditing = NO;
     imagePicker.delegate = self;
     if (buttonIndex == actionSheet.cancelButtonIndex) {
         return;

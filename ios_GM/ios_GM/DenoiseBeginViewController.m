@@ -69,12 +69,17 @@
     centerView.layer.cornerRadius = DEF_RESIZE_UI(262)/2;
     [self.view addSubview:centerView];
     
-    UILabel *dbLb = [[UILabel alloc]initWithFrame:CGRectMake(0, DEF_RESIZE_UI(52), centerView.width, DEF_RESIZE_UI(111))];
+    UILabel *dbLb = [[UILabel alloc]initWithFrame:CGRectMake(0, DEF_RESIZE_UI(45), centerView.width, DEF_RESIZE_UI(111))];
     dbLb.font = DEF_MyBoldFont(DEF_RESIZE_UI(110));
     dbLb.adjustsFontSizeToFitWidth = YES;
     dbLb.textColor = [UIColor whiteColor];
     dbLb.textAlignment = NSTextAlignmentCenter;
     [centerView addSubview:dbLb];
+    
+    UIImageView *cardImagv = [[UIImageView alloc]initWithFrame:CGRectMake(0, dbLb.bottom + DEF_RESIZE_UI(20), centerView.width, DEF_RESIZE_UI(50))];
+    cardImagv.image = DEF_IMAGE(@"Fill1");
+    cardImagv.contentMode = UIViewContentModeCenter;
+    [centerView addSubview:cardImagv];
     
     UILabel *dbLb1 = [[UILabel alloc]initWithFrame:CGRectMake(0, DEF_RESIZE_UI(48), centerView.width - DEF_RESIZE_UI(30), 25)];
     dbLb1.textColor = [UIColor whiteColor];

@@ -104,6 +104,8 @@
 		181CB352210736560095572F /* high.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB34F210736560095572F /* high.json */; };
 		181CB3572107370B0095572F /* DPimg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB3552107370A0095572F /* DPimg_0.png */; };
 		181CB3582107370B0095572F /* pan.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB3562107370A0095572F /* pan.json */; };
+		181CB362210B20270095572F /* DBimg_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 181CB360210B20260095572F /* DBimg_0.png */; };
+		181CB363210B20270095572F /* play.json in Resources */ = {isa = PBXBuildFile; fileRef = 181CB361210B20260095572F /* play.json */; };
 		182ACD0620ECBD4D007760BF /* NowAndSoonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */; };
 		182ACD0920ECBEB2007760BF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182ACD0820ECBEB2007760BF /* MainViewController.m */; };
 		188D7AA420EA116D00F283CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7AA320EA116D00F283CD /* AppDelegate.m */; };
@@ -275,6 +277,8 @@
 		181CB34F210736560095572F /* high.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = high.json; sourceTree = "<group>"; };
 		181CB3552107370A0095572F /* DPimg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DPimg_0.png; sourceTree = "<group>"; };
 		181CB3562107370A0095572F /* pan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pan.json; sourceTree = "<group>"; };
+		181CB360210B20260095572F /* DBimg_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DBimg_0.png; sourceTree = "<group>"; };
+		181CB361210B20260095572F /* play.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = play.json; sourceTree = "<group>"; };
 		182ACD0420ECBD4D007760BF /* NowAndSoonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowAndSoonCollectionCell.h; sourceTree = "<group>"; };
 		182ACD0520ECBD4D007760BF /* NowAndSoonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowAndSoonCollectionCell.m; sourceTree = "<group>"; };
 		182ACD0720ECBEB2007760BF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -494,6 +498,23 @@
 			path = DPimages;
 			sourceTree = "<group>";
 		};
+		181CB35E210B20260095572F /* 播放动画 */ = {
+			isa = PBXGroup;
+			children = (
+				181CB35F210B20260095572F /* DBimages */,
+				181CB361210B20260095572F /* play.json */,
+			);
+			path = "播放动画";
+			sourceTree = "<group>";
+		};
+		181CB35F210B20260095572F /* DBimages */ = {
+			isa = PBXGroup;
+			children = (
+				181CB360210B20260095572F /* DBimg_0.png */,
+			);
+			path = DBimages;
+			sourceTree = "<group>";
+		};
 		188D7A9620EA116D00F283CD = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +609,7 @@
 				181CB343210735C60095572F /* 环绕音效 */,
 				181CB34B210736560095572F /* 高低音 */,
 				181CB3532107370A0095572F /* 底盘 */,
+				181CB35E210B20260095572F /* 播放动画 */,
 				181CB29020FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 */,
 				181CB28E20FDCFAF0095572F /* 普通音响_开始.wav */,
 				181CB29220FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav */,
@@ -906,6 +928,7 @@
 				181CB2AB20FDE2820095572F /* 空调体验_2 蒲公英.wav in Resources */,
 				181CB2A120FDD9370095572F /* BOSE_6 环绕音效 结束.wav in Resources */,
 				181CB29D20FDD81F0095572F /* BOSE_5 环绕音效 开始.wav in Resources */,
+				181CB363210B20270095572F /* play.json in Resources */,
 				181CB2D220FDE95B0095572F /* 试驾体验_5（迈锐宝）.wav in Resources */,
 				181CB2C520FDE7C90095572F /* 降噪体验_4（探界者）.wav in Resources */,
 				181CB29B20FDD5D30095572F /* BOSE_4 真实音效 结束.wav in Resources */,
@@ -941,6 +964,7 @@
 				181CB29720FDD4880095572F /* BOSE_3 真实音效 开始.wav in Resources */,
 				181CB27720F830160095572F /* 蒲公英.mp4 in Resources */,
 				181CB22920F306430095572F /* 8270.mp3 in Resources */,
+				181CB362210B20270095572F /* DBimg_0.png in Resources */,
 				181CB28B20FD9ADF0095572F /* Evil Force.MP3 in Resources */,
 				181CB2B120FDE3C60095572F /* 空调体验_4（创酷）.wav in Resources */,
 				181CB29920FDD4EE0095572F /* 真实音效 海浪_15s.mp3 in Resources */,

@@ -20,6 +20,8 @@
 @property (nonatomic, weak)UIImageView *zhengqueImagv2;
 @property (nonatomic, weak)UIButton *loginBtn11;
 @property (nonatomic, weak)UILabel *errLb;
+@property (nonatomic, weak)LOTAnimationView *animation;
+
 @end
 
 @implementation BossSound1BeginViewController
@@ -41,19 +43,32 @@
     self.carView.hidden = NO;
     
     UIImageView *centerImagv = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.carView.bottom + 12, DEF_RESIZE_UI(282), DEF_RESIZE_UI(282))];
-    centerImagv.image = DEF_IMAGE(@"播放");
+    centerImagv.image = DEF_IMAGE(@"播放按钮");
     centerImagv.contentMode = UIViewContentModeCenter;
     centerImagv.centerX = self.view.centerX;
     centerImagv.userInteractionEnabled = YES;
     [self.view addSubview:centerImagv];
     self.centerImagv = centerImagv;
+    self.centerImagv.hidden = YES;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]init];
     [tap.rac_gestureSignal subscribeNext:^(id x) {
-        centerImagv.image = DEF_IMAGE(@"播放");
+        self.centerImagv.hidden = YES;
+        self.animation.hidden = NO;
         [self playav];
     }];
     [centerImagv addGestureRecognizer:tap];
+    
+    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"play"];
+    animation.frame = CGRectMake(0, self.carView.bottom + 12, DEF_RESIZE_UI(282), DEF_RESIZE_UI(282));
+    animation.centerX = self.view.centerX;
+    animation.loopAnimation = YES;
+    animation.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:animation];
+    [animation playWithCompletion:^(BOOL animationFinished) {
+        // Do Something
+    }];
+    self.animation = animation;
     
     UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, centerImagv.bottom + DEF_RESIZE_UI(10), DEF_DEVICE_WIDTH, 17)];
     titleLb.font = DEF_MyFont(16);
@@ -214,8 +229,8 @@
 -(void)playFinished:(NSNotification *)obj
 {
     [player pause];
-    
-    self.centerImagv.image = DEF_IMAGE(@"播放按钮");
+    self.centerImagv.hidden = NO;
+    self.animation.hidden = YES;
 }
 
 //-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
