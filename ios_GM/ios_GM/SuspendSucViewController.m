@@ -36,15 +36,15 @@
     imagv.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:imagv];
     
-    UIImageView *cardImagv = [[UIImageView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(117), DEF_RESIZE_UI(118), DEF_RESIZE_UI(90), DEF_RESIZE_UI(40))];
+    UIImageView *cardImagv = [[UIImageView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(117), DEF_RESIZE_UI(48), DEF_RESIZE_UI(90), DEF_RESIZE_UI(40))];
     cardImagv.image = DEF_IMAGE(@"水杯2");
     cardImagv.contentMode = UIViewContentModeCenter;
     [imagv addSubview:cardImagv];
     
-    UILabel *contentLb = [[UILabel alloc]initWithFrame:CGRectMake(20, cardImagv.bottom + DEF_RESIZE_UI(12), imagv.width - 40, DEF_RESIZE_UI(100))];
+    UILabel *contentLb = [[UILabel alloc]initWithFrame:CGRectMake(20, cardImagv.bottom + DEF_RESIZE_UI(12), imagv.width - 40, DEF_RESIZE_UI(150))];
     contentLb.textAlignment = NSTextAlignmentCenter;
     contentLb.textColor = [UIColor whiteColor];
-    contentLb.numberOfLines = 4;
+    contentLb.numberOfLines = 7;
     contentLb.font = DEF_MyBoldFont(DEF_RESIZE_UI(18));
     [imagv addSubview:contentLb];
     
@@ -52,7 +52,7 @@
     [loginBtn setTitle:@"查看试驾报告" forState:0];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:0];
     loginBtn.titleLabel.font = DEF_MyFont(22);
-    loginBtn.layer.cornerRadius = DEF_RESIZE_UI(48)/2;
+    loginBtn.layer.cornerRadius = DEF_RESIZE_UI(8);
     loginBtn.layer.masksToBounds = YES;
     [loginBtn addTarget:self action:@selector(jieshu) forControlEvents:UIControlEventTouchUpInside];
     loginBtn.centerX = self.view.centerX;
@@ -61,9 +61,9 @@
     
     NSString *str;
     if ([self.score intValue] < 100) {
-        str = [NSString stringWithFormat:@"即使颠簸路面仍能完美操控驾驶，水杯中的水还剩余%@%%",self.score];
+        str = [NSString stringWithFormat:@"\n\n即使颠簸路面仍能完美操控驾驶，水杯中的水还剩余%@%%",self.score];
     }else{
-        str = @"即使百公里加速，也能做到滴水不洒！水杯中的水还剩余100%.";
+        str = @"\n\n即使百公里加速，也能做到滴水不洒！水杯中的水还剩余100%.";
     }
     if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝XL"]) {
         [self playav:@"试驾体验_4（迈锐宝XL）"];

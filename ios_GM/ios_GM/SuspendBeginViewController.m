@@ -340,7 +340,7 @@
             double y = fabs(newaccelerometerData.acceleration.y);
             double z = fabs(newaccelerometerData.acceleration.z);
 
-            if (x > 1.3 || y > 1.3 || z > 1.8) {
+            if (x > 1.1 || y > 1.1 || z > 1.1) {
                
                 self.shuiwei -= 2;
             }

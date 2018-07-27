@@ -63,10 +63,10 @@
         @strongify(self);
         [self planRefresh];
     }];
-    self.Collection.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        
-    }];
-    [self.Collection.mj_footer endRefreshingWithNoMoreData];
+//    self.Collection.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+//        
+//    }];
+//    [self.Collection.mj_footer endRefreshingWithNoMoreData];
     
     [self planRefresh];
     

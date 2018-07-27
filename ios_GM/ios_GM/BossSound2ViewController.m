@@ -58,7 +58,7 @@
     [loginBtn setTitle:@"开始体验" forState:0];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:0];
     loginBtn.titleLabel.font = DEF_MyFont(22);
-    loginBtn.layer.cornerRadius = DEF_RESIZE_UI(48)/2;
+    loginBtn.layer.cornerRadius = DEF_RESIZE_UI(8);
     loginBtn.layer.masksToBounds = YES;
     [loginBtn addTarget:self action:@selector(kaishi) forControlEvents:UIControlEventTouchUpInside];
     loginBtn.centerX = self.view.centerX;

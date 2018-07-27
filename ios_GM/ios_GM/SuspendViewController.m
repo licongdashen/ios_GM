@@ -46,15 +46,29 @@
     titleLb.textColor = DEF_APP_MAIN_TITLECOLOR;
     [self.view addSubview:titleLb];
     
-    UILabel *titleLb1 = [[UILabel alloc]initWithFrame:CGRectMake(0, titleLb.bottom + DEF_RESIZE_UI(11), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(100))];
+    UILabel *titleLb1 = [[UILabel alloc]initWithFrame:CGRectMake(0, titleLb.bottom + DEF_RESIZE_UI(15), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(17))];
     titleLb1.font = DEF_MyBoldFont(DEF_RESIZE_UI(16));
-    titleLb1.text = @"画面中有盛满水的水杯\n洒水程度取决于\n您的驾驶情况哦！";
+    titleLb1.text = @"画面中有盛满水的水杯";
     titleLb1.textAlignment = NSTextAlignmentCenter;
     titleLb1.textColor = DEF_UICOLORFROMRGB(0x909090);
-    titleLb1.numberOfLines = 3;
     [self.view addSubview:titleLb1];
     
-    UIImageView *centerImagv1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, titleLb1.bottom + DEF_RESIZE_UI(12), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(54))];
+    UILabel *titleLb2 = [[UILabel alloc]initWithFrame:CGRectMake(0, titleLb1.bottom + DEF_RESIZE_UI(8), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(17))];
+    titleLb2.font = DEF_MyBoldFont(DEF_RESIZE_UI(16));
+    titleLb2.text = @"洒水程度取决于";
+    titleLb2.textAlignment = NSTextAlignmentCenter;
+    titleLb2.textColor = DEF_UICOLORFROMRGB(0x909090);
+    [self.view addSubview:titleLb2];
+    
+    UILabel *titleLb3 = [[UILabel alloc]initWithFrame:CGRectMake(0, titleLb2.bottom + DEF_RESIZE_UI(8), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(17))];
+    titleLb3.font = DEF_MyBoldFont(DEF_RESIZE_UI(16));
+    titleLb3.text = @"您的驾驶情况哦！";
+    titleLb3.textAlignment = NSTextAlignmentCenter;
+    titleLb3.textColor = DEF_UICOLORFROMRGB(0x909090);
+    [self.view addSubview:titleLb3];
+    
+    
+    UIImageView *centerImagv1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, titleLb3.bottom + DEF_RESIZE_UI(18), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(54))];
     centerImagv1.image = DEF_IMAGE(@"水杯");
     centerImagv1.contentMode = UIViewContentModeScaleAspectFit;
     centerImagv1.centerX = self.view.centerX;

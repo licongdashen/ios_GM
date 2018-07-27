@@ -133,8 +133,8 @@
 
 -(void)playbackFinished:(NSNotification *)notification{
     NSLog(@"视频播放完成.");
-    [self.myPlayer seekToTime:CMTimeMake(0, 1)];
-    [self.myPlayer play];
+//    [self.myPlayer seekToTime:CMTimeMake(0, 1)];
+//    [self.myPlayer play];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context

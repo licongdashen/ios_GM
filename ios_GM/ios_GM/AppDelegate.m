@@ -22,7 +22,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     
     [DEF_UserDefaults setObject:@"0" forKey:@"1111"];
     [DEF_UserDefaults setObject:@"0" forKey:@"1112"];

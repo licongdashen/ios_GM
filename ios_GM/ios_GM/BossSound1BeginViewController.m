@@ -145,7 +145,7 @@
     [loginBtn11 setTitle:@"提交答案" forState:0];
     [loginBtn11 setTitleColor:[UIColor whiteColor] forState:0];
     loginBtn11.titleLabel.font = DEF_MyFont(22);
-    loginBtn11.layer.cornerRadius = DEF_RESIZE_UI(48)/2;
+    loginBtn11.layer.cornerRadius = DEF_RESIZE_UI(8);
     loginBtn11.layer.masksToBounds = YES;
     [loginBtn11 addTarget:self action:@selector(jieshu) forControlEvents:UIControlEventTouchUpInside];
     loginBtn11.centerX = self.view.centerX;
