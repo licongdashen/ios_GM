@@ -64,10 +64,7 @@
         @strongify(self);
         [self planRefresh];
     }];
-//    self.Collection.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-//        
-//    }];
-//    [self.Collection.mj_footer endRefreshingWithNoMoreData];
+
     
     [self planRefresh];
     
@@ -75,7 +72,6 @@
 
 -(void)planRefresh
 {
-    
     
     NSDictionary *dic = @{@"access-token"      :DEF_MyAppDelegate.loginDic[@"access_token"],
                           };
@@ -89,7 +85,8 @@
             return;
         }
         
-        self.arr = result[@"data"];
+        self.arr = [[NSMutableArray alloc]initWithArray:result[@"data"]];
+        [self.arr addObject:@{@"type" :@"1"}];
         [self.Collection reloadData];
         
     } failture:^(id result) {
@@ -119,6 +116,10 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (indexPath.row == self.arr.count - 1) {
+        return;
+    }
     MainViewController *vc = [[MainViewController alloc]init];
     vc.dic = self.arr[indexPath.row];
     

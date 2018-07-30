@@ -132,6 +132,7 @@
 		188D7B1720EA2E3900F283CD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7B1620EA2E3900F283CD /* HomeViewController.m */; };
 		188D7B1A20EB66C300F283CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7B1920EB66C300F283CD /* LoginViewController.m */; };
 		18941355210EACEA00CC2929 /* 普通音响_科沃兹.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18941354210EACE900CC2929 /* 普通音响_科沃兹.wav */; };
+		18941357210F18E800CC2929 /* BOSE_2 蓝牙连接提示.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18941356210F18E800CC2929 /* BOSE_2 蓝牙连接提示.wav */; };
 		22C174E28DD9B54F691AAC18 /* Pods_ios_GM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ADF0588862AC73DF7CDC66 /* Pods_ios_GM.framework */; };
 /* End PBXBuildFile section */
 
@@ -338,6 +339,7 @@
 		188D7B1820EB66C300F283CD /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		188D7B1920EB66C300F283CD /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		18941354210EACE900CC2929 /* 普通音响_科沃兹.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "普通音响_科沃兹.wav"; sourceTree = "<group>"; };
+		18941356210F18E800CC2929 /* BOSE_2 蓝牙连接提示.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "BOSE_2 蓝牙连接提示.wav"; sourceTree = "<group>"; };
 		96ADF0588862AC73DF7CDC66 /* Pods_ios_GM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_GM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E04D957D1841A67C56C4160 /* Pods-ios_GM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_GM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_GM/Pods-ios_GM.release.xcconfig"; sourceTree = "<group>"; };
 		CEC8B6293C5ED21E1248ECE6 /* Pods-ios_GM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_GM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_GM/Pods-ios_GM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -617,6 +619,7 @@
 				181CB29220FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav */,
 				18941354210EACE900CC2929 /* 普通音响_科沃兹.wav */,
 				181CB29420FDD35B0095572F /* BOSE_1 选择页面.wav */,
+				18941356210F18E800CC2929 /* BOSE_2 蓝牙连接提示.wav */,
 				181CB29620FDD4880095572F /* BOSE_3 真实音效 开始.wav */,
 				181CB29820FDD4ED0095572F /* 真实音效 海浪_15s.mp3 */,
 				181CB29A20FDD5D30095572F /* BOSE_4 真实音效 结束.wav */,
@@ -906,6 +909,7 @@
 				181CB2B520FDE3C60095572F /* 空调体验_6（科鲁兹&科鲁兹两厢）.wav in Resources */,
 				181CB2D720FDE95B0095572F /* 试驾体验_4（迈锐宝XL）.wav in Resources */,
 				181CB2D320FDE95B0095572F /* 试驾体验_2（探界者）.wav in Resources */,
+				18941357210F18E800CC2929 /* BOSE_2 蓝牙连接提示.wav in Resources */,
 				181CB2D020FDE95B0095572F /* 试驾体验_7（科沃兹）.wav in Resources */,
 				181CB26620F729260095572F /* douyin.mp4 in Resources */,
 				181CB29120FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 in Resources */,

@@ -150,7 +150,7 @@
     UILabel *errLb = [[UILabel alloc]initWithFrame:CGRectMake(0, centerImagv.bottom + DEF_RESIZE_UI(205 - 25), DEF_DEVICE_WIDTH, 15)];
     errLb.font = DEF_MyFont(14);
     errLb.textColor = DEF_UICOLORFROMRGB(0xff5353);
-    errLb.text = @"错喽！请重新选择！";
+    errLb.text = @"再想一想，重新选择";
     errLb.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:errLb];
     self.errLb = errLb;

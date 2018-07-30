@@ -36,7 +36,7 @@
     UILabel *titleLb = [[UILabel alloc]initWithFrame:CGRectMake(0, nameLb.bottom + DEF_RESIZE_UI(14), DEF_DEVICE_WIDTH, 17)];
     titleLb.textColor = DEF_UICOLORFROMRGB(0x4b4948);
     titleLb.font = DEF_MyFont(16);
-    titleLb.text = @"欢迎打开雪佛兰体验试车宝";
+    titleLb.text = @"欢迎打开雪佛兰试车宝";
     titleLb.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:titleLb];
     
@@ -56,7 +56,7 @@
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), DEF_RESIZE_UI(504), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
     [loginBtn setTitle:@"打开掌上4S店授权" forState:0];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:0];
-    loginBtn.titleLabel.font = DEF_MyFont(22);
+    loginBtn.titleLabel.font = DEF_MyFont(16);
     loginBtn.layer.cornerRadius = 8;
     loginBtn.layer.masksToBounds = YES;
     loginBtn.centerX = self.view.centerX;

@@ -8,8 +8,9 @@
 
 #import "BossSound3BeginViewController.h"
 #import "BossSound3SucViewController.h"
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface BossSound3BeginViewController ()<AVAudioPlayerDelegate>
+@interface BossSound3BeginViewController ()<AVAudioPlayerDelegate,CBCentralManagerDelegate>
 
 @property (nonatomic, weak)UIView *backView1;
 @property (nonatomic, weak)UIView *backView2;
@@ -25,6 +26,13 @@
 @property (nonatomic, strong)AVPlayer *player;
 @property (nonatomic, strong)UISlider *progress;
 @property id timeObserve;
+
+@property (nonatomic,strong)CBCentralManager *centralManager;
+
+@property BOOL blueToothOpen;
+@property (nonatomic) dispatch_source_t timer11;
+@property int count11;
+@property (nonatomic, weak)UIButton *btn11;
 
 @end
 
@@ -69,6 +77,7 @@
     
     UIScrollView *scro = [[UIScrollView alloc]initWithFrame:CGRectMake(0, titleLb.bottom + DEF_RESIZE_UI(26), DEF_DEVICE_WIDTH, DEF_RESIZE_UI(180 + 80))];
     scro.contentSize = CGSizeMake(DEF_RESIZE_UI(190)*3, DEF_RESIZE_UI(180 + 80));
+    scro.contentOffset = CGPointMake(DEF_RESIZE_UI(190)/2, 0);
     [backView1 addSubview:scro];
     
     int x = 0;
@@ -116,6 +125,12 @@
     [backView2 addSubview:musicImagv];
     self.musicImagv = musicImagv;
 
+    UIView *bbView = [[UIView alloc]initWithFrame:CGRectMake(0, titleLb1.bottom + DEF_RESIZE_UI(10), DEF_RESIZE_UI(270), DEF_RESIZE_UI(270))];
+    bbView.alpha = 0.5;
+    bbView.backgroundColor = [UIColor blackColor];
+    bbView.centerX = self.view.centerX;
+    [backView2 addSubview:bbView];
+
     UIImageView *musicImagv1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, titleLb1.bottom + DEF_RESIZE_UI(60), DEF_RESIZE_UI(270), DEF_RESIZE_UI(270))];
     musicImagv1.centerX = self.view.centerX;
     musicImagv1.contentMode = UIViewContentModeScaleAspectFill;
@@ -155,9 +170,56 @@
     [btn setImage:DEF_IMAGE(@"蓝牙") forState:0];
     btn.centerX = self.view.centerX;
     [self.view addSubview:btn];
-    
+    self.btn11 = btn;
+    self.count11 = 1000000;
+    self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:nil];
     //
     [self playAv];
+}
+
+-(void)startCountDown
+{
+    if (self.timer11) {
+        dispatch_source_cancel(self.timer11);
+    }
+    
+    @weakify(self);
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    self.timer11 = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+    dispatch_source_set_timer(self.timer11,dispatch_walltime(NULL, 0),1*NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(self.timer11, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            @strongify(self);
+            if (self.count11 %2 == 0) {
+                [self.btn11 setTitleColor:DEF_UICOLORFROMRGB(0x898989) forState:0];
+            }else{
+                [self.btn11 setTitleColor:[UIColor redColor] forState:0];
+            }
+            self.count11 --;
+        });
+    });
+    dispatch_resume(self.timer11);
+}
+
+-(void)centralManagerDidUpdateState:(CBCentralManager *)central
+{
+    //第一次打开或者每次蓝牙状态改变都会调用这个函数
+    if(central.state==CBCentralManagerStatePoweredOn)
+    {
+        NSLog(@"蓝牙设备开着");
+        self.blueToothOpen = YES;
+        if (self.timer11) {
+            dispatch_source_cancel(self.timer11);
+        }
+        [self.btn11 setTitleColor:DEF_UICOLORFROMRGB(0x898989) forState:0];
+        
+    }
+    else
+    {
+        NSLog(@"蓝牙设备关着");
+        self.blueToothOpen = NO;
+        [self startCountDown];
+    }
 }
 
 -(void)playAv

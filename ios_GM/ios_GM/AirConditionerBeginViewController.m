@@ -88,7 +88,7 @@
             if (dbSPL > 20) {
                 [strongSelf.dbHelper stopMeasuring];
                 [strongSelf.myPlayer play];
-                [strongSelf playav];
+                [strongSelf performSelector:@selector(bofang) withObject:nil afterDelay:3];
             }else{
             }
         });
@@ -96,6 +96,11 @@
     };
     [self.dbHelper startMeasuringWithIsSaveVoice:NO];
 
+}
+
+-(void)bofang
+{
+    [self playav];
 }
 
 -(void)jieshu

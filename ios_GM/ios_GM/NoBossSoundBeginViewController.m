@@ -8,8 +8,9 @@
 
 #import "NoBossSoundBeginViewController.h"
 #import "NoBossSoundSucViewController.h"
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface NoBossSoundBeginViewController ()<AVAudioPlayerDelegate>
+@interface NoBossSoundBeginViewController ()<AVAudioPlayerDelegate,CBCentralManagerDelegate>
 {
     AVPlayer *player;
 }
@@ -17,6 +18,11 @@
 @property (nonatomic, weak)UIImageView *centerImagv;
 
 @property (nonatomic, weak)LOTAnimationView *animation;
+@property (nonatomic,strong)CBCentralManager *centralManager;
+@property (nonatomic) dispatch_source_t timer;
+@property int count;
+@property BOOL blueToothOpen;
+@property (nonatomic,weak)UIButton *btn;
 
 @end
 
@@ -96,9 +102,58 @@
     [btn setImage:DEF_IMAGE(@"蓝牙") forState:0];
     btn.centerX = self.view.centerX;
     [self.view addSubview:btn];
+    self.btn = btn;
+    self.count = 1000000;
+    self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:nil];
     
     [self playav];
 }
+
+-(void)startCountDown
+{
+    if (self.timer) {
+        dispatch_source_cancel(self.timer);
+    }
+    
+    @weakify(self);
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+    dispatch_source_set_timer(self.timer,dispatch_walltime(NULL, 0),1*NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(self.timer, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            @strongify(self);
+            if (self.count %2 == 0) {
+                [self.btn setTitleColor:DEF_UICOLORFROMRGB(0x898989) forState:0];
+            }else{
+                [self.btn setTitleColor:[UIColor redColor] forState:0];
+            }
+            self.count --;
+        });
+    });
+    dispatch_resume(self.timer);
+}
+
+-(void)centralManagerDidUpdateState:(CBCentralManager *)central
+{
+    //第一次打开或者每次蓝牙状态改变都会调用这个函数
+    if(central.state==CBCentralManagerStatePoweredOn)
+    {
+        NSLog(@"蓝牙设备开着");
+        self.blueToothOpen = YES;
+        if (self.timer) {
+            dispatch_source_cancel(self.timer);
+        }
+        [self.btn setTitleColor:DEF_UICOLORFROMRGB(0x898989) forState:0];
+        
+    }
+    else
+    {
+        NSLog(@"蓝牙设备关着");
+        self.blueToothOpen = NO;
+        [self startCountDown];
+    }
+}
+
 
 -(void)playav
 {

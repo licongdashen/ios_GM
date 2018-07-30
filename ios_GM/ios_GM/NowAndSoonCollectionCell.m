@@ -29,7 +29,7 @@
         
         //背景图片
         UIImageView *movieImagV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, DEF_RESIZE_UI(170), DEF_RESIZE_UI(120))];
-        movieImagV.backgroundColor = DEF_IMAGE_BACKGROUND_COLOR;
+        movieImagV.backgroundColor = DEF_RGB(62, 62, 62);
         movieImagV.clipsToBounds = YES;
         movieImagV.contentMode = UIViewContentModeScaleAspectFill;
         movieImagV.layer.cornerRadius = 5;
@@ -44,6 +44,7 @@
         [movieImagV addSubview:nameLb];
         self.nameLb = nameLb;
 
+        
     }
     return self;
 }
@@ -57,9 +58,19 @@
 {
     _model = model;
     
-    [self.movieImagV sd_setImageWithURL:[NSURL URLWithString:model[@"image"]]placeholderImage:DEF_IMAGE(@"test")];
+    if ([DEF_OBJECT_TO_STIRNG(model[@"type"])isEqualToString:@""]) {
+        [self.movieImagV sd_setImageWithURL:[NSURL URLWithString:model[@"image"]]placeholderImage:DEF_IMAGE(@"test")];
+        self.nameLb.text = model[@"name"];
+        self.nameLb.frame = CGRectMake(0, DEF_RESIZE_UI(91), DEF_RESIZE_UI(170 - 12), 17);
+        self.nameLb.textAlignment = NSTextAlignmentRight;
 
-    self.nameLb.text = model[@"name"];
+    }else{
+        self.nameLb.text = @"期待更多";
+        self.nameLb.frame = CGRectMake(0, 0, DEF_RESIZE_UI(170), DEF_RESIZE_UI(120));
+        self.nameLb.textAlignment = NSTextAlignmentCenter;
+
+    }
+   
     
 
 }
