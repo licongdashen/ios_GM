@@ -35,18 +35,40 @@
     imagv.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:imagv];
     
-    UIImageView *cardImagv = [[UIImageView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(117), DEF_RESIZE_UI(118), DEF_RESIZE_UI(90), DEF_RESIZE_UI(40))];
-    cardImagv.image = DEF_IMAGE(@"汽车");
-    cardImagv.contentMode = UIViewContentModeCenter;
-    [imagv addSubview:cardImagv];
+
+    if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈瑞宝XL"]) {
+        [self playav:@"BOSE_4 真实音效 结束"];
+        imagv.image = DEF_IMAGE(@"真实音效迈锐宝XL");
+        
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"探界者"]){
+        [self playav:@"BOSE_4 真实音效 结束"];
+        imagv.image = DEF_IMAGE(@"真实音效探界者");
+        
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈瑞宝"]){
+        [self playav:@"普通音响_科鲁兹23&创酷&迈锐宝"];
+        imagv.image = DEF_IMAGE(@"音响迈锐宝");
+        
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹"]){
+        [self playav:@"普通音响_科鲁兹23&创酷&迈锐宝"];
+        imagv.image = DEF_IMAGE(@"音响科鲁兹");
+        
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹两厢"]){
+        [self playav:@"普通音响_科鲁兹23&创酷&迈锐宝"];
+        imagv.image = DEF_IMAGE(@"音响科鲁兹两厢");
+        
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科沃兹"]){
+        [self playav:@"普通音响_科沃兹"];
+        imagv.image = DEF_IMAGE(@"音响科沃兹");
+        
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"创酷"]){
+        [self playav:@"普通音响_科鲁兹23&创酷&迈锐宝"];
+        imagv.image = DEF_IMAGE(@"音响创酷");
+        
+    }else{
+        [self playav:@"普通音响_科鲁兹23&创酷&迈锐宝"];
+        imagv.image = DEF_IMAGE(@"音响迈锐宝");
+    }
     
-    UILabel *contentLb = [[UILabel alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(70.5), cardImagv.bottom + DEF_RESIZE_UI(12), DEF_RESIZE_UI(190), DEF_RESIZE_UI(84))];
-    contentLb.textAlignment = NSTextAlignmentCenter;
-    contentLb.textColor = [UIColor whiteColor];
-    contentLb.numberOfLines = 3;
-    contentLb.font = DEF_MyBoldFont(DEF_RESIZE_UI(18));
-    contentLb.text = @"BOSE音响超高的声音还原度\n带给您身临其境的感觉";
-    [imagv addSubview:contentLb];
     
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), imagv.bottom + DEF_RESIZE_UI(52), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
     [loginBtn setTitle:@"体验其他项目" forState:0];
@@ -59,18 +81,17 @@
     loginBtn.backgroundColor = DEF_UICOLORFROMRGB(0xffbf17);
     [self.view addSubview:loginBtn];
     
-    [self playav];
 }
 
--(void)playav
+-(void)playav:(NSString *)str
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"BOSE_4 真实音效 结束" ofType:@"wav"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:str ofType:@"wav"];
     // (2)把音频文件转化成url格式
     NSURL *url = [NSURL fileURLWithPath:path];
     
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
     player = [[AVPlayer alloc] initWithPlayerItem:item];
-//    [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    //    [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(playFinished:)
                                                  name:AVPlayerItemDidPlayToEndTimeNotification

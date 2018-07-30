@@ -131,6 +131,7 @@
 		188D7B1320EA27E900F283CD /* RequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7B0120EA27E900F283CD /* RequestOperationManager.m */; };
 		188D7B1720EA2E3900F283CD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7B1620EA2E3900F283CD /* HomeViewController.m */; };
 		188D7B1A20EB66C300F283CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7B1920EB66C300F283CD /* LoginViewController.m */; };
+		18941355210EACEA00CC2929 /* 普通音响_科沃兹.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18941354210EACE900CC2929 /* 普通音响_科沃兹.wav */; };
 		22C174E28DD9B54F691AAC18 /* Pods_ios_GM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ADF0588862AC73DF7CDC66 /* Pods_ios_GM.framework */; };
 /* End PBXBuildFile section */
 
@@ -336,6 +337,7 @@
 		188D7B1620EA2E3900F283CD /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		188D7B1820EB66C300F283CD /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		188D7B1920EB66C300F283CD /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		18941354210EACE900CC2929 /* 普通音响_科沃兹.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "普通音响_科沃兹.wav"; sourceTree = "<group>"; };
 		96ADF0588862AC73DF7CDC66 /* Pods_ios_GM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_GM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E04D957D1841A67C56C4160 /* Pods-ios_GM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_GM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_GM/Pods-ios_GM.release.xcconfig"; sourceTree = "<group>"; };
 		CEC8B6293C5ED21E1248ECE6 /* Pods-ios_GM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_GM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_GM/Pods-ios_GM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -613,6 +615,7 @@
 				181CB29020FDD0BE0095572F /* Two Steps From Hell-Red Tower.mp3 */,
 				181CB28E20FDCFAF0095572F /* 普通音响_开始.wav */,
 				181CB29220FDD23B0095572F /* 普通音响_科鲁兹23&创酷&迈锐宝.wav */,
+				18941354210EACE900CC2929 /* 普通音响_科沃兹.wav */,
 				181CB29420FDD35B0095572F /* BOSE_1 选择页面.wav */,
 				181CB29620FDD4880095572F /* BOSE_3 真实音效 开始.wav */,
 				181CB29820FDD4ED0095572F /* 真实音效 海浪_15s.mp3 */,
@@ -917,6 +920,7 @@
 				181CB2D520FDE95B0095572F /* 试驾体验_8 领取试驾报告.wav in Resources */,
 				181CB3572107370B0095572F /* DPimg_0.png in Resources */,
 				181CB2B720FDE7BE0095572F /* 降噪体验_1 开启车窗.wav in Resources */,
+				18941355210EACEA00CC2929 /* 普通音响_科沃兹.wav in Resources */,
 				181CB338210734210095572F /* YXimg_1.png in Resources */,
 				181CB2D620FDE95B0095572F /* 试驾体验_3（创酷）.wav in Resources */,
 				181CB2A520FDDEDC0095572F /* BOSE_8 高低音效 音乐选择.wav in Resources */,

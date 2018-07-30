@@ -34,18 +34,6 @@
     imagv.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:imagv];
     
-    UIImageView *cardImagv = [[UIImageView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(117), DEF_RESIZE_UI(118), DEF_RESIZE_UI(90), DEF_RESIZE_UI(40))];
-    cardImagv.image = DEF_IMAGE(@"汽车");
-    cardImagv.contentMode = UIViewContentModeCenter;
-    [imagv addSubview:cardImagv];
-    
-    UILabel *contentLb = [[UILabel alloc]initWithFrame:CGRectMake(20, cardImagv.bottom + DEF_RESIZE_UI(12), imagv.width - 40, DEF_RESIZE_UI(100))];
-    contentLb.textAlignment = NSTextAlignmentCenter;
-    contentLb.textColor = [UIColor whiteColor];
-    contentLb.numberOfLines = 4;
-    contentLb.font = DEF_MyBoldFont(DEF_RESIZE_UI(18));
-    [imagv addSubview:contentLb];
-    
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), imagv.bottom + DEF_RESIZE_UI(52), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
     [loginBtn setTitle:@"体验其他项目" forState:0];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:0];
@@ -57,44 +45,36 @@
     loginBtn.backgroundColor = DEF_UICOLORFROMRGB(0xffbf17);
     [self.view addSubview:loginBtn];
     
-    if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝XL"]) {
+    if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈瑞宝XL"]) {
         [self playav:@"空调体验_3（探界者&迈锐宝XL）"];
-        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热;同时为了您的呼吸健康，我们配备了PM2.5过滤系统";
-        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+        imagv.image = DEF_IMAGE(@"空调迈锐宝XL");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"探界者"]){
         [self playav:@"空调体验_3（探界者&迈锐宝XL）"];
-        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热;同时为了您的呼吸健康，我们配备了PM2.5过滤系统";
-        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+        imagv.image = DEF_IMAGE(@"探界者-1");
 
-    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝"]){
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈瑞宝"]){
         [self playav:@"空调体验_5（迈锐宝）"];
-        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热";
-        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+        imagv.image = DEF_IMAGE(@"迈锐宝-1");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹"]){
         [self playav:@"空调体验_6（科鲁兹&科鲁兹两厢）"];
-        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热";
-        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+        imagv.image = DEF_IMAGE(@"空调科鲁兹");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹两厢"]){
         [self playav:@"空调体验_6（科鲁兹&科鲁兹两厢）"];
-        contentLb.text = @"双区控温与后排出风口，轻轻一扭制冷热";
-        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+        imagv.image = DEF_IMAGE(@"空调科鲁兹两厢");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科沃兹"]){
         [self playav:@"空调体验_7（科沃兹）"];
-        contentLb.text = @"强劲的空调系统，快速制冷热，体贴您的冷暖；为了让您呼吸更健康的空气，我们配备了PM2.5过滤系统。";
-        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+        imagv.image = DEF_IMAGE(@"空调科沃兹");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"创酷"]){
         [self playav:@"空调体验_4（创酷）"];
-        contentLb.text = @"我有多快，营造冷暖空间的速度就有多快";
-        imagv.image = DEF_IMAGE(@"shutterstock_774468421");
+        imagv.image = DEF_IMAGE(@"空调创酷");
 
     }else{
         [self playav:@"空调体验_4（创酷）"];
-        contentLb.text = @"我有多快，营造冷暖空间的速度就有多快";
         imagv.image = DEF_IMAGE(@"汽车");
     }
 }

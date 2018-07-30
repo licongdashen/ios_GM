@@ -167,10 +167,10 @@
         AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
         player = [[AVPlayer alloc] initWithPlayerItem:item];
 //        [player.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-//        [[NSNotificationCenter defaultCenter] addObserver:self
-//                                                 selector:@selector(playFinished:)
-//                                                     name:AVPlayerItemDidPlayToEndTimeNotification
-//                                                   object:player.currentItem];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(playFinished:)
+                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+                                                   object:player.currentItem];
         [player play];
     }
 }

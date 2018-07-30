@@ -33,18 +33,6 @@
     imagv.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:imagv];
     
-    UIImageView *cardImagv = [[UIImageView alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(117), DEF_RESIZE_UI(118), DEF_RESIZE_UI(90), DEF_RESIZE_UI(40))];
-    cardImagv.image = DEF_IMAGE(@"汽车");
-    cardImagv.contentMode = UIViewContentModeCenter;
-    [imagv addSubview:cardImagv];
-    
-    UILabel *contentLb = [[UILabel alloc]initWithFrame:CGRectMake(20, cardImagv.bottom + DEF_RESIZE_UI(12), imagv.width - 40, DEF_RESIZE_UI(100))];
-    contentLb.textAlignment = NSTextAlignmentCenter;
-    contentLb.textColor = [UIColor whiteColor];
-    contentLb.numberOfLines = 4;
-    contentLb.font = DEF_MyBoldFont(DEF_RESIZE_UI(18));
-    [imagv addSubview:contentLb];
-    
     UIButton *loginBtn = [[UIButton alloc]initWithFrame:CGRectMake(DEF_RESIZE_UI(54), imagv.bottom + DEF_RESIZE_UI(52), DEF_RESIZE_UI(268), DEF_RESIZE_UI(48))];
     [loginBtn setTitle:@"体验其他项目" forState:0];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:0];
@@ -56,45 +44,37 @@
     loginBtn.backgroundColor = DEF_UICOLORFROMRGB(0xffbf17);
     [self.view addSubview:loginBtn];
     
-    if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝XL"]) {
+    if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈瑞宝XL"]) {
         [self playav:@"降噪体验_5（迈锐宝XL）"];
-        contentLb.text = @"全车身物理降噪技术，有效隔绝并吸收发动机和车窗外的噪音。搭配ANC主动降噪科技，大幅降低舱内噪音，让您的旅程不受干扰";
-        imagv.image = DEF_IMAGE(@"降噪图");
+        imagv.image = DEF_IMAGE(@"降噪迈锐宝XL");
         
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"探界者"]){
         [self playav:@"降噪体验_4（探界者）"];
-        contentLb.text = @"轻量化环保隔音材质搭配ANC主动降噪科技，大幅降低舱内噪音，营造静谧的舱内环境";
-        imagv.image = DEF_IMAGE(@"降噪图");
+        imagv.image = DEF_IMAGE(@"降噪探界者");
 
-    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈锐宝"]){
+    }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"迈瑞宝"]){
         [self playav:@"降噪体验_7（迈锐宝）"];
-        contentLb.text = @"全车身32处消噪设计，让噪音无法干扰您的旅程";
-        imagv.image = DEF_IMAGE(@"降噪图");
+        imagv.image = DEF_IMAGE(@"降噪迈锐宝");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹"]){
         [self playav:@"降噪体验_8（科鲁兹&科鲁兹两厢）"];
-        contentLb.text = @"搭载NVH静音科技，以特殊车身结构设计和高品质隔音吸噪材料，为整车带来太空舱般的静音体验。";
-        imagv.image = DEF_IMAGE(@"降噪图");
+        imagv.image = DEF_IMAGE(@"降噪科鲁兹");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科鲁兹两厢"]){
         [self playav:@"降噪体验_8（科鲁兹&科鲁兹两厢）"];
-        contentLb.text = @"搭载NVH静音科技，以特殊车身结构设计和高品质隔音吸噪材料，为整车带来太空舱般的静音体验。";
-        imagv.image = DEF_IMAGE(@"降噪图");
+        imagv.image = DEF_IMAGE(@"降噪科鲁兹两厢");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"科沃兹"]){
         [self playav:@"降噪体验_9（科沃兹）"];
-        contentLb.text = @"先进的静音技术，哪怕时速达到112公里，您也能在车内感受到像在家里一样的安静舒心。";
-        imagv.image = DEF_IMAGE(@"降噪图");
+        imagv.image = DEF_IMAGE(@"降噪科沃兹");
 
     }else if ([DEF_MyAppDelegate.carDic[@"name"] isEqualToString:@"创酷"]){
         [self playav:@"降噪体验_6（创酷）"];
-        contentLb.text = @"搭载NVH静音科技，同时采用高科技静音材料，打造录音室般的静谧空间。";
-        imagv.image = DEF_IMAGE(@"降噪图");
+        imagv.image = DEF_IMAGE(@"降噪创酷");
 
     }else{
         [self playav:@"降噪体验_6（创酷）"];
-        contentLb.text = @"搭载NVH静音科技，同时采用高科技静音材料，打造录音室般的静谧空间。";
-        imagv.image = DEF_IMAGE(@"降噪图");
+        imagv.image = DEF_IMAGE(@"降噪创酷");
     }
 }
 

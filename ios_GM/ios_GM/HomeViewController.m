@@ -27,6 +27,7 @@
     nameLb.font = DEF_MyBoldFont(26);
     nameLb.textColor = DEF_UICOLORFROMRGB(0x4b4948);
     nameLb.text = [NSString stringWithFormat:@"Hi,  %@",DEF_MyAppDelegate.loginDic[@"accountName"]];
+    nameLb.userInteractionEnabled = YES;
     [self.view addSubview:nameLb];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]init];
