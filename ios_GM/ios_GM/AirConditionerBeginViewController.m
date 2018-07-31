@@ -85,7 +85,7 @@
         __strong typeof(self) strongSelf = weakSelf;
         dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"ccccc%@",[NSString stringWithFormat:@"%.2lf",dbSPL]);
-            if (dbSPL > 20) {
+            if (dbSPL > 30) {
                 [strongSelf.dbHelper stopMeasuring];
                 [strongSelf.myPlayer play];
                 [strongSelf performSelector:@selector(bofang) withObject:nil afterDelay:3];
